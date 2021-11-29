@@ -135,7 +135,7 @@ namespace FundamentosCSharp
         public static void HacerAlgo2(Action<string, string> funcionFinal)
         {
             Console.WriteLine("Hace algo");
-            funcionFinal("Se envió desde otra función", "La segunda");
+            funcionFinal("Se envió desde la otra función", "La segunda");
         }
 
         public static bool IsDivider2(int x) => x % 2 == 0;
