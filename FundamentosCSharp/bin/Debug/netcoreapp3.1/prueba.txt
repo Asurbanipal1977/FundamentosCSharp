@@ -1,0 +1,2 @@
+{"Id":1,"Nombre":"Paulaner Rubia","Cantidad":500}
+{"Id":2,"Nombre":"Mahou","Cantidad":330}
