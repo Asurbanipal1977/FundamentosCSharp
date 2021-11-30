@@ -8,7 +8,7 @@ namespace FundamentosCSharp.BD
 {
     public class AccesoBD
     {
-        private const string cadenaConexion = "Data Source=DESKTOP-96U7NU1;Initial Catalog=prueba;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private const string cadenaConexion = @"Data Source=GIGABYTE-SABRE\SQLEXPRESS;Initial Catalog=pruebas;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         private SqlConnection Conexion { 
             get
             {
