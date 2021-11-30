@@ -18,6 +18,16 @@ string str2 = d2.ToUpper();
 - El tipo uint solo admite valores positivos.
 - 127.3f es float, 127.3d es double y 127.3m es un decimal.
 - int? Permite los nulos en ese tipo.
+- Los tipos anónimos tiene estas características:
+  - Son de solo lectura.
+  - Pueden tener métodos pero el método no puede especificarse con una expresión lambda.
+  - Funciona el reflection:
+  ```
+  foreach (var elem in pruebaAnonimo.GetType().GetProperties())
+  {
+     Console.WriteLine($"{elem.Name} {elem.GetValue(pruebaAnonimo)} {pruebaAnonimo.GetType().GetProperty(elem.Name)}");
+  }
+  ```
 - Para llamar al constructor padre se usa:
 ```
 :base(parametros)
@@ -93,3 +103,15 @@ public record Person (string name);
   ```
   public record Person2(string name):Person(name);
   ```
+
+### 4. NOVEDADES EN C# 10 EN .NET 6
+El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es el puente para llegar a esta solución que se espera en .net 7.
+- Unificado y extendido.
+- Extienden las capacidades de Blazor para aplicaciones híbridas y aplicaciones de escritorio en Blazor
+- Para crear una aplicación android vasta con poner en la consola: 
+  - donet new android
+  - donet run: para ejecutar
+- Código abierto.
+- Se da soporte a Android, IOs, Mac y Windows ARM64.
+- El sistema de contenedores de .net 6 está basado en Debian 11.
+- .net MultiPlatform App UI: Es una unificación y extensión de lo que ya tenía Xamarin.
