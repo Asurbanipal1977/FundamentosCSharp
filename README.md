@@ -52,6 +52,12 @@ Func<string,int> mostrar = Show;
 - Action es igual que los delegados pero no devuelve nada, solo ejecuta.
 - Predicado es una implementación de un delegado. En este caso, sólo devuelve un true o un false.
 - Para extender se utiliza la palabra this antes del parámetro.
+- Para recorrerse una lista de forma paralela se usa la clase Parallel. Ej:
+```
+List<int> listaNumeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
+Parallel.ForEach(listaNumeros, c => Console.WriteLine(c));
+```
+- Task se utiliza para tareas asíncronas. Si se ejecuta un array de Task, no se puede determinar que tarea acabará antes.
 
 ### 3. NOVEDADES EN C# 9
 
