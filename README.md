@@ -57,7 +57,42 @@ Func<string,int> mostrar = Show;
 List<int> listaNumeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 Parallel.ForEach(listaNumeros, c => Console.WriteLine(c));
 ```
-- Task se utiliza para tareas asíncronas. Si se ejecuta un array de Task, no se puede determinar que tarea acabará antes.
+- Task:
+  - Task se utiliza para tareas asíncronas. 
+  - Si se ejecuta un array de Task, no se puede determinar que tarea acabará antes.
+  - Para cancelar una tarea hay que usar un token. Ese token se pasará por parámetro en el Task.Delay para que, si antes de ese tiempo se cancela,  deje cancelar. Ej:
+  ```
+   var cancel = new CancellationTokenSource();
+            var token = cancel.Token;
+
+            Task[] tasks = new Task[3];
+            tasks[0] = Task.Run(async delegate
+            {
+                await Task.Delay(2000, token);
+                Console.WriteLine("Tarea 1");
+            });
+            tasks[1] = Task.Run(async delegate
+            {
+                await Task.Delay(2000);
+                Console.WriteLine("Tarea 2");
+            });
+            tasks[2] = Task.Run(async delegate
+            {
+                await Task.Delay(2000, token);
+                Console.WriteLine("Tarea 3");
+            });
+
+            await Task.Delay(100);
+            cancel.Cancel();
+
+            try { Task.WaitAll(tasks); } catch { }
+
+            foreach (var item in tasks)
+            {
+                Console.WriteLine($"{item.Id} {item.Status}");
+            }
+    ````
+
 
 ### 3. NOVEDADES EN C# 9
 
