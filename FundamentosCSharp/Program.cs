@@ -167,7 +167,7 @@ namespace FundamentosCSharp
             tasks[2] = Task.Run(async delegate
             {
                 await Task.Delay(2000, token);
-                Console.WriteLine("Tarea 4");
+                Console.WriteLine("Tarea 3");
             });
 
             await Task.Delay(100);
