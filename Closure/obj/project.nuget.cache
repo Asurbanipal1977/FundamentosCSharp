@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "f12O31lvongPGfAUEy1/tguH64sOfoZkxoDmDEG4FuH8J4v8HLiKKoORq0U3UDZhtlttIeIZrFB/w3GaM9g+Xg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mame1\\source\\repos\\FundamentosCSharp\\FundamentosCSharp\\Closure\\Closure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mame1\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
