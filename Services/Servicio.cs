@@ -1,16 +1,17 @@
-﻿using AspFirstMVC.Models;
+﻿using AspFirstMVC.Services;
+using Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AspFirstMVC.Services
+namespace Services
 {
+
 	public class Servicio : IServicio
 	{
-		private JsonSerializerOptions _options=
+		private JsonSerializerOptions _options =
 			new JsonSerializerOptions
 			{
 				PropertyNameCaseInsensitive = true
@@ -23,7 +24,7 @@ namespace AspFirstMVC.Services
 			_httpClient = httpClient;
 		}
 
-		public async Task<List<Post>> ListarPost()
+		public async Task<List<Post>> Listar()
 		{
 			List<Post> lista = new List<Post>();
 			string url = "https://jsonplaceholder.typicode.com/posts";

@@ -1,4 +1,4 @@
-﻿using AspFirstMVC.Models;
+﻿using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace AspFirstMVC.Services
 {
 	public interface IServicio
 	{
-		Task<List<Post>> ListarPost();
+		Task<List<Post>> Listar();
 	}
 }

@@ -2,6 +2,7 @@
 using AspFirstMVC.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -29,7 +30,7 @@ namespace AspFirstMVC.Controllers
 			List<Post> lista = new List<Post>();
 			try
 			{
-				lista = await _servicio.ListarPost();
+				lista = await _servicio.Listar();
 			}
 			catch (Exception e)
 			{

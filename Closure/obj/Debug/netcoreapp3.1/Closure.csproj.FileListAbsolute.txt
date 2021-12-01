@@ -4,7 +4,6 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\bin\Debu
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\bin\Debug\netcoreapp3.1\Closure.runtimeconfig.dev.json
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\bin\Debug\netcoreapp3.1\Closure.dll
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\bin\Debug\netcoreapp3.1\Closure.pdb
-C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debug\netcoreapp3.1\Closure.csprojAssemblyReference.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debug\netcoreapp3.1\Closure.AssemblyInfoInputs.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debug\netcoreapp3.1\Closure.AssemblyInfo.cs
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debug\netcoreapp3.1\Closure.csproj.CoreCompileInputs.cache

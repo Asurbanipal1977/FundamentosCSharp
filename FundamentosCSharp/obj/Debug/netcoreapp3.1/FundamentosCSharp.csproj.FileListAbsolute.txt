@@ -31,7 +31,6 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\FundamentosCShar
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\FundamentosCSharp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\FundamentosCSharp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\FundamentosCSharp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\FundamentosCSharp\obj\Debug\netcoreapp3.1\FundamentosCSharp.csprojAssemblyReference.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\FundamentosCSharp\obj\Debug\netcoreapp3.1\FundamentosCSharp.AssemblyInfoInputs.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\FundamentosCSharp\obj\Debug\netcoreapp3.1\FundamentosCSharp.AssemblyInfo.cs
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\FundamentosCSharp\obj\Debug\netcoreapp3.1\FundamentosCSharp.csproj.CoreCompileInputs.cache
