@@ -1,0 +1,18 @@
+﻿@model List<Post>
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+@*Permite Mostrar los mensajes de error si se dan*@
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+@foreach (var elem in Model)
+{
+    <p>@elem.Body</p>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
