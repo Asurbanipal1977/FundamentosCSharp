@@ -93,8 +93,17 @@ Parallel.ForEach(listaNumeros, c => Console.WriteLine(c));
   }
     ````
 
+### 3. C#.Net Core
+#### 1. Inyección de dependencias
+Para inyectar dependencias en .Net Core se puede usar estas sentencias, según el ciclo de vida:
+- AddTransient: Los servicios son creados cada vez que hay una petición.Este ciclo de vida funciona mejor para servicios sencillos y sin estado.
+- AddScope: Los servicios se crean una vez por petición.
+- AddSingleton: Los servicios solo se crean una vez, en la aprte de configuración del servicio y todas las siguientes veces se usa la misma instancia
+- AddHttpClient: Es un singleton que añade la funcionalidad de HttpClient.
 
-### 3. NOVEDADES EN C# 9
+Estos métodos se usan en la clase startup, que es donde se encuentra la inversión del control.
+
+### 4. NOVEDADES EN C# 9
 
 - **Top Level Statement**: Permite prescindir de la declaración de clase y de spacename. Se puede instalar en ILSpy para ver el ensamblado resultante.
 
@@ -145,7 +154,7 @@ public record Person (string name);
   public record Person2(string name):Person(name);
   ```
 
-### 4. NOVEDADES EN C# 10 EN .NET 6
+### 5. NOVEDADES EN C# 10 EN .NET 6
 El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es el puente para llegar a esta solución que se espera en .net 7.
 - Unificado y extendido.
 - Extienden las capacidades de Blazor para aplicaciones híbridas y aplicaciones de escritorio en Blazor
