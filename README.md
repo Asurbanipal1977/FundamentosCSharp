@@ -93,6 +93,8 @@ Parallel.ForEach(listaNumeros, c => Console.WriteLine(c));
   }
     ````
 
+  - Los closures son funciones que pueden acceder a variables no locales (externas a la función), pero que son útiles a la función.
+
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
 Para inyectar dependencias en .Net Core se puede usar estas sentencias, según el ciclo de vida:
