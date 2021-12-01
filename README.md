@@ -101,7 +101,13 @@ Para inyectar dependencias en .Net Core se puede usar estas sentencias, según e
 - AddSingleton: Los servicios solo se crean una vez, en la aprte de configuración del servicio y todas las siguientes veces se usa la misma instancia
 - AddHttpClient: Es un singleton que añade la funcionalidad de HttpClient.
 
-Estos métodos se usan en la clase startup, que es donde se encuentra la inversión del control.
+Estos métodos se usan en la clase startup, que es donde se encuentra la inversión del control. Ej:
+(AspFirstMVC)[https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC]
+
+En este caso, también hay un control de errores, que se realiza con:
+- ModelState.AddModelError("ErrorMessage", $"Es un error: {e.Message}"); : En el controlador
+- @Html.ValidationSummary(false, "", new { @class = "text-danger" }) : En la vista
+
 
 ### 4. NOVEDADES EN C# 9
 
