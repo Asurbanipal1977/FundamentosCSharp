@@ -175,6 +175,6 @@ El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es
 - Código abierto.
 - Se da soporte a Android, IOs, Mac y Windows ARM64.
 - El sistema de contenedores de .net 6 está basado en Debian 11.
-- .net MultiPlatform App UI: Es una unificación y extensión de lo que ya tenía Xamarin.
+- .net MultiPlatform App UI (MAUI): Es una unificación y extensión de lo que ya tenía Xamarin.
 - Minimal API: En .net 6, si creas un proyecto de .net core vacío, se crea un minimal API. La principal característica es que genera un API con código mínimo. Ej:
 [MinimalAPI](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/MinimalAPI)
