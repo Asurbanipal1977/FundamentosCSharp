@@ -178,3 +178,9 @@ El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es
 - .net MultiPlatform App UI (MAUI): Es una unificación y extensión de lo que ya tenía Xamarin.
 - Minimal API: En .net 6, si creas un proyecto de .net core vacío, se crea un minimal API. La principal característica es que genera un API con código mínimo. Ej:
 [MinimalAPI](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/MinimalAPI)
+
+Se puede usar inyección de dependencia y swagger. Para usar swagger:
+1) Se importan las librerías: Swashbuckle.AspNetCore y Swashbuckle.AspNetCore.Swagger
+2) Se da permiso para que pueda explorar los métodos que se exponen desde el API: builder.Services.AddEndpointsApiExplorer();
+3) Se inyecta el servicio de swagger: builder.Services.AddSwaggerGen();
+4) Se usa swagger: app.UseSwagger(); y app.UseSwaggerUI();
