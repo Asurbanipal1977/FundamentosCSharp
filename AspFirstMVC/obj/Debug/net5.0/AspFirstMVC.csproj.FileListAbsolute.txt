@@ -9,7 +9,6 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\Debug\net5.0\AspFirstMVC.pdb
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\Debug\net5.0\AspFirstMVC.Views.dll
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\Debug\net5.0\AspFirstMVC.Views.pdb
-C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.csprojAssemblyReference.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.AssemblyInfoInputs.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.AssemblyInfo.cs
@@ -18,7 +17,6 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.RazorAssemblyInfo.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.RazorAssemblyInfo.cs
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\staticwebassets\AspFirstMVC.StaticWebAssets.Manifest.cache
-C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\staticwebassets\AspFirstMVC.StaticWebAssets.xml
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\scopedcss\bundle\AspFirstMVC.styles.css
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.TagHelpers.input.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.TagHelpers.output.cache
@@ -42,3 +40,5 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\Debug\net5.0\Services.dll
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\Debug\net5.0\Models.pdb
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\Debug\net5.0\Services.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\bin\Debug\net5.0\AspFirstMVC.StaticWebAssets.xml
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AspFirstMVC\obj\Debug\net5.0\AspFirstMVC.csproj.AssemblyReference.cache

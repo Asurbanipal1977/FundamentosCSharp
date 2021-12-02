@@ -6,3 +6,5 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Models\obj\Debug
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Models\obj\Debug\netcoreapp3.1\Models.dll
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Models\obj\Debug\netcoreapp3.1\Models.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Models\obj\Debug\netcoreapp3.1\Models.csproj.AssemblyReference.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Models\obj\Debug\netcoreapp3.1\Models.GeneratedMSBuildEditorConfig.editorconfig
