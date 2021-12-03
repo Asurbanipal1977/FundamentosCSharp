@@ -185,7 +185,8 @@ El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es
 
 - Se puede usar constantes en constantes de cadenas interpoladas. Todas deben ser constantes interpoladas en este caso.
 - Sellado de sobreescritura de método ToString() en records. Para ello se usa sealed.
-- global using en namespace. Permite que todos los archivos de una jerarquía menor hereden ese using.
+- global using en namespace. Permite que todos los archivos de una jerarquía menor hereden ese using. Ej:
+[global using](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/ExtendedProperties/Program.cs)
 
 
 Se puede usar inyección de dependencia y swagger. Para usar swagger:
