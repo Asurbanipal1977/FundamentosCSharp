@@ -14,6 +14,7 @@ string str2 = d2.ToUpper();
 ```
 
 ### 2. CURIOSIDADES C#
+- Una constante no es igual que un campo readonly. Mientras que la constante puede asignarse solo en la declaración, el campo readonly puede asignarse también en un constructor. Además, las constantes son constantes en tiempo de ejecución, mientras los campos readonly lo son en tiempo de ejecución.
 - El tipo sbyte admite negativos y, va de -127 a 127.
 - El tipo uint solo admite valores positivos.
 - 127.3f es float, 127.3d es double y 127.3m es un decimal.
