@@ -226,4 +226,3 @@ Se puede usar inyección de dependencia y swagger. Para usar swagger:
 2) Se da permiso para que pueda explorar los métodos que se exponen desde el API: builder.Services.AddEndpointsApiExplorer();
 3) Se inyecta el servicio de swagger: builder.Services.AddSwaggerGen();
 4) Se usa swagger: app.UseSwagger(); y app.UseSwaggerUI();
-5)
