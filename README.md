@@ -180,7 +180,9 @@ El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es
 - Minimal API: En .net 6, si creas un proyecto de .net core vacío, se crea un minimal API. La principal característica es que genera un API con código mínimo. Ej:
 [MinimalAPI](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/MinimalAPI)
 - Se puede crear estructuras (struct) con constructores sin parámetros.
-- Extended properties patterns. En clases que se asocian a otras clases, ya se puede usar el punto para acceder a las propiedades de la otra clase.
+- Extended properties patterns. En clases que se asocian a otras clases, ya se puede usar el punto para acceder a las propiedades de la otra clase. Ej:
+[ExtendedProperties](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/ExtendedProperties)
+
 - Se puede usar constantes en constantes de cadenas interpoladas. Todas deben ser constantes interpoladas en este caso.
 - Sellado de sobreescritura de método ToString() en records. Para ello se usa sealed.
 - global using en namespace. Permite que todos los archivos de una jerarquía menor hereden ese using.
