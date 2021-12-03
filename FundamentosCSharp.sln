@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{048228A6-AB3A-4899-BBC9-1DFC53E482E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalAPI", "MinimalAPI\MinimalAPI.csproj", "{3C21BFBE-4599-4809-8015-9D7E97DE03CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalAPI", "MinimalAPI\MinimalAPI.csproj", "{3C21BFBE-4599-4809-8015-9D7E97DE03CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedProperties", "ExtendedProperties\ExtendedProperties.csproj", "{74A94492-5194-4221-B0B4-408FF4DD89DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{3C21BFBE-4599-4809-8015-9D7E97DE03CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C21BFBE-4599-4809-8015-9D7E97DE03CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C21BFBE-4599-4809-8015-9D7E97DE03CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74A94492-5194-4221-B0B4-408FF4DD89DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A94492-5194-4221-B0B4-408FF4DD89DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A94492-5194-4221-B0B4-408FF4DD89DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A94492-5194-4221-B0B4-408FF4DD89DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

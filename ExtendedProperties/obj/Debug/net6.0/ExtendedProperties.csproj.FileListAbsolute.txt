@@ -1,0 +1,15 @@
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\bin\Debug\net6.0\ExtendedProperties.exe
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\bin\Debug\net6.0\ExtendedProperties.deps.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\bin\Debug\net6.0\ExtendedProperties.runtimeconfig.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\bin\Debug\net6.0\ExtendedProperties.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\bin\Debug\net6.0\ref\ExtendedProperties.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\bin\Debug\net6.0\ExtendedProperties.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ExtendedProperties.csproj.AssemblyReference.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ExtendedProperties.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ExtendedProperties.AssemblyInfoInputs.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ExtendedProperties.AssemblyInfo.cs
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ExtendedProperties.csproj.CoreCompileInputs.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ExtendedProperties.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ref\ExtendedProperties.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ExtendedProperties.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\ExtendedProperties\obj\Debug\net6.0\ExtendedProperties.genruntimeconfig.cache
