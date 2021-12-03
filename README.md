@@ -103,8 +103,8 @@ Los closure devuelven como respuesta una función y permiten guardar el estado e
 #### 1. Inyección de dependencias
 Para inyectar dependencias en .Net Core se puede usar estas sentencias, según el ciclo de vida:
 - AddTransient: Los servicios son creados cada vez que hay una petición.Este ciclo de vida funciona mejor para servicios sencillos y sin estado.
-- AddScope: Los servicios se crean una vez por petición.
-- AddSingleton: Los servicios solo se crean una vez, en la aprte de configuración del servicio y todas las siguientes veces se usa la misma instancia
+- AddScope: Los servicios se crean una vez por petición dentro del alcance. Por ejemplo, para un misma petición reutiliza la misma instancia.
+- AddSingleton: Los servicios solo se crean una vez, en la parte de configuración del servicio y todas las siguientes veces se usa la misma instancia
 - AddHttpClient: Es un singleton que añade la funcionalidad de HttpClient.
 
 Estos métodos se usan en la clase startup, que es donde se encuentra la inversión del control. Ej:
@@ -192,6 +192,7 @@ El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es
   - Son equivalentes:
   ```
   Predicate<int> predicate1 = (x) => x > 1;
+  var predicate1 = (int x) => x > 1;
   Console.WriteLine(predicate1(2));
 
   Func<int,int,int> suma = (x,y) => x+y;
@@ -203,6 +204,22 @@ El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es
   var p = object (bool b) => b ? 1 : "1";
   Console.WriteLine(p(true).GetType());
   ```
+
+  - Cambios en Linq:
+    - Index y Range: 
+    Se puede obtener fácilmente el penúltimo elemento de una lista: list.elementAt(^2).Name
+    Se puede tomar los primeros elementos de una lista: lista.Take(..3) y para recorrerse los tres últimos, lista.Take(^3..)
+    - DistinctBy y UnionBy: list.DistinctBy(c=>c.property) permitirá obtener todos los elementos que tengan el valor de esa propiedad distinto.
+    - MaxBy y MinBy
+    - Chunk. Se utiliza para empaquetar listas. list.Chunk(2) crea un arreglo de arreglos.
+    - FirstOrDefault(new Clase {propiedad=""}).propiedad. Nos permite devolver un valor para el campo si no existe un elemento que cumpla la condición.
+    - Zip puede combinar tres colecciones: 
+     list1.Zip(list2, (a,b) => a.Name + b)
+
+    Ahora:
+    list1.Zip(list2,list3)
+
+    La lista resultante tendrá un número se elementos igual al menor de las tres listas y se puede obtener los elementos con: a.First, a.Second, a.Third
   
 Se puede usar inyección de dependencia y swagger. Para usar swagger:
 1) Se importan las librerías: Swashbuckle.AspNetCore y Swashbuckle.AspNetCore.Swagger
