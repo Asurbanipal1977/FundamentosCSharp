@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExtendedProperties
+namespace ExtendedProperties.Clases
 {
     public class Person
     {
