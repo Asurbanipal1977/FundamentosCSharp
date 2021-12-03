@@ -15,3 +15,13 @@ Console.WriteLine(cadena3);
 
 MostrarDato.imprimir(person);
 
+//Son iguales
+Predicate<int> predicate1 = (x) => x > 1;
+Console.WriteLine(predicate1(2));
+
+var predicate2 = (int x) => x > 1;
+Console.WriteLine(predicate2(1));
+
+//Devoluciones híbridas
+var p = object (bool b) => b ? 1 : "1";
+Console.WriteLine(p(true).GetType());
