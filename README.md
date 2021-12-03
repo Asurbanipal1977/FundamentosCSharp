@@ -187,8 +187,23 @@ El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es
 - Sellado de sobreescritura de método ToString() en records. Para ello se usa sealed.
 - global using en namespace. Permite que todos los archivos de una jerarquía menor hereden ese using. Ej:
 [global using](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/ExtendedProperties/Program.cs)
+- Cambios en las expresiones lambda. 
 
+  - Son equivalentes:
+  ```
+  Predicate<int> predicate1 = (x) => x > 1;
+  Console.WriteLine(predicate1(2));
 
+  Func<int,int,int> suma = (x,y) => x+y;
+  var suma = (int x, int y) => x+y;
+  ```
+
+  - Devoluciones híbridas
+  ```
+  var p = object (bool b) => b ? 1 : "1";
+  Console.WriteLine(p(true).GetType());
+  ```
+  
 Se puede usar inyección de dependencia y swagger. Para usar swagger:
 1) Se importan las librerías: Swashbuckle.AspNetCore y Swashbuckle.AspNetCore.Swagger
 2) Se da permiso para que pueda explorar los métodos que se exponen desde el API: builder.Services.AddEndpointsApiExplorer();
