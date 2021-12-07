@@ -245,9 +245,12 @@ Se puede usar inyección de dependencia y swagger. Para usar swagger:
 4) Se usa swagger: app.UseSwagger(); y app.UseSwaggerUI();
 
 ### 6. CREAR Y USAR VISUAL STUDIO CODE CON PROYECTO NET 5
+- [Descarga de SDK](https://dotnet.microsoft.com/download)
 - Para crear proyectos se usa el comando dotnet.
   - dotnet new [console | web | mvc | angular | blazorserver] [nombreproyecto]
   - Se ejecuta con dotnet run
+ 
+- Github copilot: La extensión de vscode que nos ayuda a programar mediante inteligencia artificial.
  
  
 
