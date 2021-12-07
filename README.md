@@ -117,8 +117,12 @@ Ej:
 [Test](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AuthTestingTests)
 
 #### 2.9. SCAFFOLDING PARA FRAMEWORK
-Desde la línea de comando lanzar:
+- Hay que instalar Microsoft.EntityFrameworkCore.SqlServer y Microsoft.EntityFrameworkCore.SqlServer.Tools en Nuget
+- Desde la línea de comando lanzar:
 scaffold-dbcontext "Server=gigabyte-sabre\sqlexpress;Database=pruebas;integrated security=True;" Microsoft.EntityFrameworkCore.SqlServer -outputdir Models -context EFContext
+
+#### 2.10. PETICIONES HTTPCLIENT
+Nos permite llamar a servicios externos. Se tiene que crear el objeto httpClient, llamar a GetAsync y, después, leer la respuesta con httpResponse.Content.ReadAsStringAsync o ReadAsAync<T>
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
