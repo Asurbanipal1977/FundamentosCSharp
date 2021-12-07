@@ -102,7 +102,8 @@ Parallel.ForEach(listaNumeros, c => Console.WriteLine(c));
   {
       Console.WriteLine($"{item.Id} {item.Status}");
   }
-    ````
+    
+ ````
 
 #### 2.7. CLOSURES
 - Los closures son funciones que pueden acceder a variables no locales (externas a la función), pero que son útiles a la función. Un closure en C# toma la forma de un método delegado / anónimo en línea. Se adjunta un cierre a su método principal, lo que significa que se puede hacer referencia a las variables definidas en el cuerpo del método principal desde el método anónimo.
