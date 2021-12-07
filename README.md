@@ -19,6 +19,8 @@ string str2 = d2.ToUpper();
 - El tipo uint solo admite valores positivos.
 - 127.3f es float, 127.3d es double y 127.3m es un decimal.
 - int? Permite los nulos en ese tipo.
+
+#### 2.1. TIPOS ANÓNIMOS
 - Los tipos anónimos tiene estas características:
   - Son de solo lectura.
   - Pueden tener métodos pero el método no puede especificarse con una expresión lambda.
@@ -34,17 +36,24 @@ string str2 = d2.ToUpper();
 :base(parametros)
 
 ```
-- Para serializar y deserializar se utiliza JSONSerializer.
-- Los generic permiten hacer clases que pueden recibir distintas clases. Con la clausula where se restringe el acceso a solo aquellas clases que implementen el interfaz. Ej:
+#### 2.2. SERIALIZAR
+Para serializar y deserializar se utiliza JSONSerializer.
+
+#### 2.3 GENERIC
+Los generic permiten hacer clases que pueden recibir distintas clases. Con la clausula where se restringe el acceso a solo aquellas clases que implementen el interfaz. Ej:
 ```
 public class SendRequest<T> where T : ISendRequest
 ```
-- Linq extiende las propiedades de los objetos.
+
+#### 2.4. LINQ
+Linq extiende las propiedades de los objetos.
 ```
 var query = from person in people
            join pet in pets on person equals pet.Owner
            select new { OwnerName = person.FirstName, PetName = pet.Name };
-```   
+```
+
+#### 2.5. DELEGADOS, FUNCTION, ACTION, PREDICADOS
 - Los delegados permiten enviar funciones por parámetro.
 - Func es una versión mejorada de los delegados. Por ejemplo, en el siguiente caso se indica que la función tiene un parámetro string y devuelve un int de salida. El número máximo de parámetros es de 16.
 ```
@@ -58,7 +67,8 @@ Func<string,int> mostrar = Show;
 List<int> listaNumeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 Parallel.ForEach(listaNumeros, c => Console.WriteLine(c));
 ```
-- Task:
+
+#### 2.6 TASK
   - Task se utiliza para tareas asíncronas. 
   - Si se ejecuta un array de Task, no se puede determinar que tarea acabará antes.
   - Para cancelar una tarea hay que usar un token. Ese token se pasará por parámetro en el Task.Delay para que, si antes de ese tiempo se cancela,  deje cancelar. Ej:
@@ -94,10 +104,16 @@ Parallel.ForEach(listaNumeros, c => Console.WriteLine(c));
   }
     ````
 
+#### 2.7. CLOSURES
 - Los closures son funciones que pueden acceder a variables no locales (externas a la función), pero que son útiles a la función. Un closure en C# toma la forma de un método delegado / anónimo en línea. Se adjunta un cierre a su método principal, lo que significa que se puede hacer referencia a las variables definidas en el cuerpo del método principal desde el método anónimo.
 Los closure devuelven como respuesta una función y permiten guardar el estado entre ejecuciones. Ej:
 [Closure](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure)
 
+#### 2.8. PRUEBAS UNITARIAS
+Permiten asegurar la funcionalidad de la aplicación de manera que cualquier cambio no pueda provocar un mal funcionamiento de la aplicación. Un de las maneras es realizar un MStest.
+Para lanzar la prueba se tiene que usar el explorador de pruebas. Desde este explorador se puede lanzar todas las pruebas existentes.
+Ej:
+[Closure](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure)
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
@@ -114,8 +130,10 @@ En este caso, también hay un control de errores, que se realiza con:
 - ModelState.AddModelError("ErrorMessage", $"Es un error: {e.Message}"); : En el controlador
 - @Html.ValidationSummary(false, "", new { @class = "text-danger" }) : En la vista
 
+### 4. PRUEBAS UNITARIAS EN C#
 
-### 4. NOVEDADES EN C# 9
+
+### 5. NOVEDADES EN C# 9
 
 - **Top Level Statement**: Permite prescindir de la declaración de clase y de spacename. Se puede instalar en ILSpy para ver el ensamblado resultante.
 
@@ -166,7 +184,7 @@ public record Person (string name);
   public record Person2(string name):Person(name);
   ```
 
-### 5. NOVEDADES EN C# 10 EN .NET 6
+### 6. NOVEDADES EN C# 10 EN .NET 6
 El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es el puente para llegar a esta solución que se espera en .net 7.
 - Unificado y extendido.
 - Extienden las capacidades de Blazor para aplicaciones híbridas y aplicaciones de escritorio en Blazor
