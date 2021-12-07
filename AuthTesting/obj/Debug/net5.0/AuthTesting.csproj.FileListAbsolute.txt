@@ -1,0 +1,15 @@
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\bin\Debug\net5.0\AuthTesting.exe
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\bin\Debug\net5.0\AuthTesting.deps.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\bin\Debug\net5.0\AuthTesting.runtimeconfig.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\bin\Debug\net5.0\AuthTesting.runtimeconfig.dev.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\bin\Debug\net5.0\AuthTesting.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\bin\Debug\net5.0\ref\AuthTesting.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\bin\Debug\net5.0\AuthTesting.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.AssemblyInfoInputs.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.AssemblyInfo.cs
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.csproj.CoreCompileInputs.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\ref\AuthTesting.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.genruntimeconfig.cache
