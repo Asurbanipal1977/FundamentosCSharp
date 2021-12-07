@@ -113,7 +113,7 @@ Los closure devuelven como respuesta una función y permiten guardar el estado e
 Permiten asegurar la funcionalidad de la aplicación de manera que cualquier cambio no pueda provocar un mal funcionamiento de la aplicación. Un de las maneras es realizar un MStest.
 Para lanzar la prueba se tiene que usar el explorador de pruebas. Desde este explorador se puede lanzar todas las pruebas existentes.
 Ej:
-[Closure](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure)
+[Test](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AuthTestingTests)
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
@@ -130,10 +130,8 @@ En este caso, también hay un control de errores, que se realiza con:
 - ModelState.AddModelError("ErrorMessage", $"Es un error: {e.Message}"); : En el controlador
 - @Html.ValidationSummary(false, "", new { @class = "text-danger" }) : En la vista
 
-### 4. PRUEBAS UNITARIAS EN C#
 
-
-### 5. NOVEDADES EN C# 9
+### 4. NOVEDADES EN C# 9
 
 - **Top Level Statement**: Permite prescindir de la declaración de clase y de spacename. Se puede instalar en ILSpy para ver el ensamblado resultante.
 
@@ -184,7 +182,7 @@ public record Person (string name);
   public record Person2(string name):Person(name);
   ```
 
-### 6. NOVEDADES EN C# 10 EN .NET 6
+### 5. NOVEDADES EN C# 10 EN .NET 6
 El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es el puente para llegar a esta solución que se espera en .net 7.
 - Unificado y extendido.
 - Extienden las capacidades de Blazor para aplicaciones híbridas y aplicaciones de escritorio en Blazor
