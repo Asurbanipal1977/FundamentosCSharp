@@ -162,6 +162,8 @@ public class MappingProfile : Profile
 ```
 - En un controller usar ese mapeo
 Cliente cliente = mapper.Map<Cliente>(clienteRequest);
+    
+Ejemplo: (AutoMappersPrueba)[https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AutoMappersPrueba]
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
