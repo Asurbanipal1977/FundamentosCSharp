@@ -162,6 +162,16 @@ public class MappingProfile : Profile
 ```
 - En un controller usar ese mapeo
 Cliente cliente = mapper.Map<Cliente>(clienteRequest);
+
+#### 2.14. CONSTRUCTOR ESTÁTICO
+Se puede tener un constructor estático que solo se va a ejecutar la primera vez que haces referencia a esa clase. Es decir, si creas dos instancias de un clase, solo se va a ejecutar la primera vez.
+
+#### 2.15. YIELD
+Permite ejecutar un método devolviendo resultados sin que acabe el método.
+
+#### 2.16. COALESCE NULL
+Son las ??. Por ejemplo: Console.WriteLine(a ?? b), imprime b si a es null y a si es not null.
+a ??= b asignará el valor de b si a es null.
     
 Ejemplo: [AutoMapperMVC](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AutoMapperMVC)
 
