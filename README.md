@@ -134,8 +134,34 @@ public static string Level (beer Beer) => beer.Alcohol switch
   _ => "high"  
 
 ```
+    
 #### 2.12. INTERFAZ DEFAULT METHOD
 Desde C# 6 se puede poner un método por defecto en una interfaz, cosa que antes no se podía
+
+#### 2.13. AUTOMAPPERS
+Nos permite pasar datos de un objeto a otro de manera automática. Para poderlo usar hay que:
+- Instalar la librería AutoMapper.
+- Crear el MapperConfiguration e inyectar la dependencia así:
+```
+IMapper mapper = mapperConfig.CreateMapper();
+services.AddSingleton(mapper);
+services.AddMvc();
+```
+- Crear una clase que herede de Profile com oesta:
+```
+public class MappingProfile : Profile
+{
+    public MappingProfile()
+    {
+       //Nos permite mapear aunque el nombre de los campos cambie
+       CreateMap<ClienteRequest, Cliente>()
+                .ForMember(d => d.Name, o=>o.MapFrom(s=>s.Nombre))
+                .ForMember(d => d.Surname, o => o.MapFrom(s => s.Apellido));
+    }
+}
+    
+- En un controller usar ese mapeo
+Cliente cliente = mapper.Map<Cliente>(clienteRequest);
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
