@@ -20,11 +20,11 @@ string str2 = d2.ToUpper();
 - 127.3f es float, 127.3d es double y 127.3m es un decimal.
 - int? Permite los nulos en ese tipo.
 
-#### 2.1. TIPOS ANÓNIMOS
+#### 2.1. TIPOS ANÓNIMOS Y REFLECTION
 - Los tipos anónimos tiene estas características:
   - Son de solo lectura.
   - Pueden tener métodos pero el método no puede especificarse con una expresión lambda.
-  - Funciona el reflection:
+  - Funciona el reflection, es decir, la capacidad de poder obtener las propiedades de un objeto 
   ```
   foreach (var elem in pruebaAnonimo.GetType().GetProperties())
   {
@@ -37,7 +37,8 @@ string str2 = d2.ToUpper();
 
 ```
 #### 2.2. SERIALIZAR
-Para serializar y deserializar se utiliza JSONSerializer.
+Para serializar y deserializar se utiliza JSONSerializer de la librería de System.Text.Json.
+Anteriormente se usaba Newtonsoft.Json, pero consume mas y es mas lento.
 
 #### 2.3 GENERIC
 Los generic permiten hacer clases que pueden recibir distintas clases. Con la clausula where se restringe el acceso a solo aquellas clases que implementen el interfaz. Ej:
@@ -123,6 +124,18 @@ scaffold-dbcontext "Server=gigabyte-sabre\sqlexpress;Database=pruebas;integrated
 
 #### 2.10. PETICIONES HTTPCLIENT
 Nos permite llamar a servicios externos. Se tiene que crear el objeto httpClient, llamar a GetAsync y, después, leer la respuesta con httpResponse.Content.ReadAsStringAsync o ReadAsAync<T>
+
+#### 2.11. PATTERN-MATCHING
+Es la capacidad para hacer una comparación de una manera muy reducida con un switch
+```
+public static string Level (beer Beer) => beer.Alcohol switch
+  <=0 => "water",
+  >0 and <=6 => "medium",
+  _ => "high"  
+
+```
+#### 2.12. INTERFAZ DEFAULT METHOD
+Desde C# 6 se puede poner un método por defecto en una interfaz, cosa que antes no se podía
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
