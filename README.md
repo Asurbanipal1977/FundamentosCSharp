@@ -159,7 +159,7 @@ public class MappingProfile : Profile
                 .ForMember(d => d.Surname, o => o.MapFrom(s => s.Apellido));
     }
 }
-    
+```
 - En un controller usar ese mapeo
 Cliente cliente = mapper.Map<Cliente>(clienteRequest);
 
