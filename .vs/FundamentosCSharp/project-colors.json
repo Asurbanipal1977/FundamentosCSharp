@@ -10,7 +10,57 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Archivos varios",
       "ColorIndex": -1
+    },
+    "048228a6-ab3a-4899-bbc9-1dfc53e482e2": {
+      "ProjectGuid": "048228a6-ab3a-4899-bbc9-1dfc53e482e2",
+      "DisplayName": "Services",
+      "ColorIndex": 1
+    },
+    "3c21bfbe-4599-4809-8015-9d7e97de03cb": {
+      "ProjectGuid": "3c21bfbe-4599-4809-8015-9d7e97de03cb",
+      "DisplayName": "MinimalAPI",
+      "ColorIndex": 2
+    },
+    "74a94492-5194-4221-b0b4-408ff4dd89da": {
+      "ProjectGuid": "74a94492-5194-4221-b0b4-408ff4dd89da",
+      "DisplayName": "ExtendedProperties",
+      "ColorIndex": 3
+    },
+    "e2221082-0f7f-41cb-b9b2-e2c350719fff": {
+      "ProjectGuid": "e2221082-0f7f-41cb-b9b2-e2c350719fff",
+      "DisplayName": "AuthTesting",
+      "ColorIndex": 4
+    },
+    "1687d21b-6702-4cc9-a6af-7c6edd83994c": {
+      "ProjectGuid": "1687d21b-6702-4cc9-a6af-7c6edd83994c",
+      "DisplayName": "AuthTesting",
+      "ColorIndex": 5
+    },
+    "af1f89b1-4958-43a7-86f8-de31b736c3b5": {
+      "ProjectGuid": "af1f89b1-4958-43a7-86f8-de31b736c3b5",
+      "DisplayName": "AuthTestingTests",
+      "ColorIndex": 6
+    },
+    "e2329768-2a0c-4581-b7f3-3b83fb0f02f0": {
+      "ProjectGuid": "e2329768-2a0c-4581-b7f3-3b83fb0f02f0",
+      "DisplayName": "AspFirstMVC",
+      "ColorIndex": 7
+    },
+    "cd166683-015c-4406-99c8-a2463a196fff": {
+      "ProjectGuid": "cd166683-015c-4406-99c8-a2463a196fff",
+      "DisplayName": "Models",
+      "ColorIndex": 8
+    },
+    "0d296123-8b0f-4644-976f-282bac84e6f9": {
+      "ProjectGuid": "0d296123-8b0f-4644-976f-282bac84e6f9",
+      "DisplayName": "AutoMappersPrueba",
+      "ColorIndex": 9
+    },
+    "903133b6-f009-4182-8b9c-8b79b28255b0": {
+      "ProjectGuid": "903133b6-f009-4182-8b9c-8b79b28255b0",
+      "DisplayName": "AutoMapperMVC",
+      "ColorIndex": 10
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 11
 }
