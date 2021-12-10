@@ -167,7 +167,8 @@ Cliente cliente = mapper.Map<Cliente>(clienteRequest);
 Se puede tener un constructor estático que solo se va a ejecutar la primera vez que haces referencia a esa clase. Es decir, si creas dos instancias de un clase, solo se va a ejecutar la primera vez.
 
 #### 2.15. YIELD
-Permite ejecutar un método devolviendo resultados sin que acabe el método.
+Permite ejecutar un método devolviendo resultados sin que acabe el método. Ej:
+[Yield](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/Closure/Program.cs)    
 
 #### 2.16. COALESCE NULL
 Son las ??. Por ejemplo: Console.WriteLine(a ?? b), imprime b si a es null y a si es not null.
