@@ -332,3 +332,13 @@ Se puede usar inyección de dependencia y swagger. Para usar swagger:
 
 ### 7. SWAGGER Y ANGULAR
 Este es un proyecto con swagger junto con un proyecto de Angular que usa el api de swagger.
+1. Creamos un proyecto API o minimal API.
+2. Se tiene que dar permiso para permitir el acceso a ese API  y evitar el error de CORS.
+3. Se genera el proyecto de angular.
+4. Se copia el json del swagger, que tiene la definición del servicio, en una carpeta del proyecto angular.
+5. Añadir en ese json el campo servers en el que indicaremos la ruta del back.
+6. Se instala una librería que permita leer el json que utiliza swagger. Esa librería puede ser: 
+[ng-openapi-gen](https://www.npmjs.com/package/ng-openapi-gen)
+En esta ruta vienen las instrucciones de instalación
+7. Esto te genera el módelo y te crea el servicio que hay que inyectar.
+8. Para el correcto funcionamiento hay que importar el modulo HttpClientModule.
