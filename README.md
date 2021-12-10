@@ -176,6 +176,22 @@ a ??= b asignará el valor de b si a es null.
     
 Ejemplo: [AutoMapperMVC](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AutoMapperMVC)
 
+#### 2.17. SOBRECARGA DE OPERADORES
+Permite poder sobrecargar los métodos +, -, *, =, /
+Ejemplo de concatenación de listas:
+```
+public class Persona<T> : List<T>
+{
+  public static Persona<T> operator + (Persona<T> p1, Persona<T> p2)
+  {
+    Persona<T> result = new Persona<T>();
+    p1.ForEach(elem => result.Add(elem));
+    p2.ForEach(elem => result.Add(elem));
+    return result;
+  }
+}
+```
+
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
 Para inyectar dependencias en .Net Core se puede usar estas sentencias, según el ciclo de vida:
