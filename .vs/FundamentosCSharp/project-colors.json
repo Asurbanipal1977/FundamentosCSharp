@@ -60,7 +60,12 @@
       "ProjectGuid": "903133b6-f009-4182-8b9c-8b79b28255b0",
       "DisplayName": "AutoMapperMVC",
       "ColorIndex": 10
+    },
+    "d0f94bdd-b1c7-45ac-a97c-fffb61dab97f": {
+      "ProjectGuid": "d0f94bdd-b1c7-45ac-a97c-fffb61dab97f",
+      "DisplayName": "Closure",
+      "ColorIndex": 11
     }
   },
-  "NextColorIndex": 11
+  "NextColorIndex": 12
 }

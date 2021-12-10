@@ -1,0 +1,6 @@
+<div *ngIf="cervezas">
+  <li *ngFor="let elemCerveza of cervezas">
+    {{elemCerveza.nombre}}
+  </li>
+</div>
+<router-outlet></router-outlet>
