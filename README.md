@@ -342,3 +342,6 @@ Este es un proyecto con swagger junto con un proyecto de Angular que usa el api 
 En esta ruta vienen las instrucciones de instalación
 7. Esto te genera el módelo y te crea el servicio que hay que inyectar.
 8. Para el correcto funcionamiento hay que importar el modulo HttpClientModule.
+  
+Ejemplo:
+[angularswagger](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/angularswagger/app/src/app/app.component.ts)
