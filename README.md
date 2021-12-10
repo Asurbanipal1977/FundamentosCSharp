@@ -329,3 +329,6 @@ Se puede usar inyección de dependencia y swagger. Para usar swagger:
   - Se ejecuta con dotnet run
  
 - Github copilot: La extensión de vscode que nos ayuda a programar mediante inteligencia artificial.
+
+### 7. SWAGGER Y ANGULAR
+Este es un proyecto con swagger junto con un proyecto de Angular que usa el api de swagger.
