@@ -80,6 +80,7 @@ int resultado = fnHigher(300, (number) => number * 2);
 Console.WriteLine(resultado);
 
 ```
+- Con Predicate y expresiones lambda se puede hacer un validador de objetos.
 
 
 #### 2.6 TASK
