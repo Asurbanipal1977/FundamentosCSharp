@@ -68,6 +68,19 @@ Func<string,int> mostrar = Show;
 List<int> listaNumeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 Parallel.ForEach(listaNumeros, c => Console.WriteLine(c));
 ```
+- Un Func puede llamar a otro Func. Ej:
+```
+Func<int,Func<int,int>,int> fnHigher = (number, fn) =>
+  {
+    if(number > 10) return fn(number);
+    else return number;
+  };
+
+int resultado = fnHigher(300, (number) => number * 2);
+Console.WriteLine(resultado);
+
+```
+
 
 #### 2.6 TASK
   - Task se utiliza para tareas asíncronas. 
