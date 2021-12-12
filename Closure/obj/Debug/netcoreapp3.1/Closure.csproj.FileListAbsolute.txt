@@ -12,3 +12,6 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debu
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debug\netcoreapp3.1\Closure.genruntimeconfig.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debug\netcoreapp3.1\Closure.csproj.AssemblyReference.cache
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debug\netcoreapp3.1\Closure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Closure\obj\Debug\netcoreapp3.1\Closure.csproj.CopyComplete

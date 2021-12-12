@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Closure
 {
@@ -7,6 +9,15 @@ namespace Closure
 	{
 		static void Main(string[] args)
 		{
+			//Ejemplo validación general con expresiones lambda
+			Post post1 = new Post()
+			{
+				UserId = 1,
+				Title="Es una prueba",
+				Body = "Es una prueba"
+			};
+			Console.WriteLine(Validator.Validate(post1, Validator.predicates));
+
 			Action fn = EjemploClosure(2);
 			HacerAlgo(fn);
 			HacerAlgo(fn);
@@ -24,6 +35,8 @@ namespace Closure
 			{
 				Console.WriteLine($"Console externo {++i}");
 			}
+
+			//Ejemplo de validación de clase Post
 		}
 
 		static Action EjemploClosure(int maximo)
@@ -74,4 +87,29 @@ namespace Closure
 			}
 		}
 	}
+
+	public class GeneralValidator<T>
+    {
+		public static readonly Predicate<T> NotNull = o => o != null ;
+		public static readonly Func<string, int, bool> SizeMax = (o, num) => o != null && o.Length > 0 && o.Length <= num;
+	}
+
+	public class Validator
+    {
+		public static readonly Predicate<Post>[] predicates =
+		{
+			c => GeneralValidator<int>.NotNull(c.Id),
+			c => GeneralValidator<int>.NotNull(c.UserId),
+			c => GeneralValidator<string>.NotNull(c.Title),
+			c => GeneralValidator<Post>.SizeMax(c.Title,20)
+		};
+
+		public static bool Validate(Post p, params Predicate<Post>[] predicates) =>
+			predicates.ToList().Where(elemP =>
+            {
+                return !elemP(p);
+			}
+        ).Count() == 0;
+
+    }
 }
