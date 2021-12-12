@@ -80,8 +80,8 @@ int resultado = fnHigher(300, (number) => number * 2);
 Console.WriteLine(resultado);
 
 ```
-- Con Predicate y expresiones lambda se puede hacer un validador de objetos.
-
+- Con Predicate y expresiones lambda se puede hacer un validador de objetos. Ej:
+[Validador](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/Closure/Program.cs)
 
 #### 2.6 TASK
   - Task se utiliza para tareas asíncronas. 
