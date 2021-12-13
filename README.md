@@ -220,6 +220,11 @@ public class Persona<T> : List<T>
        this.posts = posts;
      }
 ```
+Un ejemplo en: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia)
+
+Para formularios hay que usar la librería FluentValidation.ASpNetCore
+
+Un ejemplo en: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)    
 
 #### 2.19. Uso de goto
 El goto se puede usar en switch case. Bastaría con poner 'goto case valor'
@@ -260,9 +265,8 @@ Pa usarlo:
             return View();
         }
     ```
-    
-Un ejemplo en: 
-Ejemplo: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia)
+Un ejemplo en: [Secretos](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)    
+
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
