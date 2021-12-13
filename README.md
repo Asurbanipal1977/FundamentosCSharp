@@ -269,8 +269,13 @@ Un ejemplo en: [Secretos](https://github.com/Asurbanipal1977/FundamentosCSharp/t
 
     #### 2.22. GUARDAR UN FICHERO
     Para guardar un fichero se puede usar varias técnicas:
-    1) Guardarlo en base de datos. Para ello se usa EntityFrameWork y MemoryStream.Ej:
+    1) Guardarlo en base de datos. Para ello se usa EntityFrameWork y MemoryStream.
+    2) Guardarlo en disco.
+    3) Guardarlo en un S3(Sample Storage Service)    
+    
+    Ej:
     [Guardar fichero en base de datos](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)
+   
 
 
 ### 3. C#.Net Core
