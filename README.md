@@ -271,7 +271,7 @@ Un ejemplo en: [Secretos](https://github.com/Asurbanipal1977/FundamentosCSharp/t
     Para guardar un fichero se puede usar varias técnicas:
     1) Guardarlo en base de datos. Para ello se usa EntityFrameWork y MemoryStream.
     2) Guardarlo en disco.
-    3) Guardarlo en un S3(Sample Storage Service)    
+    3) Guardarlo en un S3(Sample Storage Service). Para usar ese servicio, se tiene que importar la librería Minio.
     
     Ej:
     [Guardar fichero en base de datos](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)
