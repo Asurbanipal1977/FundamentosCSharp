@@ -238,7 +238,28 @@ public static implicit operator objetoAlQueTransformas(ObjetoDesdeElqueTransform
   }
 
 La diferencia entre implicit y explicit radica en si al hacer el cast de un objeto a otro tenemos o no que pasar el tipo del objeto al que transformamos.
+    
+#### 2.22. SECRETOS
+Permiten almacenar información confidencial que no queremos que se suba. Esos datos se guardarán en un archivo en una ruta local de nuestra máquina como un json.
+Pa usarlo:
+    - Botón derecho en el proyecto y "Administrar secretos de usuario".
+    - Es un archivo json dónde pondremos la información confidencial.
+    - Para usarlo, se inyecta la depencia en el startup: services.AddSingleton<IConfiguration>(Configuration);
+    - En el fichero donde se use hay que hacer algo como esto:
+    ```
+        private IConfiguration _configuration;
+        public PostController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
+        public IActionResult Create()
+        {
+            ViewBag.Message = TempData["Message"];
+            var clave = _configuration["clave"];
+            return View();
+        }
+    ```
     
 Un ejemplo en: 
 Ejemplo: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia)
