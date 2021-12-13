@@ -1,0 +1,25 @@
+﻿@using Models
+@model Post
+
+<p>@ViewBag.Message</p>
+
+<form asp-action="Create">
+    Id: <input asp-for=Id />
+    <span class="text-danger" asp-validation-for=Id>
+    </span>
+
+    UserId: <input asp-for=UserId />
+     <span class="text-danger" asp-validation-for=UserId>
+    </span>
+
+    Title: <input asp-for=Title />
+     <span class="text-danger" asp-validation-for=Title>
+    </span>
+
+    Body: <input asp-for=Body />
+     <span class="text-danger" asp-validation-for=Body>
+    </span>
+
+    <input type="submit" value="Guardar" />
+
+</form>

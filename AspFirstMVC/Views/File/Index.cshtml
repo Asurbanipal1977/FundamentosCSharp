@@ -1,0 +1,18 @@
+﻿@using AspFirstMVC.Models.ViewModels
+@model UploadModel
+
+<p>@ViewBag.message</p>
+
+<div class="text-center">
+    <form asp-controller="File" asp-action="Upload1" enctype="multipart/form-data" method="post">
+        <dl>
+            <dt>
+                <label>Archivo</label>
+            </dt>
+            <dd>
+                <input type="file" asp-for=MyFile />
+            </dd>
+        </dl>
+        <input type="submit" value="Upload" />
+    </form>
+</div>
