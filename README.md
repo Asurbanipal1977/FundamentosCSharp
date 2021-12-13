@@ -205,6 +205,24 @@ public class Persona<T> : List<T>
   }
 }
 ```
+    
+#### 2.18. FLUENTVALIDATION
+- Se instala la librería FluentValidation.
+- Se crea una clase que herede de AbstractValidator<T>
+- Se crea un constructor como:
+```
+    public PostValidation(List<Post> posts)
+    {
+       RuleFor(r => r.Id).NotNull().NotEmpty().GreaterThan(0);
+       RuleFor(r => r.UserId).NotNull().NotEmpty().GreaterThan(0);
+       RuleFor(r => r.Title).NotNull().NotEmpty().MaximumLength(20).MinimumLength(1);
+       RuleFor(r => r.Id).Must(NoExistPost).WithMessage("Ya existe un post igual");
+       this.posts = posts;
+     }
+```
+    
+Un ejemplo en: 
+Ejemplo: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia)
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
