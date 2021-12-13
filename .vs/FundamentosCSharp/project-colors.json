@@ -75,7 +75,12 @@
       "ProjectGuid": "ade4d033-ae05-4cc9-ac62-904b2e31fd61",
       "DisplayName": "AutoMapperMVC",
       "ColorIndex": 13
+    },
+    "5725aa09-705e-4994-9c9e-41aaa378fbd4": {
+      "ProjectGuid": "5725aa09-705e-4994-9c9e-41aaa378fbd4",
+      "DisplayName": "Concurrencia",
+      "ColorIndex": 14
     }
   },
-  "NextColorIndex": 14
+  "NextColorIndex": 15
 }
