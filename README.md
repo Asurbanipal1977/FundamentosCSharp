@@ -220,9 +220,58 @@ public class Persona<T> : List<T>
        this.posts = posts;
      }
 ```
+Un ejemplo en: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia)
+
+Para formularios hay que usar la librería FluentValidation.ASpNetCore
+
+Un ejemplo en: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)    
+
+#### 2.19. Uso de goto
+El goto se puede usar en switch case. Bastaría con poner 'goto case valor'
+
+#### 2.20. ATRIBUTOS OBSOLETOS
+Se puede indicar poniendo antes del atributo de la clase [ObsoleteAttribute("El atributo ya no es válido")]. Si se pasa como parámetro un true, ya no compilaría la clase con ese atributo.
+
+#### 2.21. TRANSFORMACIONES EXPLICITAS E IMPLICITAS
+Se puede transformar un objeto en otro mediante:
+- public static explicit operator objetoAlQueTransformas(ObjetoDesdeElqueTransformas o)
+  {      
+  }
+
+public static implicit operator objetoAlQueTransformas(ObjetoDesdeElqueTransformas o)
+  {      
+  }
+
+La diferencia entre implicit y explicit radica en si al hacer el cast de un objeto a otro tenemos o no que pasar el tipo del objeto al que transformamos.
     
-Un ejemplo en: 
-Ejemplo: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia)
+#### 2.22. SECRETOS
+Permiten almacenar información confidencial que no queremos que se suba. Esos datos se guardarán en un archivo en una ruta local de nuestra máquina como un json.
+Pa usarlo:
+    - Botón derecho en el proyecto y "Administrar secretos de usuario".
+    - Es un archivo json dónde pondremos la información confidencial.
+    - Para usarlo, se inyecta la depencia en el startup: services.AddSingleton<IConfiguration>(Configuration);
+    - En el fichero donde se use hay que hacer algo como esto:
+    ```
+        private IConfiguration _configuration;
+        public PostController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        public IActionResult Create()
+        {
+            ViewBag.Message = TempData["Message"];
+            var clave = _configuration["clave"];
+            return View();
+        }
+    ```
+Un ejemplo en: [Secretos](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)    
+
+    #### 2.22. GUARDAR UN FICHERO
+    Para guardar un fichero se puede usar varias técnicas:
+    1) Guardarlo en base de datos. Para ello se usa EntityFrameWork y MemoryStream.Ej:
+    [Guardar fichero en base de datos](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)
+
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
@@ -352,6 +401,8 @@ Se puede usar inyección de dependencia y swagger. Para usar swagger:
 2) Se da permiso para que pueda explorar los métodos que se exponen desde el API: builder.Services.AddEndpointsApiExplorer();
 3) Se inyecta el servicio de swagger: builder.Services.AddSwaggerGen();
 4) Se usa swagger: app.UseSwagger(); y app.UseSwaggerUI();
+Ej: Swagger en Minimal API ->
+[Swagger en Minimal API](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/MinimalAPI)
 
 ### 6. CREAR Y USAR VISUAL STUDIO CODE CON PROYECTO NET 5
 - [Descarga de SDK](https://dotnet.microsoft.com/download)

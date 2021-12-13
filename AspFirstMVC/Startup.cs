@@ -1,10 +1,15 @@
+using AspFirstMVC.Models;
 using AspFirstMVC.Services;
+using AspFirstMVC.Validator;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Models;
 using Services;
 
 namespace AspFirstMVC
@@ -22,7 +27,11 @@ namespace AspFirstMVC
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllersWithViews();
+			services.AddMvc().AddFluentValidation();
+
 			services.AddHttpClient<IServicio, Servicio>();
+			services.AddTransient<IValidator<Post>, PostValidator>();
+			services.AddDbContext<EFContext>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
