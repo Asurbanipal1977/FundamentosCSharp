@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthTestingTests", "AuthTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapperMVC", "AutoMapperMVC\AutoMapperMVC.csproj", "{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concurrencia", "Concurrencia\Concurrencia.csproj", "{5725AA09-705E-4994-9C9E-41AAA378FBD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5725AA09-705E-4994-9C9E-41AAA378FBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5725AA09-705E-4994-9C9E-41AAA378FBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5725AA09-705E-4994-9C9E-41AAA378FBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5725AA09-705E-4994-9C9E-41AAA378FBD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
