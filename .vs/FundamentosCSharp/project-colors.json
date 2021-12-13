@@ -65,7 +65,17 @@
       "ProjectGuid": "d0f94bdd-b1c7-45ac-a97c-fffb61dab97f",
       "DisplayName": "Closure",
       "ColorIndex": 11
+    },
+    "b8321002-d9d4-4bc8-a74b-37fa2d5f436a": {
+      "ProjectGuid": "b8321002-d9d4-4bc8-a74b-37fa2d5f436a",
+      "DisplayName": "AutoMappersPrueba",
+      "ColorIndex": 12
+    },
+    "ade4d033-ae05-4cc9-ac62-904b2e31fd61": {
+      "ProjectGuid": "ade4d033-ae05-4cc9-ac62-904b2e31fd61",
+      "DisplayName": "AutoMapperMVC",
+      "ColorIndex": 13
     }
   },
-  "NextColorIndex": 12
+  "NextColorIndex": 14
 }

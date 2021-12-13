@@ -12,6 +12,7 @@ namespace Closure
 			//Ejemplo validación general con expresiones lambda
 			Post post1 = new Post()
 			{
+				Id=1,
 				UserId = 1,
 				Title="Es una prueba",
 				Body = "Es una prueba"
@@ -90,7 +91,7 @@ namespace Closure
 
 	public class GeneralValidator<T>
     {
-		public static readonly Predicate<T> NotNull = o => o != null ;
+		public static readonly Predicate<T> NotNull = o => o != null && (o.GetType()== typeof(int)? Convert.ToInt32(o)>0:true);
 		public static readonly Func<string, int, bool> SizeMax = (o, num) => o != null && o.Length > 0 && o.Length <= num;
 	}
 

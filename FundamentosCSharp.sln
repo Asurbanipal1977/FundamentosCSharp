@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalAPI", "MinimalAPI\Mi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendedProperties", "ExtendedProperties\ExtendedProperties.csproj", "{74A94492-5194-4221-B0B4-408FF4DD89DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthTesting", "AuthTesting\AuthTesting.csproj", "{1687D21B-6702-4CC9-A6AF-7C6EDD83994C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthTesting", "AuthTesting\AuthTesting.csproj", "{1687D21B-6702-4CC9-A6AF-7C6EDD83994C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthTestingTests", "AuthTestingTests\AuthTestingTests.csproj", "{AF1F89B1-4958-43A7-86F8-DE31B736C3B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthTestingTests", "AuthTestingTests\AuthTestingTests.csproj", "{AF1F89B1-4958-43A7-86F8-DE31B736C3B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapperMVC", "AutoMapperMVC\AutoMapperMVC.csproj", "{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{AF1F89B1-4958-43A7-86F8-DE31B736C3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF1F89B1-4958-43A7-86F8-DE31B736C3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF1F89B1-4958-43A7-86F8-DE31B736C3B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
