@@ -220,6 +220,25 @@ public class Persona<T> : List<T>
        this.posts = posts;
      }
 ```
+
+#### 2.19. Uso de goto
+El goto se puede usar en switch case. Bastaría con poner 'goto case valor'
+
+#### 2.20. ATRIBUTOS OBSOLETOS
+Se puede indicar poniendo antes del atributo de la clase [ObsoleteAttribute("El atributo ya no es válido")]. Si se pasa como parámetro un true, ya no compilaría la clase con ese atributo.
+
+#### 2.21. TRANSFORMACIONES EXPLICITAS E IMPLICITAS
+Se puede transformar un objeto en otro mediante:
+- public static explicit operator objetoAlQueTransformas(ObjetoDesdeElqueTransformas o)
+  {      
+  }
+
+public static implicit operator objetoAlQueTransformas(ObjetoDesdeElqueTransformas o)
+  {      
+  }
+
+La diferencia entre implicit y explicit radica en si al hacer el cast de un objeto a otro tenemos o no que pasar el tipo del objeto al que transformamos.
+
     
 Un ejemplo en: 
 Ejemplo: [FluentValidation](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia)
