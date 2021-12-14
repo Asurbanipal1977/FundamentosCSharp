@@ -295,7 +295,7 @@ Se basa en crear un observable y que aquel que se suscriba a dicho observable pu
    MyEvent(null, 1);
    MyEvent(null, 2);
 ```
-[Progrmación reactiva](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
+[Programación reactiva](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
     
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
