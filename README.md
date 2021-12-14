@@ -296,6 +296,9 @@ Se basa en crear un observable y que aquel que se suscriba a dicho observable pu
    MyEvent(null, 2);
 ```
 [Programación reactiva](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
+
+#### 2.26. EVENTOS
+Muy bien explicado en: [Eventos](https://geeks.ms/etomas/2012/01/05/c-bsico-eventos/)
     
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
