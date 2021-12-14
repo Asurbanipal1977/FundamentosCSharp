@@ -54,6 +54,9 @@ var query = from person in people
            select new { OwnerName = person.FirstName, PetName = pet.Name };
 ```
 
+Hay un ejemplo de group by en:
+[GroupBy](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
+
 #### 2.5. DELEGADOS, FUNCTION, ACTION, PREDICADOS
 - Los delegados permiten enviar funciones por parámetro.
 - Func es una versión mejorada de los delegados. Por ejemplo, en el siguiente caso se indica que la función tiene un parámetro string y devuelve un int de salida. El número máximo de parámetros es de 16.
