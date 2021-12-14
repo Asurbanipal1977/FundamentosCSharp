@@ -300,6 +300,8 @@ Se basa en crear un observable y que aquel que se suscriba a dicho observable pu
 #### 2.26. EVENTOS
 Muy bien explicado en: [Eventos](https://geeks.ms/etomas/2012/01/05/c-bsico-eventos/)
     
+Y un ejemplo en: [Eventos](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
+    
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
 Para inyectar dependencias en .Net Core se puede usar estas sentencias, según el ciclo de vida:
