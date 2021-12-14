@@ -31,6 +31,7 @@ namespace AspFirstMVC
 
 			services.AddHttpClient<IServicio, Servicio>();
 			services.AddTransient<IValidator<Post>, PostValidator>();
+			services.AddSingleton<IConfiguration>(Configuration);
 			services.AddDbContext<EFContext>();
 		}
 
