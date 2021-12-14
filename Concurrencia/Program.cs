@@ -3,6 +3,7 @@ using FluentValidation.Results;
 using Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -46,22 +47,35 @@ namespace Concurrencia
             }
 
 
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            //Comparativa entre asincrono y sincrono
+            var watch = Stopwatch.StartNew();
+            for (int i = 0; i < 100; i++)
+            {
+                var client = new HttpClient();
+                var response = client.GetAsync("http://jsonplaceholder.typicode.com/todos/").Result;
+                var result2 = response.Content.ReadAsStringAsync().Result;
+            }
+            watch.Stop();
+            Console.WriteLine($"El tiempo para síncrono es de: {watch.ElapsedMilliseconds}");
 
+            watch = Stopwatch.StartNew();
             List<Task> tasks = new List<Task>();
-            for (int i=0; i < 100;i++){
+            for (int i = 0; i < 100; i++)
+            {
                 tasks.Add(Task.Factory.StartNew(async () =>
                 {
                     var client = new HttpClient();
-                    var response = await client.GetAsync("http://jsonplaceholder.typicode.com/todos/"); 
+                    var response = await client.GetAsync("http://jsonplaceholder.typicode.com/todos/");
                     //response.EnsureSuccessStatusCode();
-                    var result = await response.Content.ReadAsStringAsync();
+                    var result2 = await response.Content.ReadAsStringAsync();
                     //Console.WriteLine(result);
                 }));
             }
             Task.WaitAll(tasks.ToArray());
             watch.Stop();
-            Console.WriteLine(watch.ElapsedMilliseconds);
+            Console.WriteLine($"El tiempo para asíncrono es de: {watch.ElapsedMilliseconds}");
+
+
             Console.ReadLine();
         }
 
