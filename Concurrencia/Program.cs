@@ -14,6 +14,7 @@ namespace Concurrencia
     internal class Program
     {
         public static event EventHandler<int> MyEvent;
+        public static event Action MyAction;
         static void Main(string[] args)
         {
             List<Post> posts = new List<Post>
@@ -89,7 +90,44 @@ namespace Concurrencia
             MyEvent(null, 1);
             MyEvent(null, 2);
 
+            //EVENTOS
+            Empleados empleados = new Empleados();
+
+            MyAction += () => { Console.WriteLine("Apagar Luces"); };
+            MyAction += () => { Console.WriteLine("Cerrar Puertas"); };
+
+            empleados.ficharSalida();
+            empleados.ficharSalida();
+            empleados.ficharSalida();
+            empleados.ficharSalida();
+            empleados.ficharSalida();
+            empleados.ficharSalida();
+
             Console.ReadLine();
+        }
+        
+
+        public class Empleados
+        {
+            private int empleados = 5;
+
+            public void ficharSalida()
+            {
+                if (empleados > 0)
+                {
+                    empleados--;
+                    if (empleados > 0)
+                    {
+                        Console.WriteLine($"Quedan {empleados} empleados");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No hay mas empleados");
+                        if (MyAction != null)
+                            MyAction();
+                    }
+                }
+            }
         }
 
 
