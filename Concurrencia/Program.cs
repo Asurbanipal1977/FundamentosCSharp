@@ -24,7 +24,20 @@ namespace Concurrencia
                     UserId = 1,
                     Title = "Es una prueba",
                     Body = "Es una prueba"
+                },
+                new Post{
+                    Id = 2,
+                    UserId = 1,
+                    Title = "Es una prueba",
+                    Body = "Es una prueba"
+                },
+                new Post{
+                    Id = 3,
+                    UserId = 2,
+                    Title = "Es una prueba",
+                    Body = "Es una prueba"
                 }
+
             };
 
             Post post1 = new Post()
@@ -103,10 +116,38 @@ namespace Concurrencia
             empleados.ficharSalida();
             empleados.ficharSalida();
 
+
+            //GROUP BY EN LINQ
+            List<Product> productos = new List<Product>()
+            {
+                new Product { Id=2, Name="Producto2", Country="Fracia", Price=2400},
+                new Product { Id=1, Name="Producto1", Country="España", Price=1150},
+                new Product { Id=1, Name="Producto1", Country="España", Price=1150},
+                new Product { Id=2, Name="Producto2", Country="España", Price=150},
+                new Product { Id=2, Name="Producto3", Country="Francia", Price=50},
+                new Product { Id=2, Name="Producto2", Country="Fracia", Price=2400}
+            };
+
+            var totalVentas = from p in productos
+                              group p by new { p.Name, p.Country } into totals
+                              select new
+                              {
+                                  Name = totals.Key.Name,
+                                  Country = totals.Key.Country,
+                                  Total = totals.Sum(t => t.Price)
+                              };
+
+            foreach (var totalventa in totalVentas)
+            {
+                Console.WriteLine($"El {totalventa.Name} del país {totalventa.Country} tiene un sumatorio de {totalventa.Total} ");
+            }
+
+            
             Console.ReadLine();
         }
         
 
+        
         public class Empleados
         {
             private int empleados = 5;
@@ -128,6 +169,15 @@ namespace Concurrencia
                     }
                 }
             }
+        }   
+
+        public class Product
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+
+            public decimal Price { get; set; }
+            public string Country { get; set; }
         }
 
 
