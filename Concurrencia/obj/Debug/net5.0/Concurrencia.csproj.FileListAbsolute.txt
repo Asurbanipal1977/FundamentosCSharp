@@ -18,3 +18,4 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Concurrencia\bin
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Concurrencia\bin\Debug\net5.0\Models.dll
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Concurrencia\bin\Debug\net5.0\Models.pdb
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Concurrencia\obj\Debug\net5.0\Concurrencia.csproj.CopyComplete
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Concurrencia\bin\Debug\net5.0\System.Reactive.dll

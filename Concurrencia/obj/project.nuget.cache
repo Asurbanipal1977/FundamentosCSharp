@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "DtN2NHrvZ/JsKCHfPwhMvcMpzaKJz3mqDcaCy0jSqqfjNmCysZIO5PKjkeNO/yuy0pnDSzq5tPqMmznY7kMABQ==",
+  "dgSpecHash": "ETu8bmmSuX4zvcNbDdVWWS1fFgrN+3vHawQbP7k+U/vCzZc61/z/hxKpA2E7N+snE5+DL1FNJu9yYeV24ukYYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\mame1\\source\\repos\\FundamentosCSharp\\FundamentosCSharp\\Concurrencia\\Concurrencia.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mame1\\.nuget\\packages\\fluentvalidation\\10.3.5\\fluentvalidation.10.3.5.nupkg.sha512"
+    "C:\\Users\\mame1\\.nuget\\packages\\fluentvalidation\\10.3.5\\fluentvalidation.10.3.5.nupkg.sha512",
+    "C:\\Users\\mame1\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

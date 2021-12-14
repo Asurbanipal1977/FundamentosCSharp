@@ -6,12 +6,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Reactive.Linq;
 using System.Threading.Tasks;
 
 namespace Concurrencia
 {
     internal class Program
     {
+        public static event EventHandler<int> MyEvent;
         static void Main(string[] args)
         {
             List<Post> posts = new List<Post>
@@ -75,6 +77,17 @@ namespace Concurrencia
             watch.Stop();
             Console.WriteLine($"El tiempo para asíncrono es de: {watch.ElapsedMilliseconds}");
 
+            //PROGRAMACION REACTIVA
+            var observable = Observable.FromEventPattern<int>(
+                c => MyEvent += c,
+                c => MyEvent -= c
+                );
+
+            var subscrito1 = observable.Subscribe(c => { Console.WriteLine($"Se ha detectado el cambio por subscrito1: {c.EventArgs}"); });
+            var subscrito2= observable.Subscribe(c => { Console.WriteLine($"Se ha detectado el cambio por subscrito2: {c.EventArgs}"); });
+
+            MyEvent(null, 1);
+            MyEvent(null, 2);
 
             Console.ReadLine();
         }
