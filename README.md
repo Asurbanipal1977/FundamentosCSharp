@@ -275,7 +275,10 @@ Un ejemplo en: [Secretos](https://github.com/Asurbanipal1977/FundamentosCSharp/t
     
     Ej:
     [Guardar fichero en base de datos](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)
-   
+    
+    #### 2.23. COMPARATIVA ENTRE ASÍNCRONO Y SÍNCRONO
+    para probar se hace 100 llamadas al servicio de jsonplaceholder. El resultado es que con asíncrono va mas rápido. Para el ejemplo habría que ñlanzarlo comentando la parte de asíncrono y luego la de asíncrono:
+    [Comparativa](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
 
 
 ### 3. C#.Net Core
