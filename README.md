@@ -278,7 +278,25 @@ Ej:
 #### 2.24. COMPARATIVA ENTRE ASÍNCRONO Y SÍNCRONO
 Para probar se hace 100 llamadas al servicio de jsonplaceholder. El resultado es que con asíncrono va mas rápido. Para el ejemplo habría que ñlanzarlo comentando la parte de asíncrono y luego la de asíncrono:
 [Comparativa](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
+    
+#### 2.25. PROGRAMACIÓN REACTIVA
+Se basa en crear un observable y que aquel que se suscriba a dicho observable pueda ejecutar ciertas tareas cada vez que se ejecute el evento asociado al observable. 
+- Se usa la libreria System.Reactive que se instala desde Nuget.
+- El código sería:
+```
+    var observable = Observable.FromEventPattern<int>(
+                c => MyEvent += c,
+                c => MyEvent -= c
+   );
 
+   var subscrito1 = observable.Subscribe(c => { Console.WriteLine($"Se ha detectado el cambio por subscrito1: {c.EventArgs}"); });
+   var subscrito2= observable.Subscribe(c => { Console.WriteLine($"Se ha detectado el cambio por subscrito2: {c.EventArgs}"); });
+
+   MyEvent(null, 1);
+   MyEvent(null, 2);
+```
+[Progrmación reactiva](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
+    
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
 Para inyectar dependencias en .Net Core se puede usar estas sentencias, según el ciclo de vida:
