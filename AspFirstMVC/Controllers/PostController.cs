@@ -15,7 +15,7 @@ namespace AspFirstMVC.Controllers
         public IActionResult Create()
         {
             ViewBag.Message = TempData["Message"];
-            var clave = _configuration["clave"];
+            var clave = _configuration["password"];
             return View();
         }
 

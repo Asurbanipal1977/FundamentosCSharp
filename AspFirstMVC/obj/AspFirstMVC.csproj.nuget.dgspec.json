@@ -64,6 +64,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.12, )"
+            },
+            "Minio": {
+              "target": "Package",
+              "version": "[3.1.13, )"
             }
           },
           "imports": [
