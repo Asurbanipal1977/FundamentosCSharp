@@ -319,7 +319,17 @@ valor.Item2;
 
 También se le puede dar nombre a cada uno de los campos:
 (int,string) valor = (entero: 5, cadena: "pepe");
+
+Se puede deconstruir un clase en una tupla. Para ello se tiene que hacer:
+public void Deconstruct(out int dato1, out string dato2) => (dato1, dato2) = (Dato1, Dato2);
+
+Para invocarlo se usa:
+var (valor1,valor2) = objeto;
     
+Para ignorar un valor de la tupla, bastaría con poner _.
+
+Ej:
+
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
 Para inyectar dependencias en .Net Core se puede usar estas sentencias, según el ciclo de vida:
