@@ -1,6 +1,7 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,31 +13,44 @@ namespace Closure
 		static void Main(string[] args)
 		{
 			Empleado empleado = new Empleado()
-            {
+			{
 				Id = 1,
 				Name = "Juan",
 				Position = "CEO"
-            };
+			};
 
 			//Ejemplo de uso de deconstructor
 			var (id, nombre, _) = empleado;
 			Console.WriteLine($"{id} {nombre}");
 
 			//ejemplo de tupla
-			var tupla = (a:5, b:4);
+			var tupla = (a: 5, b: 4);
 			Console.WriteLine(tupla.a);
 
 			//Otro closure
-			var fncAcumulador = Acumulador(LlamadaHttp);
-			Parallel.For(1, 11, (i) => fncAcumulador());		
+			//var fncAcumulador = Acumulador(LlamadaHttp);
+			Parallel.For(1, 11, (i) => {
+				var operaciones = Operaciones(i);
+				operaciones.Counter.increment();
+				operaciones.Counter.increment();
+				Console.WriteLine(operaciones.Counter.get());
+
+				operaciones.AccesoBD.Add(i);
+
+				operaciones.PeticionHttp(i);
+			});			
+
+			//Currificación
+			Action<string> log = (m) => Log(PrintConsole, m);
+			log("Es una prueba");
 
 
 			//Ejemplo validación general con expresiones lambda
 			Post post1 = new Post()
 			{
-				Id=1,
+				Id = 1,
 				UserId = 1,
-				Title="Es una prueba",
+				Title = "Es una prueba",
 				Body = "Es una prueba"
 			};
 			Console.WriteLine(Validator.Validate(post1, Validator.predicates));
@@ -49,9 +63,9 @@ namespace Closure
 			//Ejemplo de yield
 			var i = 0;
 			foreach (int arg in bucleSinYield())
-            {
+			{
 				Console.WriteLine($"Console externo {++i}");
-            }
+			}
 
 			i = 0;
 			foreach (int arg in bucleConYield())
@@ -84,14 +98,14 @@ namespace Closure
 		}
 
 		static Func<int> Acumulador(Action<int> fncLlamadaHttp)
-        {
+		{
 			int counter = 0;
 
 			return () => {
 				fncLlamadaHttp(++counter);
-				return counter; 
+				return counter;
 			};
-        }
+		}
 
 		static void HacerAlgo(Action fn)
 		{
@@ -102,16 +116,16 @@ namespace Closure
 
 
 		public static IEnumerable<int> bucleSinYield()
-        {
+		{
 			List<int> auxiliar = new List<int>();
-			for (int i=0;i<10;i++)
-            {
-				Console.WriteLine($"Console interno sin Yield {i+1}");
+			for (int i = 0; i < 10; i++)
+			{
+				Console.WriteLine($"Console interno sin Yield {i + 1}");
 				auxiliar.Add(i);
-            }
+			}
 
 			return auxiliar;
-        }
+		}
 
 		public static IEnumerable<int> bucleConYield()
 		{
@@ -122,12 +136,45 @@ namespace Closure
 			}
 		}
 
-		public static async void LlamadaHttp(int i)
+		public static (
+			(Action increment, Action subtract, Func<int> get) Counter,
+			(Action<int> Add, Action<int> Delete, Action<int> Update) AccesoBD,
+			Action<int> PeticionHttp
+		) Operaciones(int i)
+		{
+			return (
+				Counter(), AccesoBD(), PeticionHttp(i));
+		}
+
+		public static Action<int> PeticionHttp(int i)
         {
+			return (i) => LlamadaHttp(i);
+		}
+
+		public static async void LlamadaHttp(int i)
+		{
 			HttpClient httpClient = new HttpClient();
 			var response = await httpClient.GetAsync("https://www.20minutos.es/");
 			Console.WriteLine($"Solicitud: {i} {response.StatusCode}");
+		}
+
+		public static (Action increment, Action subtract, Func<int> get) Counter ()
+        {
+			int i = 0;
+			return (() => i++, () => i--, () => i);
         }
+
+		public static (Action<int> Add, Action<int> Delete, Action<int> Update) AccesoBD()
+		{
+			return ((i) => Console.WriteLine($"Se añade el registro {i}"),
+				(i) => Console.WriteLine($"Se borra el registro {i}"),
+				(i) => Console.WriteLine($"Se modifica el registro {i}"));
+		}
+
+		public static void Log(Action<string> fncLogeo, string message) => fncLogeo(message);
+
+		public static void PrintConsole(string message) => Console.WriteLine(message);
+		public static void WriteFile(string message) => File.WriteAllText("prueba.log", message);
 	}
 
 	public class GeneralValidator<T>
@@ -153,7 +200,8 @@ namespace Closure
 			}
         ).Count() == 0;
 
-    }
+
+	}
 
 	public class Empleado
     {
