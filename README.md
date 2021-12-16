@@ -329,11 +329,12 @@ var (valor1,valor2) = objeto;
 Para ignorar un valor de la tupla, bastaría con poner _.
 
 Ej:
+    [Tuplas](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure/Program.cs)
 
 ####2.28. CURRIFICACIÓN
 Se trata de poder llamar a una serie de funciones de manera secuencial con un solo argumento. Básicamente permite que se pueda llamar a funciones que tienen dos parámetros desde funciones con uno, utilizando expresiones lambda par acrear funciones anónimas.
 Un ejemplo tenemos en esta dirección:
-
+[Currificacion](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure/Program.cs)
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
