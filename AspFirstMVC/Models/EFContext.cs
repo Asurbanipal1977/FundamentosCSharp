@@ -85,9 +85,12 @@ namespace AspFirstMVC.Models
             {
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.FileDb)
-                    .IsRequired()
-                    .HasColumnName("file.db");
+                entity.Property(e => e.FileDb).HasColumnName("file.db");
+
+                entity.Property(e => e.Path)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("path");
             });
 
             modelBuilder.Entity<Paise>(entity =>

@@ -9,5 +9,6 @@ namespace AspFirstMVC.Models
     {
         public int Id { get; set; }
         public byte[] FileDb { get; set; }
+        public string Path { get; set; }
     }
 }

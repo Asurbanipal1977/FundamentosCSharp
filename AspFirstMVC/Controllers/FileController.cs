@@ -28,6 +28,12 @@ namespace AspFirstMVC.Controllers
         public IActionResult Index()
         {
             ViewBag.message = TempData["message"];
+
+            if (TempData["error"] != null)
+            {
+                ModelState.AddModelError("ErrorMessage", $"Es un error: {TempData["error"]}");
+            }
+
             return View();
         }
 
@@ -50,14 +56,66 @@ namespace AspFirstMVC.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<IActionResult> Download1(int Id)
+        {
+            using (var db = _context)
+            {
+                try
+                {
+                    var file = await db.Files.FindAsync(Id);
+                    if (file == null) throw new Exception("No se encuentra ese elemento");
+                    return File(file.FileDb, "application/pdf", fileDownloadName: "descarga.pdf");
+                }
+                catch (Exception e)
+                {
+                    TempData["error"] = e.Message;
+                    return RedirectToAction("Index"); 
+                }
+            }
+        }
+
         //Grabar en disco
         public async Task<IActionResult> Upload2(UploadModel upload)
         {
             var filename = Path.Combine(_env.ContentRootPath, "uploads", upload.MyFile.FileName);
             await upload.MyFile.CopyToAsync(new FileStream(filename,FileMode.Create));
 
+            using (var db = _context)
+            {
+                var file = new File();
+                file.Path = upload.MyFile.FileName;
+                db.Files.Add(file);
+                db.SaveChanges();
+            }
+
             TempData["message"] = "Archivo arriba";
             return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Download2(int Id)
+        {
+            using (var db = _context)
+            {
+                try
+                {
+                    var file = await db.Files.FindAsync(Id);
+                    if (file == null) throw new Exception("No se encuentra ese elemento");
+                    var fullFileName = Path.Combine(_env.ContentRootPath, "uploads", file.Path);
+                    using (var fs = new FileStream(fullFileName,FileMode.Open,FileAccess.Read))
+                    {
+                        using (var ms=new MemoryStream())
+                        {
+                            await fs.CopyToAsync(ms);
+                            return File(ms.ToArray(), "application/pdf", fileDownloadName: "descarga.pdf");
+                        }
+                    }                        
+                }
+                catch (Exception e)
+                {
+                    TempData["error"] = e.Message;
+                    return RedirectToAction("Index");
+                }
+            }
         }
 
         //Grabar en S3 (Simple storage service) 
@@ -79,15 +137,49 @@ namespace AspFirstMVC.Controllers
                 }
 
                 TempData["message"] = "Archivo arriba";
+
+                System.IO.File.Delete(filename);
+
+                using (var db = _context)
+                {
+                    var file = new File();
+                    file.Path = upload.MyFile.FileName;
+                    db.Files.Add(file);
+                    db.SaveChanges();
+                }
             }
             catch (Exception e)
             {
-                TempData["message"] = $"Error: {e.Message}";
+                TempData["error"] = $"Error: {e.Message}";
             }
 
-            System.IO.File.Delete(filename);
             
             return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Download3(int Id)
+        {
+            using (var db = _context)
+            {
+                try
+                {
+                    var file = await db.Files.FindAsync(Id);
+                    if (file == null) throw new Exception("No se encuentra ese elemento");
+                    var minioCliente = new MinioClient(_configuration["server"], _configuration["user"], _configuration["password"]).WithSSL();
+
+                    using (var ms = new MemoryStream())
+                    {
+                        await minioCliente.GetObjectAsync("video", file.Path, (stream) => { stream.CopyTo(ms); } );
+                        return File(ms.ToArray(), "application/pdf", fileDownloadName: "descarga.pdf");
+                    }
+                    
+                }
+                catch (Exception e)
+                {
+                    TempData["error"] = e.Message;
+                    return RedirectToAction("Index");
+                }
+            }
         }
     }
 }

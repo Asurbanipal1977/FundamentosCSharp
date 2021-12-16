@@ -3,8 +3,10 @@
 
 <p>@ViewBag.message</p>
 
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
 <div class="text-center">
-    <form asp-controller="File" asp-action="Upload3" enctype="multipart/form-data" method="post">
+    <form asp-controller="File" asp-action="Upload1" enctype="multipart/form-data" method="post">
         <dl>
             <dt>
                 <label>Archivo</label>
@@ -15,4 +17,10 @@
         </dl>
         <input type="submit" value="Upload" />
     </form>
+</div>
+
+<div>
+    <a href="/File/Download1/1005">Descargar de BD</a><br />
+    <a href="/File/Download2/1006">Descargar de Disco</a> <br />
+    <a href="/File/Download3/1007">Descargar de S3</a>
 </div>
