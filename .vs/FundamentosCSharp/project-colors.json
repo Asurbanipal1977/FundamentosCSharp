@@ -80,7 +80,12 @@
       "ProjectGuid": "5725aa09-705e-4994-9c9e-41aaa378fbd4",
       "DisplayName": "Concurrencia",
       "ColorIndex": 14
+    },
+    "7d23b30e-045a-43e6-b802-bddbaec403e2": {
+      "ProjectGuid": "7d23b30e-045a-43e6-b802-bddbaec403e2",
+      "DisplayName": "HilosRecursosCompartidos",
+      "ColorIndex": 15
     }
   },
-  "NextColorIndex": 15
+  "NextColorIndex": 0
 }
