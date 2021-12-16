@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthTestingTests", "AuthTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapperMVC", "AutoMapperMVC\AutoMapperMVC.csproj", "{ADE4D033-AE05-4CC9-AC62-904B2E31FD61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concurrencia", "Concurrencia\Concurrencia.csproj", "{5725AA09-705E-4994-9C9E-41AAA378FBD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Concurrencia", "Concurrencia\Concurrencia.csproj", "{5725AA09-705E-4994-9C9E-41AAA378FBD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HilosRecursosCompartidos", "HilosRecursosCompartidos\HilosRecursosCompartidos.csproj", "{7D23B30E-045A-43E6-B802-BDDBAEC403E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{5725AA09-705E-4994-9C9E-41AAA378FBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5725AA09-705E-4994-9C9E-41AAA378FBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5725AA09-705E-4994-9C9E-41AAA378FBD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D23B30E-045A-43E6-B802-BDDBAEC403E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D23B30E-045A-43E6-B802-BDDBAEC403E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D23B30E-045A-43E6-B802-BDDBAEC403E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D23B30E-045A-43E6-B802-BDDBAEC403E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
