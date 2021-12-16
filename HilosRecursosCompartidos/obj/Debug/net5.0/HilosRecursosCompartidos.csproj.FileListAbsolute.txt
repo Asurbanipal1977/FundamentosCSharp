@@ -1,0 +1,16 @@
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\bin\Debug\net5.0\HilosRecursosCompartidos.exe
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\bin\Debug\net5.0\HilosRecursosCompartidos.deps.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\bin\Debug\net5.0\HilosRecursosCompartidos.runtimeconfig.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\bin\Debug\net5.0\HilosRecursosCompartidos.runtimeconfig.dev.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\bin\Debug\net5.0\HilosRecursosCompartidos.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\bin\Debug\net5.0\ref\HilosRecursosCompartidos.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\bin\Debug\net5.0\HilosRecursosCompartidos.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\HilosRecursosCompartidos.csproj.AssemblyReference.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\HilosRecursosCompartidos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\HilosRecursosCompartidos.AssemblyInfoInputs.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\HilosRecursosCompartidos.AssemblyInfo.cs
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\HilosRecursosCompartidos.csproj.CoreCompileInputs.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\HilosRecursosCompartidos.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\ref\HilosRecursosCompartidos.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\HilosRecursosCompartidos.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\HilosRecursosCompartidos\obj\Debug\net5.0\HilosRecursosCompartidos.genruntimeconfig.cache
