@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Closure
 {
@@ -9,6 +11,26 @@ namespace Closure
 	{
 		static void Main(string[] args)
 		{
+			Empleado empleado = new Empleado()
+            {
+				Id = 1,
+				Name = "Juan",
+				Position = "CEO"
+            };
+
+			//Ejemplo de uso de deconstructor
+			var (id, nombre, _) = empleado;
+			Console.WriteLine($"{id} {nombre}");
+
+			//ejemplo de tupla
+			var tupla = (a:5, b:4);
+			Console.WriteLine(tupla.a);
+
+			//Otro closure
+			var fncAcumulador = Acumulador(LlamadaHttp);
+			Parallel.For(1, 11, (i) => fncAcumulador());		
+
+
 			//Ejemplo validación general con expresiones lambda
 			Post post1 = new Post()
 			{
@@ -37,6 +59,8 @@ namespace Closure
 				Console.WriteLine($"Console externo {++i}");
 			}
 
+			Console.ReadLine();
+
 			//Ejemplo de validación de clase Post
 		}
 
@@ -58,6 +82,16 @@ namespace Closure
 				i++;
 			};
 		}
+
+		static Func<int> Acumulador(Action<int> fncLlamadaHttp)
+        {
+			int counter = 0;
+
+			return () => {
+				fncLlamadaHttp(++counter);
+				return counter; 
+			};
+        }
 
 		static void HacerAlgo(Action fn)
 		{
@@ -87,6 +121,13 @@ namespace Closure
 				yield return i;
 			}
 		}
+
+		public static async void LlamadaHttp(int i)
+        {
+			HttpClient httpClient = new HttpClient();
+			var response = await httpClient.GetAsync("https://www.20minutos.es/");
+			Console.WriteLine($"Solicitud: {i} {response.StatusCode}");
+        }
 	}
 
 	public class GeneralValidator<T>
@@ -112,5 +153,15 @@ namespace Closure
 			}
         ).Count() == 0;
 
+    }
+
+	public class Empleado
+    {
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public string Position { get; set; }
+
+		public void Deconstruct (out int Id, out string Name, out string Position) => (Id, Name, Position) = (this.Id, this.Name, this.Position);
+        
     }
 }
