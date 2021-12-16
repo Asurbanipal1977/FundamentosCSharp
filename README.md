@@ -308,6 +308,17 @@ Se basa en crear un observable y que aquel que se suscriba a dicho observable pu
 Muy bien explicado en: [Eventos](https://geeks.ms/etomas/2012/01/05/c-bsico-eventos/)
     
 Y un ejemplo en: [Eventos](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
+
+#### 2.27. TUPLAS
+Es una lista finita que contiene una serie de elementos. Ej:
+(int,string) valor = (5, "pepe");
+
+Para acceder a los valores:
+valor.Item1;
+valor.Item2;
+
+También se le puede dar nombre a cada uno de los campos:
+(int,string) valor = (entero: 5, cadena: "pepe");
     
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
