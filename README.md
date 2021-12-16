@@ -335,6 +335,17 @@ Ej:
 Se trata de poder llamar a una serie de funciones de manera secuencial con un solo argumento. Básicamente permite que se pueda llamar a funciones que tienen dos parámetros desde funciones con uno, utilizando expresiones lambda par acrear funciones anónimas.
 Un ejemplo tenemos en esta dirección:
 [Currificacion](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure/Program.cs)
+    
+#### 2.29. HILOS RECURSOS COMPARTIDOS
+Ej: [Hilos](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/HilosRecursosCompartidos/Program.cs)
+
+#### 2.30. SUBIR A NUGET
+- Dando a lbotón derecho, en Propiedades, Paquetes, se tiene que seleccionar la opción generar paquete Nuget.
+- Una vez generado al fichero se puede subir de dos formas:
+   - Sitio Nuget: https://www.nuget.org/
+   - Comando, sacando la clave del API de la página de nuget:
+    
+   dotnet nuget push NombreDeTuPaquete.1.0.0.nupkg --api-key tukey --source https://api.nuget.org/v3/index.json
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
