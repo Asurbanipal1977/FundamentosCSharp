@@ -19,6 +19,7 @@ string str2 = d2.ToUpper();
 - El tipo uint solo admite valores positivos.
 - 127.3f es float, 127.3d es double y 127.3m es un decimal.
 - int? Permite los nulos en ese tipo.
+- Una expresión lambda es una función o método anónimo con el que podemos crear tipo delegados y árboles de expresiones
 
 #### 2.1. TIPOS ANÓNIMOS Y REFLECTION
 - Los tipos anónimos tiene estas características:
@@ -124,7 +125,7 @@ Console.WriteLine(resultado);
  ````
 
 #### 2.7. CLOSURES
-- Los closures son funciones que pueden acceder a variables no locales (externas a la función), pero que son útiles a la función. Un closure en C# toma la forma de un método delegado / anónimo en línea. Se adjunta un cierre a su método principal, lo que significa que se puede hacer referencia a las variables definidas en el cuerpo del método principal desde el método anónimo.
+Los closures son funciones que pueden acceder a variables no locales (externas a la función), pero que son útiles a la función. Un closure en C# toma la forma de un método delegado / anónimo en línea. Se adjunta un cierre a su método principal, lo que significa que se puede hacer referencia a las variables definidas en el cuerpo del método principal desde el método anónimo.
 Los closure devuelven como respuesta una función y permiten guardar el estado entre ejecuciones. Ej:
 [Closure](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure)
 
