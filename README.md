@@ -129,6 +129,9 @@ Los closures son funciones que pueden acceder a variables no locales (externas a
 Los closure devuelven como respuesta una función y permiten guardar el estado entre ejecuciones. Ej:
 [Closure](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure)
 
+Se puede también pasar una función como parámetro.Ej:
+[Closure](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure)
+
 #### 2.8. PRUEBAS UNITARIAS
 Permiten asegurar la funcionalidad de la aplicación de manera que cualquier cambio no pueda provocar un mal funcionamiento de la aplicación. Un de las maneras es realizar un MStest.
 Para lanzar la prueba se tiene que usar el explorador de pruebas. Desde este explorador se puede lanzar todas las pruebas existentes.
