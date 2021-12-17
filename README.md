@@ -346,6 +346,32 @@ Ej: [Hilos](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/Hilos
    - Comando, sacando la clave del API de la página de nuget:
     
    dotnet nuget push NombreDeTuPaquete.1.0.0.nupkg --api-key tukey --source https://api.nuget.org/v3/index.json
+    
+#### 2.31. Utilizar Redis en C# .Net
+- Se tiene que instalar chocolatey, que es un gestor de paquetes, desde esta url:
+[chocolatey](https://chocolatey.org/install)
+- Se instala redis: choco install redis-64
+- En la aplicación, se instala el paquete StackExchange.Redis
+- Después, basta con generar una clase de este tipo:
+```
+    public class RedisDB
+    {
+        //Para objetos grandes
+        private static Lazy<ConnectionMultiplexer> _lazy;
+
+        public static ConnectionMultiplexer Connection
+        {
+            get { return _lazy.Value; }
+        }
+        static RedisDB()
+        {
+            _lazy = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect("localhost"));
+        }
+    }
+```
+    
+Ej: [Hilos](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/HilosRecursosCompartidos/Program.cs)
+    
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
