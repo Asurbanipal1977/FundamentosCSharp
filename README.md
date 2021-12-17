@@ -138,7 +138,8 @@ Para lanzar la prueba se tiene que usar el explorador de pruebas. Desde este exp
 Ej:
 [Test](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AuthTestingTests)
 
-#### 2.9. SCAFFOLDING PARA FRAMEWORK
+#### 2.9. SCAFFOLDING
+##### 2.9.1. NET CORE
 - Hay que instalar Microsoft.EntityFrameworkCore.SqlServer y Microsoft.EntityFrameworkCore.Tools en Nuget
 - Desde la línea de comando lanzar:
 scaffold-dbcontext "Server=gigabyte-sabre\sqlexpress;Database=pruebas;integrated security=True;" Microsoft.EntityFrameworkCore.SqlServer -outputdir Models -context EFContext
@@ -181,7 +182,16 @@ services.AddDbContext<ApplicationDbContext>(options =>
   "OtraBase": "Server=server2;Database=Base;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
 ```
+Mas detalles en:
+[Mas detalles](https://aspnetcoremaster.com/asp.net/core/2019/04/07/aspnetcore-appsettings.html)
+
 Ej: [Uso de bd distintas en desarrollo y producción](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)
+
+#### 2.9.2. NET FRAMEWORK
+Desde la versión 4 (Visual studio 2010), se dispone de la posibilidad de tener archivos de configuración por entorno. Habría que hacer algo como esto:
+[Varias versiones web.config](http://www.profesional.co.cr/es/2010/11/04/como-usar-diferentes-webconfig-para-cada-ambiente-transformaciones-webconfig-1473/)
+
+Los ficheros de configuración son xml.
 
 
 #### 2.10. PETICIONES HTTPCLIENT
