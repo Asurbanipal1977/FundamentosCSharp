@@ -143,6 +143,47 @@ Ej:
 - Desde la línea de comando lanzar:
 scaffold-dbcontext "Server=gigabyte-sabre\sqlexpress;Database=pruebas;integrated security=True;" Microsoft.EntityFrameworkCore.SqlServer -outputdir Models -context EFContext
 
+Para poder usar en .net core la configuración de desarrollo y producción:
+1. En program.cs se usará un código como este, de manera que el archivo de configuración tome datos del appsettings que corresponda.
+```
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        CreateHostBuilder(args).Build().Run();
+    }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureAppConfiguration((hostContext, config) =>
+            {
+                var env = hostContext.HostingEnvironment;
+
+                config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
+}
+```
+2. En la clase Startup.cs se debe inyectar la configuración mediante la interfaz.
+3. En el método ConfigureServices haremos:
+```
+services.AddDbContext<ApplicationDbContext>(options =>
+         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+```
+4. Dentro del archivo json de cada entorno tendremos que definir la cadena de conexión:
+```
+"ConnectionStrings": {
+  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=LeerAppSettings;Trusted_Connection=True;MultipleActiveResultSets=true",
+  "OtraBase": "Server=server2;Database=Base;Trusted_Connection=True;MultipleActiveResultSets=true"
+}
+```
+Ej: [Uso de bd distintas en desarrollo y producción](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)
+
+
 #### 2.10. PETICIONES HTTPCLIENT
 Nos permite llamar a servicios externos. Se tiene que crear el objeto httpClient, llamar a GetAsync y, después, leer la respuesta con httpResponse.Content.ReadAsStringAsync o ReadAsAync<T>
 
