@@ -58,6 +58,10 @@ var query = from person in people
 Hay un ejemplo de group by en:
 [GroupBy](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
 
+Métodos poco usados:
+- lista.All(c => c > 5) : Devolvería true o false en función de si se culpe o no la condición del lambda
+- lista.SelectMany(e => e.sublista, (lista,sublista)=> new {lista, sublista}).Select(l => new {Name: l.lista.Name, NameSub: l.sublista}) este permite obtener una lista mezclando lista y sublista.
+
 #### 2.5. DELEGADOS, FUNCTION, ACTION, PREDICADOS
 - Los delegados permiten enviar funciones por parámetro.
 - Func es una versión mejorada de los delegados. Por ejemplo, en el siguiente caso se indica que la función tiene un parámetro string y devuelve un int de salida. El número máximo de parámetros es de 16.
