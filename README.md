@@ -187,6 +187,9 @@ Mas detalles en:
 
 Ej: [Uso de bd distintas en desarrollo y producción](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)
 
+Es importante hacer notar que el nombre del entorno saldrá del archivo Properties\launchSettings.json en desarrollo. Para mas detalles:
+[Entornos](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-6.0)
+
 #### 2.9.2. NET FRAMEWORK
 Desde la versión 4 (Visual studio 2010), se dispone de la posibilidad de tener archivos de configuración por entorno. Habría que hacer algo como esto:
 [Varias versiones web.config](http://www.profesional.co.cr/es/2010/11/04/como-usar-diferentes-webconfig-para-cada-ambiente-transformaciones-webconfig-1473/)
