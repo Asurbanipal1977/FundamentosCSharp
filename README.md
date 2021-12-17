@@ -212,6 +212,11 @@ public static string Level (beer Beer) => beer.Alcohol switch
     
 #### 2.12. INTERFAZ DEFAULT METHOD
 Desde C# 6 se puede poner un método por defecto en una interfaz, cosa que antes no se podía
+Se puede incluso definir el mismo método implementado en dos interfaces distintas que implemente una clase. La limitación es que debemos indicar que interfaz usamos.Ej:
+((IPrueba) oPrueba).Metodo()
+
+Si se ha definido un método igual en la clase, ejecutará el evento de esa clase independientemente del interfaz indicado. 
+
 
 #### 2.13. AUTOMAPPERS
 Nos permite pasar datos de un objeto a otro de manera automática. Para poderlo usar hay que:
