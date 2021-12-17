@@ -427,7 +427,8 @@ Ej: [Hilos](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/Hilos
 Ej: [Hilos](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/HilosRecursosCompartidos/Program.cs)
     
 #### 2.32. PRINCIPIOS SOLID
-El principio Solid o principio de responsabilidad única indica que una clase solo debería tener una responsabilidad. Por tanto, tendremos una clase con los datos, otra que, por ejemplo, grabe en base de datos y otra que envie correos.    
+El principio Solid o principio de responsabilidad única indica que una clase solo debería tener una responsabilidad. Por tanto, tendremos una clase con los datos, otra que, por ejemplo, grabe en base de datos y otra que envie correos.
+Para los principios solid ayudan mucho las interfaces, puesto que gracias al poliformismo, podenos invocar al método de una clase que implementa un interfaz 
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
