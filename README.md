@@ -20,6 +20,9 @@ string str2 = d2.ToUpper();
 - 127.3f es float, 127.3d es double y 127.3m es un decimal.
 - int? Permite los nulos en ese tipo.
 - Una expresión lambda es una función o método anónimo con el que podemos crear tipo delegados y árboles de expresiones
+- Enviroment.NewLine permite poner una linea en blanco tal y como hace \n.
+- Se puede encadenar métodos. También puedes crear métodos que encadenen. Para ello siempre debes responder el objeto actual. 
+Ej de concatenación: cadena.toUpper().Trim()
 
 #### 2.1. TIPOS ANÓNIMOS Y REFLECTION
 - Los tipos anónimos tiene estas características:
