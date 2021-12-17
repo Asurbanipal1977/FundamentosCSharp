@@ -6,6 +6,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,7 +33,7 @@ namespace AspFirstMVC
 			services.AddHttpClient<IServicio, Servicio>();
 			services.AddTransient<IValidator<Post>, PostValidator>();
 			services.AddSingleton<IConfiguration>(Configuration);
-			services.AddDbContext<EFContext>();
+			services.AddDbContext<EFContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) );
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
