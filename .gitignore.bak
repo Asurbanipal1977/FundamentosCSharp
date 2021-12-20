@@ -44,4 +44,9 @@ testem.log
 .DS_Store
 Thumbs.db
 *.launch
+<<<<<<< HEAD
 .vs/*
+=======
+.vs/*
+AspFirstMVC/obj/Debug/net5.0/AspFirstMVC.csproj.AssemblyReference.cache
+>>>>>>> 08c81bf (blazor)
