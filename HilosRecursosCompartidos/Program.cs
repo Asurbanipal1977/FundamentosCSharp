@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Concurrent;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +9,7 @@ using StackExchange.Redis;
 
 namespace HilosRecursosCompartidos
 {
-    internal class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
@@ -24,6 +26,33 @@ namespace HilosRecursosCompartidos
 
             var valor = redisDb.StringGet("1");
             Console.WriteLine(valor);
+
+            //Memoization
+            var watch = Stopwatch.StartNew();
+            Func<long, long> factorial = null;
+            factorial = n => n > 1 ? factorial(n - 1) : 1;
+
+            for (int i = 0; i < 200000000; i++)
+                factorial(9);
+            watch.Stop();
+            Console.WriteLine(watch.ElapsedMilliseconds);
+
+
+            var watch2 = Stopwatch.StartNew();
+            var factorial2 = factorial.Memoize();
+
+            for (int i = 0; i < 200000000; i++)
+                factorial2(9);
+            watch2.Stop();
+            Console.WriteLine(watch2.ElapsedMilliseconds);
+
+        }
+
+        public static Func<T, TResult> Memoize<T, TResult>(this Func<T, TResult> func)
+        {
+            var cache = new ConcurrentDictionary<T, TResult>();
+            //Se crea un diccionario de funciones
+            return (a) => cache.GetOrAdd(a, func);
         }
 
         static void Write (string content, FileStream fs)
