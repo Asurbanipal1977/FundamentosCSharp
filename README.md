@@ -443,7 +443,8 @@ El principio Solid o principio de responsabilidad única indica que una clase so
 Para los principios solid ayudan mucho las interfaces, puesto que gracias al poliformismo, podenos invocar al método de una clase que implementa un interfaz 
 
 #### 2.37. MEMOIZATION
-Es el proceso de optimización del código para aumentar la velocidad de ejecución. Si tienes una función puro (siempre devuelve lo mismo), no es útil ejecutar la misma función, di no que puedes tener almacenado en una caché los valores de esa ejecución 
+Es el proceso de optimización del código para aumentar la velocidad de ejecución. Si tienes una función puro (siempre devuelve lo mismo), no es útil ejecutar la misma función, di no que puedes tener almacenado en una caché los valores de esa ejecución.
+Ej: [Memoization](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/HilosRecursosCompartidos)
     
 #### 2.38 BLAZOR CON SWAGGER
 Podemos usar Blazor con Swagger. Para ello:
