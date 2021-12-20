@@ -85,7 +85,12 @@
       "ProjectGuid": "7d23b30e-045a-43e6-b802-bddbaec403e2",
       "DisplayName": "HilosRecursosCompartidos",
       "ColorIndex": 15
+    },
+    "524355c0-bee0-4e8c-8189-8e3e2c6a24fb": {
+      "ProjectGuid": "524355c0-bee0-4e8c-8189-8e3e2c6a24fb",
+      "DisplayName": "BlazorApp",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 1
 }

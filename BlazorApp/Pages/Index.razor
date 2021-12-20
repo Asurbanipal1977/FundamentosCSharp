@@ -1,0 +1,51 @@
+﻿@page "/"
+@inject IJSRuntime jsRuntime
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.<br />
+<button @onclick="Cervezas">Cargar cervezas</button><br />
+<button @onclick="Peticiones">Cargar peticiones</button>
+
+<div id="idCervezas">
+@if (resultCerveza!=null) {     
+        //jsRuntime.InvokeVoidAsync("inicializarDiv", "idCervezas", "");  
+      @foreach (var item in resultCerveza)
+      {
+          @(String.Format("{0} \n {1}", item.Marca, item.Nombre))<br />
+      }
+} 
+</div>
+
+<div id="idPeticiones">
+@if (resultPosts!=null) {
+     //jsRuntime.InvokeVoidAsync("inicializarDiv", "idPeticiones", "");
+       @foreach (var item in resultPosts)
+      {
+          @(String.Format("{0} \n {1}", item.Title, item.Body))<br /><br /><br />
+      }       
+}
+</div>
+
+@code {
+    private ICollection<Cerveza> resultCerveza;
+    private ICollection<Post> resultPosts;   
+
+    private swaggerClient client = new swaggerClient("https://localhost:7177", new HttpClient());
+    private async Task Cervezas()
+    {
+        await jsRuntime.InvokeVoidAsync("inicializarDiv", "idCervezas", "Cargando...");
+        resultCerveza = await client.CervezasAsync();
+    }
+
+    private async Task Peticiones()
+    {
+        await jsRuntime.InvokeVoidAsync("inicializarDiv", "idPeticiones", "Cargando...");
+        resultPosts = await client.PeticionAsync();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        //await Cervezas();
+    }
+}

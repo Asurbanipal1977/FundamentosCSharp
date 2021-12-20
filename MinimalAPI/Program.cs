@@ -1,15 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using MinimalAPI;
 using MinimalAPI.Models;
+using System.Text.Json;
 
+string MyCors = "MyCors";
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<EFContext>();
 builder.Services.AddTransient<Prueba>();
+builder.Services.AddCors(opts => opts.AddPolicy(MyCors, builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()));
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseCors(MyCors);
 app.UseSwagger();
 app.UseSwaggerUI();
 
@@ -24,7 +29,11 @@ app.MapGet("/peticion", async () =>
     var httpResponseMessage = await client.GetAsync(url);
     httpResponseMessage.EnsureSuccessStatusCode();
     var respuesta = await httpResponseMessage.Content.ReadAsStringAsync();
-    return respuesta;
+
+    return JsonSerializer.Deserialize<Models.Post[]>(respuesta, new JsonSerializerOptions
+    {
+        PropertyNameCaseInsensitive = true,
+    });
 });
 
 app.MapGet("/cervezas", 

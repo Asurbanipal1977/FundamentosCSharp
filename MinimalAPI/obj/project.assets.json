@@ -702,6 +702,16 @@
             "rid": "win"
           }
         }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
       }
     }
   },
@@ -2046,12 +2056,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0",
+      "Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Swashbuckle.AspNetCore.Swagger >= 6.2.3"
     ]
@@ -2087,7 +2103,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\mame1\\source\\repos\\FundamentosCSharp\\FundamentosCSharp\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\mame1\\source\\repos\\FundamentosCSharp\\FundamentosCSharp\\Models\\Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
