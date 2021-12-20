@@ -32,7 +32,7 @@ namespace HilosRecursosCompartidos
             Func<long, long> factorial = null;
             factorial = n => n > 1 ? factorial(n - 1) : 1;
 
-            for (int i = 0; i < 200000000; i++)
+            for (int i = 0; i < 20000000; i++)
                 factorial(9);
             watch.Stop();
             Console.WriteLine(watch.ElapsedMilliseconds);
@@ -41,7 +41,7 @@ namespace HilosRecursosCompartidos
             var watch2 = Stopwatch.StartNew();
             var factorial2 = factorial.Memoize();
 
-            for (int i = 0; i < 200000000; i++)
+            for (int i = 0; i < 20000000; i++)
                 factorial2(9);
             watch2.Stop();
             Console.WriteLine(watch2.ElapsedMilliseconds);
