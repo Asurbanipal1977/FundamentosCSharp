@@ -29,6 +29,9 @@ chrome-profiler-events*.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+.vs/*
+*.cache
+*.suo
 
 # misc
 /.sass-cache
@@ -44,5 +47,3 @@ testem.log
 .DS_Store
 Thumbs.db
 *.launch
-.vs/*
-*.cache
