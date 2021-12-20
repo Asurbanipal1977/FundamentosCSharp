@@ -444,7 +444,13 @@ Para los principios solid ayudan mucho las interfaces, puesto que gracias al pol
 
 #### 2.37. MEMOIZATION
 Es el proceso de optimización del código para aumentar la velocidad de ejecución. Si tienes una función puro (siempre devuelve lo mismo), no es útil ejecutar la misma función, di no que puedes tener almacenado en una caché los valores de esa ejecución 
-
+    
+#### 2.38 BLAZOR CON SWAGGER
+Podemos usar Blazor con Swagger. Para ello:
+- Tomamos el fichero .json del swagger: https://localhost:7177/swagger/v1/swagger.json
+- Damos botón derecho en Connected Services y damos a administrar servicios conectados.
+- Se llama a los servicios de la API.
+Ej: [Blazor](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/BlazorApp)
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
