@@ -636,7 +636,7 @@ Ej: Swagger en Minimal API ->
 ### 7. SWAGGER Y ANGULAR
 Este es un proyecto con swagger junto con un proyecto de Angular que usa el api de swagger.
 1. Creamos un proyecto API o minimal API.
-2. Se tiene que dar permiso para permitir el acceso a ese API  y evitar el error de CORS.
+2. Se tiene que dar permiso para permitir el acceso a ese API  y evitar el error de CORS. El CORS es un mecanisco para evitar que se compartan recursos entre dos dominios.
 3. Se genera el proyecto de angular.
 4. Se copia el json del swagger, que tiene la definición del servicio, en una carpeta del proyecto angular.
 5. Añadir en ese json el campo servers en el que indicaremos la ruta del back.
