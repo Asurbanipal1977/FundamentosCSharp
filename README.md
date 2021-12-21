@@ -452,6 +452,17 @@ Podemos usar Blazor con Swagger. Para ello:
 - Damos botón derecho en Connected Services y damos a administrar servicios conectados.
 - Se llama a los servicios de la API.
 Ej: [Blazor](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/BlazorApp)
+    
+#### SIGNALR
+Permite recibir la información de un CRUD en tiempo real.
+    - Se agrega la biblioteca signalr del lado de cliente: @microsoft/signalr@latest
+    - Se crea una clase que herede de Hub y que realice el envío de los datos.
+    - Se añade en el startup la inyeccion y se añade el punto de acceso al hub: endpoints.MapHub<PostHub>("/postHub");
+    - Se añade la libreria js: /lib/microsoft/signalr/dist/browser/signalr.min.js en el fichero dónde queramos que los datos estén en tiempo real.
+    - Se define con javascript la conexión.
+    - Se añade la inyección de dependencia del hub a la clase que queramos usar esta librería.
+    - Se llama a All.SendAsync para que el envío se realice y se muestre en tiempo real los cambios :  _hubContext.Clients.All.SendAsync("Receive", post.Id, post.Title;
+[SignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)    
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
