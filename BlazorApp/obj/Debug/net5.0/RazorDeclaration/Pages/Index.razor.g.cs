@@ -109,11 +109,6 @@ using BlazorApp.Shared;
         resultPosts = await client.PeticionAsync();
     }
 
-    protected override async Task OnInitializedAsync()
-    {
-        //await Cervezas();
-    }
-
 #line default
 #line hidden
 #nullable disable

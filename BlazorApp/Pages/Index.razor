@@ -43,9 +43,4 @@ Welcome to your new app.<br />
         await jsRuntime.InvokeVoidAsync("inicializarDiv", "idPeticiones", "Cargando...");
         resultPosts = await client.PeticionAsync();
     }
-
-    protected override async Task OnInitializedAsync()
-    {
-        //await Cervezas();
-    }
 }
