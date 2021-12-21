@@ -50,7 +50,7 @@ Los generic permiten hacer clases que pueden recibir distintas clases. Con la cl
 public class SendRequest<T> where T : ISendRequest
 ```
 
-#### 2.4. LINQ
+#### 2.4. LINQ Y PLINQ
 Linq extiende las propiedades de los objetos.
 ```
 var query = from person in people
@@ -64,6 +64,9 @@ Hay un ejemplo de group by en:
 Métodos poco usados:
 - lista.All(c => c > 5) : Devolvería true o false en función de si se culpe o no la condición del lambda
 - lista.SelectMany(e => e.sublista, (lista,sublista)=> new {lista, sublista}).Select(l => new {Name: l.lista.Name, NameSub: l.sublista}) este permite obtener una lista mezclando lista y sublista.
+
+PLinq es un Linq pero usando ejecución paralela. Se puede conseguir con los métodos: AsParallel().WithDegreeOfParallelism(2). El segundo método es para indicar el número de hilos.
+Ej: [PLinq](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
 
 #### 2.5. DELEGADOS, FUNCTION, ACTION, PREDICADOS
 - Los delegados permiten enviar funciones por parámetro.
