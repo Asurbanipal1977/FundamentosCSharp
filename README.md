@@ -65,6 +65,14 @@ Métodos poco usados:
 - lista.All(c => c > 5) : Devolvería true o false en función de si se culpe o no la condición del lambda
 - lista.SelectMany(e => e.sublista, (lista,sublista)=> new {lista, sublista}).Select(l => new {Name: l.lista.Name, NameSub: l.sublista}) este permite obtener una lista mezclando lista y sublista.
 
+Se puede también leer archivos xml con c#.Ej:
+```
+var filename = @"C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Concurrencia\store.xml";
+XDocument store = XDocument.Load(filename);
+var empleadosXML = store.Root.Elements("Empleado").OrderBy(e=>e.Attribute("Nombre").Value).ToList();
+empleadosXML.ForEach(empleado => Console.WriteLine(empleado.Attribute("Nombre").Value));
+```
+
 PLinq es un Linq pero usando ejecución paralela. Se puede conseguir con los métodos: AsParallel().WithDegreeOfParallelism(2). El segundo método es para indicar el número de hilos.
 Ej: [PLinq](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Concurrencia/Program.cs)
 
