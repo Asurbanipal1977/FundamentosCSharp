@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Reactive.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Concurrencia
 {
@@ -149,6 +150,13 @@ namespace Concurrencia
             var filterNumeros = listaNumeros.AsParallel().WithDegreeOfParallelism(2).Where(e => IsNumberValid(e)).ToList();
             watch2.Stop();
             Console.WriteLine($"Tiempo con Linq Lista {watch2.ElapsedMilliseconds}");
+
+            //Leer xml
+            var filename = @"C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\Concurrencia\store.xml";
+            XDocument store = XDocument.Load(filename);
+
+            var empleadosXML = store.Root.Elements("Empleado").OrderBy(e=>e.Attribute("Nombre").Value).ToList();
+            empleadosXML.ForEach(empleado => Console.WriteLine(empleado.Attribute("Nombre").Value));
 
             Console.ReadLine();
         }

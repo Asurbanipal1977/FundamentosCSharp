@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Empleados>
+	<Empleado Nombre="Juan" Apellido="Garcia" Edad="18"></Empleado>
+	<Empleado Nombre="Miguel" Apellido="Sanchez" Edad="20"></Empleado>
+</Empleados>
