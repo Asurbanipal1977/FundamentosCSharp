@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Reactive.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Concurrencia
@@ -142,8 +143,21 @@ namespace Concurrencia
                 Console.WriteLine($"El {totalventa.Name} del país {totalventa.Country} tiene un sumatorio de {totalventa.Total} ");
             }
 
-            
+
+            var watch2 = Stopwatch.StartNew();
+            var listaNumeros = Enumerable.Range(0,1000);
+            var filterNumeros = listaNumeros.AsParallel().WithDegreeOfParallelism(2).Where(e => IsNumberValid(e)).ToList();
+            watch2.Stop();
+            Console.WriteLine($"Tiempo con Linq Lista {watch2.ElapsedMilliseconds}");
+
             Console.ReadLine();
+        }
+
+
+        public static bool IsNumberValid(int num)
+        {
+            Thread.Sleep(10);
+            return (num % 2 != 0 && num % 5 != 0);
         }
         
 
