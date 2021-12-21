@@ -203,6 +203,14 @@ Desde la versión 4 (Visual studio 2010), se dispone de la posibilidad de tener 
 
 Los ficheros de configuración son xml.
 
+#### 2.9.3. ENTITYFRAMEWORK PARA SQLLITE CON FIRST CODE.
+1. Crear un proyecto de consola o de otro tipo de .net core.
+2. Instalar la librería de entityFramework para sqllite.
+3. Crear una clase por cada tabla.
+4. Crear una clase que herede de DbContext y sobreescribir lo métodos OnConfiguring y OnModelCreating
+5. Generar el acceso a bd y grabar en la tabla.
+6. Abrir el archivo con un manejador de BD como Navicat.
+
 
 #### 2.10. PETICIONES HTTPCLIENT
 Nos permite llamar a servicios externos. Se tiene que crear el objeto httpClient, llamar a GetAsync y, después, leer la respuesta con httpResponse.Content.ReadAsStringAsync o ReadAsAync<T>
