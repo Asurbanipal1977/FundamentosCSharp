@@ -480,9 +480,10 @@ Ej:[SignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspF
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
+Se trata de un patrón de diseño que se encarga de extraer la responsabilidad de la creación de instancias de un componente para delegarla en otro.
 Para inyectar dependencias en .Net Core se puede usar estas sentencias, según el ciclo de vida:
 - AddTransient: Los servicios son creados cada vez que hay una petición.Este ciclo de vida funciona mejor para servicios sencillos y sin estado.
-- AddScope: Los servicios se crean una vez por petición dentro del alcance. Por ejemplo, para un misma petición reutiliza la misma instancia.
+- AddScoped: Los servicios se crean una vez por petición dentro del alcance. Por ejemplo, para un misma petición reutiliza la misma instancia.
 - AddSingleton: Los servicios solo se crean una vez, en la parte de configuración del servicio y todas las siguientes veces se usa la misma instancia
 - AddHttpClient: Es un singleton que añade la funcionalidad de HttpClient.
 
