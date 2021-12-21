@@ -8,12 +8,34 @@
 @*Permite Mostrar los mensajes de error si se dan*@
 @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div id="divPost">
+
+</div>
+
 @foreach (var elem in Model)
 {
     <p>@elem.Body</p>
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+<script src="/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/postHub").build();
+
+    connection.start().then(function () {
+        console.log("Conexión exitosa")
+    }).catch(function (err) {
+        console.error(err);
+    });
+    connection.on("Receive", function (Id, Title) {
+        let divElem = document.createElement("div");
+        divElem.textContent = `${Id} ${Title}`;
+        document.getElementById("divPost").appendChild(divElem);
+    })
+</script>

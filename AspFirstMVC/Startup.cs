@@ -29,6 +29,7 @@ namespace AspFirstMVC
 		{
 			services.AddControllersWithViews();
 			services.AddMvc().AddFluentValidation();
+			services.AddSignalR();
 
 			services.AddHttpClient<IServicio, Servicio>();
 			services.AddTransient<IValidator<Post>, PostValidator>();
@@ -61,6 +62,7 @@ namespace AspFirstMVC
 				endpoints.MapControllerRoute(
 					name: "default",
 					pattern: "{controller=Home}/{action=Index}/{id?}");
+				endpoints.MapHub<PostHub>("/postHub");
 			});
 		}
 	}
