@@ -453,7 +453,7 @@ Podemos usar Blazor con Swagger. Para ello:
 - Se llama a los servicios de la API.
 Ej: [Blazor](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/BlazorApp)
     
-#### SIGNALR
+#### 2.39. SIGNALR
 Permite recibir la información de un CRUD en tiempo real.
     - Se agrega la biblioteca signalr del lado de cliente: @microsoft/signalr@latest
     - Se crea una clase que herede de Hub y que realice el envío de los datos.
