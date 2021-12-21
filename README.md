@@ -484,7 +484,13 @@ Permite recibir la información de un CRUD en tiempo real.
 - Se llama a All.SendAsync para que el envío se realice y se muestre en tiempo real los cambios:  
     _hubContext.Clients.All.SendAsync("Receive", post.Id, post.Title);
     
-Ej:[SignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)    
+Ej:[SignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)   
+    
+#### 2.40. PROCESOS EN SEGUNDO PLANO
+- Se crea una clase que implenta de IHostedService.
+- Se implementan los métodos StartAsync y StopAsync.
+- Se inyecta en el fichero Startup.cs
+Ej:[Segundo Plano](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AutoMapperMVC/IntervalTaskHostedService.cs)   
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
