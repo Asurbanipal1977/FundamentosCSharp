@@ -209,7 +209,8 @@ Los ficheros de configuración son xml.
 3. Crear una clase por cada tabla.
 4. Crear una clase que herede de DbContext y sobreescribir lo métodos OnConfiguring y OnModelCreating
 5. Generar el acceso a bd y grabar en la tabla.
-6. Abrir el archivo con un manejador de BD como Navicat.
+6. Abrir el archivo con un manejador de BD como Navicat o DB Browser for Lite.
+Ej: [SQLLite](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/SqlLiteDoNet)
 
 
 #### 2.10. PETICIONES HTTPCLIENT
