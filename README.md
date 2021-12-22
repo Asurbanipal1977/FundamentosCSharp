@@ -493,7 +493,12 @@ Se puede también usar signalR para una aplicación de Blazor con parte cliente 
 - Se crea una clase que implenta de IHostedService.
 - Se implementan los métodos StartAsync y StopAsync.
 - Se inyecta en el fichero Startup.cs
-Ej:[Segundo Plano](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AutoMapperMVC/IntervalTaskHostedService.cs)   
+Ej:[Segundo Plano](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AutoMapperMVC/IntervalTaskHostedService.cs) 
+
+#### 2.41. GUID
+Es un tipo de datos lamado Identificador único global. Se utiliza para poder insertar en una tabla con clave ajena. En ese caso, tenemos que insertar antes en la tabla padre y este tipo de datos nos permite obtener un número único para poder dar de alta en la tabla relacionada.
+
+
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
