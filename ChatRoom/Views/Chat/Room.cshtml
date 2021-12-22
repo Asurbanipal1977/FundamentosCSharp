@@ -1,0 +1,52 @@
+﻿@model int
+
+<h1>@ChatRoom.Controllers.ChatController.rooms.GetValueOrDefault(Model)</h1>
+
+<div class="row">
+    <div class="col-12">
+        <input type="text" placeholder="usuario" id="user" />
+        <input type="text" placeholder="mensaje" id="message" />
+        <button id="btnSend">Enviar</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div id="messages"></div>
+    </div>
+
+     <div class="col-6">
+        <div id="alerts"></div>
+    </div>
+</div>
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/chat").build();
+
+    connection.start().then(() => {
+        connection.invoke("AddToGroup","@Model");
+    }).catch((e) => console.error(e));
+
+    document.getElementById("btnSend").addEventListener("click",(event) => {
+        let room = "@Model";
+        let user = document.getElementById("user").value;
+        let message = document.getElementById("message").value;
+        connection.invoke("sendMessage",room,user,message).catch((e) => console.log(e));
+
+        document.getElementById("message").value = "";
+        document.getElementById("message").focus();
+
+        event.preventDefault();
+    });
+
+    connection.on("ReceiveMessage",(user, message) => {
+       document.getElementById("messages").innerHTML = `<div><b> ${user} </b> dijo: ${message}</div>` + 
+                                                    document.getElementById("messages").innerHTML;
+    });
+
+     connection.on("ShowUser",(message) => {
+       document.getElementById("alerts").innerHTML = message + document.getElementById("alerts").innerHTML;
+    });
+
+</script>

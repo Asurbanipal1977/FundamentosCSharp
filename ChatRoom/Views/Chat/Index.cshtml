@@ -1,0 +1,13 @@
+﻿<div class="row">
+    <div class="col-md-8 offset-2">
+        <h2>Salas de Chat</h2>
+        <ul class="list-group">
+            @foreach (var item in ChatRoom.Controllers.ChatController.rooms)
+           {
+               <li class="list-group-item">
+                   <a href="/chat/room?room=@item.Key">@item.Value</a>
+               </li>
+           }            
+        </ul>
+    </div>
+</div>
