@@ -486,6 +486,9 @@ Permite recibir la información de un CRUD en tiempo real.
     
 Ej:[SignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)   
     
+Se puede también usar signalR para una aplicación de Blazor con parte cliente y servidor. Ej:
+[BlazorSignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/BlazorSignalR)     
+    
 #### 2.40. PROCESOS EN SEGUNDO PLANO
 - Se crea una clase que implenta de IHostedService.
 - Se implementan los métodos StartAsync y StopAsync.
