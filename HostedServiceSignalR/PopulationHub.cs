@@ -1,6 +1,8 @@
-﻿namespace HostedServiceSignalR
+﻿using Microsoft.AspNetCore.SignalR;
+
+namespace HostedServiceSignalR
 {
-    public class PopulationHub
+    public class PopulationHub : Hub
     {
     }
 }

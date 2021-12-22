@@ -2,7 +2,23 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="list">
+    
 </div>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js">
+</script>
+
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/listaAlumnos").build();
+    connection.start().then(()=> console.log("conectado")).catch((e) => console.log(e));
+
+    connection.on("listadoAlumnos",(alumnos) => {
+        console.log(alumnos);
+        document.getElementById("list").innerHTML = "";
+        alumnos.forEach((element) => {
+            let divDatos = document.createElement("div");
+            divDatos.textContent = `Id: ${element.id}, Nombre: ${element.nombre}, Apellidos: ${element.apellidos}, Dni: ${element.dni}`;
+            document.getElementById("list").appendChild(divDatos);
+        });
+    })
+</script>
