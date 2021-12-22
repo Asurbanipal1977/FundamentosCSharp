@@ -496,7 +496,10 @@ Otro ejemplo con SignalR, EntityFrameWork y IHostedService (Procesos en Segundo 
        _hubContext = hubContext;
     }
 ```
-Ej:[HostedServiceSignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/HostedServiceSignalR)      
+Ej:[HostedServiceSignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/HostedServiceSignalR)
+    
+Mediante signalR se puede crear un chat con varias salas. El ejemplo:
+[Chat](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/ChatRoom) 
     
 #### 2.40. PROCESOS EN SEGUNDO PLANO
 - Se crea una clase que implenta de IHostedService.
@@ -665,3 +668,6 @@ En esta ruta vienen las instrucciones de instalación
   
 Ejemplo:
 [angularswagger](https://github.com/Asurbanipal1977/FundamentosCSharp/blob/main/angularswagger/app/src/app/app.component.ts)
+    
+#### 8. CÓDIGO JAVASCRIPT EN VISUAL STUDIO CODE
+Para poder usar el intellisense de javascript, hay que usar una librería llamada Javascript Snippet Pack. De esta manera tendremos un intellisense muy útil.
