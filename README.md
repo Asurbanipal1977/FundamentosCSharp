@@ -487,7 +487,16 @@ Permite recibir la información de un CRUD en tiempo real.
 Ej:[SignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AspFirstMVC)   
     
 Se puede también usar signalR para una aplicación de Blazor con parte cliente y servidor. Ej:
-[BlazorSignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/BlazorSignalR)     
+[BlazorSignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/BlazorSignalR)   
+    
+Otro ejemplo con SignalR, EntityFrameWork y IHostedService (Procesos en Segundo plano). En este caso, el SignalR se inyecta en el IHostedService con:
+```
+    public PopulationHostedService (IHubContext<PopulationHub> hubContext)
+    {
+       _hubContext = hubContext;
+    }
+```
+Ej:[HostedServiceSignalR](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/HostedServiceSignalR)      
     
 #### 2.40. PROCESOS EN SEGUNDO PLANO
 - Se crea una clase que implenta de IHostedService.
