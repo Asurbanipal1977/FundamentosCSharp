@@ -29,7 +29,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HilosRecursosCompartidos", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{524355C0-BEE0-4E8C-8189-8E3E2C6A24FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlLiteDoNet", "SqlLiteDoNet\SqlLiteDoNet.csproj", "{9CF3C914-095E-4492-BB31-5BF8641A6CD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlLiteDoNet", "SqlLiteDoNet\SqlLiteDoNet.csproj", "{9CF3C914-095E-4492-BB31-5BF8641A6CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalR.Server", "BlazorSignalR\Server\BlazorSignalR.Server.csproj", "{70AB98FA-B752-4C8A-AA28-7F352112EE8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalR.Client", "BlazorSignalR\Client\BlazorSignalR.Client.csproj", "{8953E307-1883-4BDC-997D-B8B976EC0F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalR.Shared", "BlazorSignalR\Shared\BlazorSignalR.Shared.csproj", "{7C0891E5-F21D-45BC-AD15-3503980C98FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +99,18 @@ Global
 		{9CF3C914-095E-4492-BB31-5BF8641A6CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CF3C914-095E-4492-BB31-5BF8641A6CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CF3C914-095E-4492-BB31-5BF8641A6CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70AB98FA-B752-4C8A-AA28-7F352112EE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70AB98FA-B752-4C8A-AA28-7F352112EE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70AB98FA-B752-4C8A-AA28-7F352112EE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70AB98FA-B752-4C8A-AA28-7F352112EE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8953E307-1883-4BDC-997D-B8B976EC0F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8953E307-1883-4BDC-997D-B8B976EC0F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8953E307-1883-4BDC-997D-B8B976EC0F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8953E307-1883-4BDC-997D-B8B976EC0F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0891E5-F21D-45BC-AD15-3503980C98FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0891E5-F21D-45BC-AD15-3503980C98FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0891E5-F21D-45BC-AD15-3503980C98FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0891E5-F21D-45BC-AD15-3503980C98FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

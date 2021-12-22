@@ -1,0 +1,12 @@
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\bin\Debug\net5.0\BlazorSignalR.Shared.deps.json
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\bin\Debug\net5.0\BlazorSignalR.Shared.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\bin\Debug\net5.0\ref\BlazorSignalR.Shared.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\bin\Debug\net5.0\BlazorSignalR.Shared.pdb
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\obj\Debug\net5.0\BlazorSignalR.Shared.csproj.AssemblyReference.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\obj\Debug\net5.0\BlazorSignalR.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\obj\Debug\net5.0\BlazorSignalR.Shared.AssemblyInfoInputs.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\obj\Debug\net5.0\BlazorSignalR.Shared.AssemblyInfo.cs
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\obj\Debug\net5.0\BlazorSignalR.Shared.csproj.CoreCompileInputs.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\obj\Debug\net5.0\BlazorSignalR.Shared.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\obj\Debug\net5.0\ref\BlazorSignalR.Shared.dll
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\BlazorSignalR\Shared\obj\Debug\net5.0\BlazorSignalR.Shared.pdb
