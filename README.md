@@ -672,7 +672,7 @@ Ejemplo:
 #### 8. CÓDIGO JAVASCRIPT EN VISUAL STUDIO CODE
 Para poder usar el intellisense de javascript, hay que usar una librería llamada Javascript Snippet Pack. De esta manera tendremos un intellisense muy útil.
     
-####9. SECURIZAR SERVICIOS CON WEBTOKEN
+#### 9. SECURIZAR SERVICIOS CON WEBTOKEN
 Ejemplo con JWT
 
 Esto es un ejemplo de Api con JWT que nos permite securizar estos servicios. Para securizarlos se debe indicar en el controlador:
