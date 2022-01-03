@@ -673,12 +673,10 @@ Ejemplo:
 Para poder usar el intellisense de javascript, hay que usar una librería llamada Javascript Snippet Pack. De esta manera tendremos un intellisense muy útil.
     
 #### 9. SECURIZAR SERVICIOS CON WEBTOKEN
-Ejemplo con JWT
-
-Esto es un ejemplo de Api con JWT que nos permite securizar estos servicios. Para securizarlos se debe indicar en el controlador:
+Se puede securizar servicios mediante la Api JWT. Para securizarlos se debe indicar en el controlador:
 [Authorize]
 
-Para realizar el Api nos basamos en: [Construir web api con JWT](https://enmilocalfunciona.io/construyendo-una-web-api-rest-segura-con-json-web-token-en-net-parte-ii/)
+Para realizar el Api nos basamos en: [Construir web api con JWT](https://enmilocalfunciona.io/construyendo-una-web-api-rest-segura-con-json-web-token-en-net-parte-ii/). Se deben usar tres librerías de Nuget: Microsoft.IdentityModel.JsonWebTokens, Microsoft.IdentityModel.Logging, Microsoft.IdentityModel.Tokens
 
 Para almacenar el web token es normal usar el localstorage. Un ejercicio de ejemplo le tenemos en:
 [https://github.com/Asurbanipal1977/WebApiSeguro](https://github.com/Asurbanipal1977/WebApiSeguro)
