@@ -680,3 +680,10 @@ Para realizar el Api nos basamos en: [Construir web api con JWT](https://enmiloc
 
 Para almacenar el web token es normal usar el localstorage. Un ejercicio de ejemplo le tenemos en:
 [https://github.com/Asurbanipal1977/WebApiSeguro](https://github.com/Asurbanipal1977/WebApiSeguro)
+
+### 10. TAG HELPERS
+Nos permiten añadir ciertas funcionalidades.
+    - asp-append-version: permite añadir un string a la url de un css o js para evitar problemas de caché. Ej:
+    ```
+    <link rel="stylesheet" href="~/PortaFolio.styles.css" asp-append-version="true" />
+    ```
