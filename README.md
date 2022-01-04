@@ -708,5 +708,12 @@ Si no queremos que tenga en cuenta y oblige a indicar si acepta o no nulos, se p
     
 #### 12. RAZOR
 Se puede mezclar código cliente y servidor mediante @ y @{}. Las páginas razor aportan un gran dinamismo a una página. 
-    - Se puden hacer if, for, foreach, ...
-    - Se pueden crear vistas parciales y añadirlas mediante: <partial name="Nombre de la vista parcial" />. También se puede definir el modelo que se va a pasar a esa sección o vista parcial: <partial name="_SeccionProyectos" model="Model.Proyectos" />
+- Se puden hacer if, for, foreach, ...
+- Se pueden crear vistas parciales y añadirlas mediante: 
+```
+<partial name="Nombre de la vista parcial" />
+```
+También se puede definir el modelo que se va a pasar a esa sección o vista parcial: 
+```
+<partial name="_SeccionProyectos" model="Model.Proyectos" />
+```
