@@ -509,6 +509,9 @@ Ej:[Segundo Plano](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/mai
 
 #### 2.41. GUID
 Es un tipo de datos lamado Identificador único global. Se utiliza para poder insertar en una tabla con clave ajena. En ese caso, tenemos que insertar antes en la tabla padre y este tipo de datos nos permite obtener un número único para poder dar de alta en la tabla relacionada.
+    
+#### 2.42. GENERAR MÉTODOS DE INTERFACES DESDE CLASE
+Si se pulsa control + intro encima del método y se da a Extraer a la interfaz, el método se llevará a la interfaz.
 
 
 
