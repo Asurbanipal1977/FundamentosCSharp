@@ -681,9 +681,24 @@ Para realizar el Api nos basamos en: [Construir web api con JWT](https://enmiloc
 Para almacenar el web token es normal usar el localstorage. Un ejercicio de ejemplo le tenemos en:
 [https://github.com/Asurbanipal1977/WebApiSeguro](https://github.com/Asurbanipal1977/WebApiSeguro)
 
-### 10. TAG HELPERS
+#### 10. TAG HELPERS
 Nos permiten añadir ciertas funcionalidades.
     - asp-append-version: permite añadir un string a la url de un css o js para evitar problemas de caché. Ej:
     ```
     <link rel="stylesheet" href="~/PortaFolio.styles.css" asp-append-version="true" />
     ```
+    
+#### 11. CAMPOS NULLABLES EN .NET 6
+    
+Si no queremos que tenga en cuenta y oblige a indicar si acepta o no nulos, se puede poner el campo <nullable> a disable en la definición del proyecto.
+```
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>
+```
