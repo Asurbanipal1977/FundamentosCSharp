@@ -165,8 +165,8 @@ scaffold-dbcontext "Server=gigabyte-sabre\sqlexpress;Database=pruebas;integrated
 Para poder usar en .net core la configuración de desarrollo y producción:
 Por defecto, si estamos en entorno de desarrollo, tomará lo que hay en el fichero de appsettings.Development. En caso de no encontrarse, se tomará, appsetttings.
 
-Para poder leer del fichero hen función de las variables de entorno para .net 5, podemos usar:
-1. En program.cs se usará un código como este, de manera que el archivo de configuración tome datos del appsettings que corresponda.
+Para poder leer del fichero en función de las variables de entorno para .net 5, podemos usar:
+1. En program.cs se usará un código como este, de manera que el archivo de configuración tome datos del appsettings que corresponda. De todas formas, esa configuración por defecto ya está en el contsructor estático CreateDefaultBuilder
 ```
 public class Program
 {
