@@ -163,6 +163,9 @@ Ej:
 scaffold-dbcontext "Server=gigabyte-sabre\sqlexpress;Database=pruebas;integrated security=True;" Microsoft.EntityFrameworkCore.SqlServer -outputdir Models -context EFContext
 
 Para poder usar en .net core la configuración de desarrollo y producción:
+Por defecto, si estamos en entorno de desarrollo, tomará lo que hay en el fichero de appsettings.Development. En caso de no encontrarse, se tomará, appsetttings.
+
+Para poder leer del fichero hen función de las variables de entorno para .net 5, podemos usar:
 1. En program.cs se usará un código como este, de manera que el archivo de configuración tome datos del appsettings que corresponda.
 ```
 public class Program
@@ -638,6 +641,9 @@ El objetivo era unificar las plataformas .net core, .net framework y Xamarin. Es
     list1.Zip(list2,list3)
 
     La lista resultante tendrá un número se elementos igual al menor de las tres listas y se puede obtener los elementos con: a.First, a.Second, a.Third
+    
+  - Se puede acceder a las variables del fichero json mediante la inyección del servicio IConfiguration.
+    
   
 Se puede usar inyección de dependencia y swagger. Para usar swagger:
 1) Se importan las librerías: Swashbuckle.AspNetCore y Swashbuckle.AspNetCore.Swagger
