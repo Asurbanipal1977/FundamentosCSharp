@@ -511,11 +511,23 @@ Mediante signalR se puede crear un chat con varias salas. El ejemplo:
 Ej:[Segundo Plano](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/AutoMapperMVC/IntervalTaskHostedService.cs) 
 
 #### 2.41. GUID
-Es un tipo de datos lamado Identificador único global. Se utiliza para poder insertar en una tabla con clave ajena. En ese caso, tenemos que insertar antes en la tabla padre y este tipo de datos nos permite obtener un número único para poder dar de alta en la tabla relacionada.
+Es un tipo de datos llamado Identificador único global. Se utiliza para poder insertar en una tabla con clave ajena. En ese caso, tenemos que insertar antes en la tabla padre y este tipo de datos nos permite obtener un número único para poder dar de alta en la tabla relacionada.
     
 #### 2.42. GENERAR MÉTODOS DE INTERFACES DESDE CLASE
 Si se pulsa control + intro encima del método y se da a Extraer a la interfaz, el método se llevará a la interfaz.
 
+#### 2.43. SERVICIOS SOAP CON WCF
+WCF es Windows Communication Foundation y permite crear un servicio SOAP (Service Object Action Protocol). Las características de un servicio SOAP:
+    - Es fuertemente tipado.
+    - Es mas lento y pesado que un API Rest.
+    - Se define un fichero wsdl que define el formato de la entrada y salida.
+    - Se crea mediante una aplicación de servicios WCF.
+    - Los atributos DataContract y DataMember permite definir la clase de entrada y de salida del servicio.
+    - Los aributos ServiceContract y OperationContract definen el servicio y los métodos expuestos.
+    
+ Después se puede crear un cliente que consuma este servicio. Para ello se puede "Agragar referencia a servicio" e indicar este servicio. Si se cambia debe actualizarse el servicio siempre que afecte a los servicios o métodos que se exponen.
+    
+    Ej: [SOAP APi](https://github.com/Asurbanipal1977/WcfPersonas)
 
 
 ### 3. C#.Net Core
