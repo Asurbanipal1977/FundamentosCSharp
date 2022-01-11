@@ -421,7 +421,7 @@ Ej:
     [Tuplas](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure/Program.cs)
 
 #### 2.28. CURRIFICACIÓN
-Se trata de poder llamar a una serie de funciones de manera secuencial con un solo argumento. Básicamente permite que se pueda llamar a funciones que tienen dos parámetros desde funciones con uno, utilizando expresiones lambda par acrear funciones anónimas.
+Se trata de poder llamar a una serie de funciones de manera secuencial con un solo argumento. Básicamente permite que se pueda llamar a funciones que tienen dos parámetros desde funciones con uno, utilizando expresiones lambda para crear funciones anónimas.
 Un ejemplo tenemos en esta dirección:
 [Currificacion](https://github.com/Asurbanipal1977/FundamentosCSharp/tree/main/Closure/Program.cs)
     
