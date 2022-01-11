@@ -518,14 +518,15 @@ Si se pulsa control + intro encima del método y se da a Extraer a la interfaz, 
 
 #### 2.43. SERVICIOS SOAP CON WCF
 WCF es Windows Communication Foundation y permite crear un servicio SOAP (Service Object Action Protocol). Las características de un servicio SOAP:
-    - Es fuertemente tipado.
-    - Es mas lento y pesado que un API Rest.
-    - Se define un fichero wsdl que define el formato de la entrada y salida.
-    - Se crea mediante una aplicación de servicios WCF.
-    - Los atributos DataContract y DataMember permite definir la clase de entrada y de salida del servicio.
-    - Los aributos ServiceContract y OperationContract definen el servicio y los métodos expuestos.
+- Es fuertemente tipado.
+- Es mas lento y pesado que un API Rest.
+- Se define un fichero wsdl que define el formato de la entrada y salida.
+- Se crea mediante una aplicación de servicios WCF.
+- Los atributos DataContract y DataMember permite definir la clase de entrada y de salida del servicio.
+- Los atributos ServiceContract y OperationContract definen el servicio y los métodos expuestos.
+- Para que los métodos expuestos no den error, hay que definir siempre el get y el set.
     
- Después se puede crear un cliente que consuma este servicio. Para ello se puede "Agragar referencia a servicio" e indicar este servicio. Si se cambia debe actualizarse el servicio siempre que afecte a los servicios o métodos que se exponen.
+ Después se puede crear un cliente que consuma este servicio. Para ello se puede "Agregar referencia a servicio" e indicar este servicio. Si se cambia debe actualizarse el servicio siempre que afecte a los servicios o métodos que se exponen.
     
     Ej: [SOAP APi](https://github.com/Asurbanipal1977/WcfPersonas)
 
