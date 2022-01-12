@@ -30,7 +30,7 @@ namespace HilosRecursosCompartidos
             //Memoization
             var watch = Stopwatch.StartNew();
             Func<long, long> factorial = null;
-            factorial = n => n > 1 ? factorial(n - 1) : 1;
+            factorial = n => n > 1 ? n * factorial(n - 1) : 1;
 
             for (int i = 0; i < 20000000; i++)
                 factorial(9);
