@@ -736,3 +736,9 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
 ```
 <partial name="_SeccionProyectos" model="Model.Proyectos" />
 ```
+
+#### 13. JENKINS
+- Servidor OpenSource con integración continua y automatización para Java, Node.js y .net, entre otros.
+- Pasos para configurarlo:
+  - [Descarga](https://jenkins.io/download/)
+  - 
