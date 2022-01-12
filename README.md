@@ -741,4 +741,13 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
 - Servidor OpenSource con integración continua y automatización para Java, Node.js y .net, entre otros.
 - Pasos para configurarlo:
   - [Descarga](https://jenkins.io/download/)
-  - 
+  - Desbloqueamos jenkins. Es para asegurarnos que somos nosotros los que vamos a administrar.
+    ![imagen](https://user-images.githubusercontent.com/37666654/149171426-f92607de-5418-45ad-be75-5b99830c125a.png)
+
+    Solo hay que irse a la ruta y coger la clave de esa ruta.
+    
+  - A continuación, se selecciona los plugins a descargar. Selecionamos los sugeridos.
+  - Después empezamos la configuración de Jenkins:
+    1) Cambios el fichero jenkins.xml para cambiar la ruta donde se guardan las compilaciones. Se puede ver en Administrar Jenkins / Configurar Sistema
+    2) Se reinicia con el comando: jenkins restart
+    
