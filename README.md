@@ -756,7 +756,7 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
     Solo hay que irse a la ruta y coger la clave de esa ruta.
     
   - A continuación, se selecciona los plugins a descargar. Selecionamos los sugeridos.
-  - Después empezamos la configuración de Jenkins:
+  - Después empezamos la configuración de Jenkins y su integración con github:
     1) Cambios el fichero jenkins.xml para cambiar la ruta donde se guardan las compilaciones. Se puede ver en Administrar Jenkins / Configurar Sistema
     2) Se reinicia con el comando: jenkins restart
     3) Se crea una nueva tarea de tipo Folder (yo he creado ProyectosGitHUb).
@@ -766,4 +766,13 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
     6) Se indica que es un repositorio de github y se marca Consultar repositorio (SCM) cada el tiempo que queramos (por ejemplo, cada 15 min):
     H/15 * * * *
     7) se debe cambiar el */master por */main en el apartado: Branch Specifier (blank for 'any')
+    8) Se pulsa a "Construir ahora", procediéndose a la descarga del proyecto.
+  - Para SVN, tenemos que instalar SVNServer y un cliente como TortoiseSVN
+  - Compilar un proyecto ASP.net en Jenkins con MSBuild.
+    - Vamos a la url: [https://www.visualsvn.com/visualsvn/download/](https://www.visualsvn.com/visualsvn/download/) para descargar el MSBuild que corresponda.
+    - En plugins debemos instalar, si no lo tenemos ya, en plugin MsBuild
+    - Se configura en Global Tool Configuration el Ms<Build indicando la ruta de ese archivo. En el caso de visual studio 2022 la ruta es:
+      D:\Programas\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin
+                                                            
+    
     
