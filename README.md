@@ -765,4 +765,5 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
     https://access_token@github.com/Asurbanipal1977/FundamentosCSharp.git
     6) Se indica que es un repositorio de github y se marca Consultar repositorio (SCM) cada el tiempo que queramos (por ejemplo, cada 15 min):
     H/15 * * * *
+    7) se debe cambiar el */master por */main en el apartado: Branch Specifier (blank for 'any')
     
