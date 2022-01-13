@@ -773,6 +773,9 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
     - En plugins debemos instalar, si no lo tenemos ya, en plugin MsBuild
     - Se configura en Global Tool Configuration el Ms<Build indicando la ruta de ese archivo. En el caso de visual studio 2022 la ruta es:
       D:\Programas\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin
+    - Se configura el msbuild:
+    ![imagen](https://user-images.githubusercontent.com/37666654/149363998-7a16ff0c-f2ff-4ab5-9e32-1aa85c0e4a62.png)
+
                                                             
     
     
