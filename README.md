@@ -528,7 +528,7 @@ WCF es Windows Communication Foundation y permite crear un servicio SOAP (Servic
     
  Después se puede crear un cliente que consuma este servicio. Para ello se puede "Agregar referencia a servicio" e indicar este servicio. Si se cambia debe actualizarse el servicio siempre que afecte a los servicios o métodos que se exponen.
     
-    Ej: [SOAP APi](https://github.com/Asurbanipal1977/WcfPersonas)
+    Ej:[SOAP APi](https://github.com/Asurbanipal1977/WcfPersonas)
 
 Con respecto a los antiguos servicios asmx, estas son las diferencias:
 - asmx solo puede ser invocado por http, mientras que wcf puede ser invocado por http, tcp, etc.
