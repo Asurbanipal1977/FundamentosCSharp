@@ -530,6 +530,15 @@ WCF es Windows Communication Foundation y permite crear un servicio SOAP (Servic
     
     Ej: [SOAP APi](https://github.com/Asurbanipal1977/WcfPersonas)
 
+Con respecto a los antiguos servicios asmx, estas son las diferencias:
+- asmx solo puede ser invocado por http, mientras que wcf puede ser invocado por http, tcp, etc.
+- asmx no es flexible, mientras wue en WCF si creas una nueva versión solo debes exponer un nuevo final.
+- asmx es:
+  - Fácil de montar y configurar
+  - No garantiza transmisión de datos, utiliza estructuras rudimentarias para envío de dstos, es lento y es propenso a conflictos entre diversos sistemas operativos.
+- WCF:
+  - Asegura entrega de mensajes, transacciones seguras, segmentación binaria y reemplaza los xml
+  - Requiere mayores conocimientos y tiempo de configuración.
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
