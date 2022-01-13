@@ -769,12 +769,15 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
     8) Se pulsa a "Construir ahora", procediéndose a la descarga del proyecto.
   - Para SVN, tenemos que instalar SVNServer y un cliente como TortoiseSVN
   - Compilar un proyecto ASP.net en Jenkins con MSBuild.
-    - Vamos a la url: [https://www.visualsvn.com/visualsvn/download/](https://www.visualsvn.com/visualsvn/download/) para descargar el MSBuild que corresponda.
-    - En plugins debemos instalar, si no lo tenemos ya, en plugin MsBuild
-    - Se configura en Global Tool Configuration el Ms<Build indicando la ruta de ese archivo. En el caso de visual studio 2022 la ruta es:
+   - Vamos a la url: [https://www.visualsvn.com/visualsvn/download/](https://www.visualsvn.com/visualsvn/download/) para descargar el MSBuild que corresponda.
+   - En plugins debemos instalar, si no lo tenemos ya, en plugin MsBuild
+   - Se configura en Global Tool Configuration el Ms<Build indicando la ruta de ese archivo. En el caso de visual studio 2022 la ruta es:
       D:\Programas\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin
-    - Se configura el msbuild:
-    ![imagen](https://user-images.githubusercontent.com/37666654/149363998-7a16ff0c-f2ff-4ab5-9e32-1aa85c0e4a62.png)
+   - Se configura el msbuild. En esa configuración se pueden poner todas las tareas que sean necesarias.                                                        
+Por otro lado, se puede indicar la solución o los proyectos. En el ejemplo, he puesto dos tareas:                                                          
+![imagen](https://user-images.githubusercontent.com/37666654/149401171-2353a09b-be2b-4ffa-9fd2-63acd215b14e.png)
+                                                           
+De esta manera, a parte de descargar desde github, se automatiza la compilación.
 
                                                             
     
