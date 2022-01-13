@@ -750,4 +750,10 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
   - Después empezamos la configuración de Jenkins:
     1) Cambios el fichero jenkins.xml para cambiar la ruta donde se guardan las compilaciones. Se puede ver en Administrar Jenkins / Configurar Sistema
     2) Se reinicia con el comando: jenkins restart
+    3) Se crea una nueva tarea de tipo Folder (yo he creado ProyectosGitHUb).
+    4) Se crea un item y se configura el git.
+    5) Se tiene que crear un access token en github y se añade la url en el formato:
+    https://access_token@github.com/Asurbanipal1977/FundamentosCSharp.git
+    6) Se indica que es un repositorio de github y se marca Consultar repositorio (SCM) cada el tiempo que queramos (por ejemplo, cada 15 min):
+    H/15 * * * *
     
