@@ -778,6 +778,14 @@ Por otro lado, se puede indicar la solución o los proyectos. En el ejemplo, he 
 ![imagen](https://user-images.githubusercontent.com/37666654/149401171-2353a09b-be2b-4ffa-9fd2-63acd215b14e.png)
                                                            
 De esta manera, a parte de descargar desde github, se automatiza la compilación.
+    - Si faltan los paquetes nuget, se puede incluir la tarea /t:restore
+                                                           
+   Para mas datos: https://docs.microsoft.com/es-es/nuget/consume-packages/package-restore#restore-using-msbuild
+                                                           
+Se puede personalizar el log:
+- Se instala el Plugin "Collapsing Console Sections"
+- En configuración configuramos la sección: Collapsing Console Sections medinate expresiones regulares. Las expersiones regulares pueden comprobarse en:
+https://regexr.com/
 
                                                             
     
