@@ -801,7 +801,10 @@ sonar.web.context=/sonarqube
 Entre otras cosas, se nos informa que debemos lanzar:
 ALTER DATABASE YourSonarQubeDatabase SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBACK IMMEDIATE;
  
-- Para probar que funciona, vamos a D:\Programas\sonarqube-8.9.6.50800\bin\windows-x86-64 y se ejecuta StartSonar.bat
+- Para probar que funciona, vamos a D:\Programas\sonarqube-8.9.6.50800\bin\windows-x86-64 y se ejecuta StartSonar.bat.
+- Para modificar las propiedades a travcés del Sql Configuration Manager, se tiene que ejecutar el SQLServerManager15.msc.
+- Una vez dentro, hay que habilitar el protócolo TCP/IP y Canalizaciones con nombre.
+     ![imagen](https://user-images.githubusercontent.com/37666654/149575854-24ad3677-b74e-4c62-ad94-8f4579fe638f.png)
 - Se tiene que comprobar que se han creado las tablas en la base de datos de sonar.
 
 
