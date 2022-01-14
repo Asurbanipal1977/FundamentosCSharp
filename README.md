@@ -805,8 +805,10 @@ ALTER DATABASE YourSonarQubeDatabase SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBAC
 - Para modificar las propiedades a travcés del Sql Configuration Manager, se tiene que ejecutar el SQLServerManager15.msc.
 - Una vez dentro, hay que habilitar el protócolo TCP/IP y Canalizaciones con nombre.
      ![imagen](https://user-images.githubusercontent.com/37666654/149575854-24ad3677-b74e-4c62-ad94-8f4579fe638f.png)
-- Se tiene que comprobar que se han creado las tablas en la base de datos de sonar.
-
+- Se comprueba que las tablas se han creado en la base de datos de sonar.
+- Se ejecuta el: http://localhost:9002/sonarqube, que es dónde hemos instalado el sonar. El usuario es admin y la clave, la que pongo siempre.
+- Se da de alta como servicio:
+sc.exe create SonarQube binPath= "D:\Programas\sonarqube-8.9.6.50800\bin\windows-x86-64\wrapper.exe -s D:\Programas\sonarqube-8.9.6.50800\conf\wrapper.conf"
 
                                                             
     
