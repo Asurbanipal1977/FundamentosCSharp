@@ -791,8 +791,16 @@ https://regexr.com/
 **SonarQue**:
 - Es una plataforma web que se utiliza para analizar y cuantificar la calidad del código fuente
 - Se instala en esta dirección: [https://www.sonarqube.org/downloads/](https://www.sonarqube.org/downloads/)
-- Vamos al archivo sonar.properties y: Descomentamos las líneas de username y password, y se descomenta sonar.jdbc.url, con la url de la base de datos que queramos usar. En nuestro caso tenemos instalado sql server 2019 Express, edición Developer y Express. Se puede ver las características de la instalación en Windows / Centro de instalación de Sql Server"
-- Se crea la base de datos de sonar: Se crea con el collation:Latin1_General_CS_AS(para axcentos y case sensitive). Además, se crea un usario que por defecto abra la base de datos sonar y, en Ussser Mapping, se pone que sea propietario de la base de datos (db_owner)
+- Vamos al archivo sonar.properties y: Descomentamos las líneas de username y password, y se descomenta sonar.jdbc.url, con la url de la base de datos que queramos usar. En nuestro caso tenemos instalado sql server 2019 Express, edición Developer y Express. Se puede ver las características de la instalación en Windows / Centro de instalación de Sql Server". Además podemos seleccionar el puerto y el contexto:
+sonar.web.port=9001
+sonar.web.context=/sonarqube
+     
+- Se crea la base de datos de sonar: Se crea con el collation:Latin1_General_CS_AS(para acentos y case sensitive). Además, se crea un usario que por defecto abra la base de datos sonar y, en Ussser Mapping, se pone que sea propietario de la base de datos (db_owner). Debemos seguir las instrucciones de la página:
+[https://docs.sonarqube.org/latest/setup/install-server/](https://docs.sonarqube.org/latest/setup/install-server/)
+
+Entre otras cosas, se nos informa que debemos lanzar:
+ALTER DATABASE YourSonarQubeDatabase SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBACK IMMEDIATE;
+ 
 - Para probar que funciona, vamos a D:\Programas\sonarqube-8.9.6.50800\bin\windows-x86-64 y se ejecuta StartSonar.bat
 - Se tiene que comprobar que se han creado las tablas en la base de datos de sonar.
 
