@@ -838,6 +838,13 @@ sonar.language=cs
 sonar.sourceEncoding=UTF-8
 #*****************************************************
 ````
+     
+Sin embargo, para C# habría que utilizar este código usando el NET global tool dotnet-sonarscanner:
+````
+dotnet sonarscanner begin /k:"project-key"  /d:sonar.login="myAuthenticationToken" /d:"sonar.host.url"=http://localhost:9000
+dotnet build 
+dotnet sonarscanner end /d:sonar.login="myAuthenticationToken"
+````
 
                                                             
     
