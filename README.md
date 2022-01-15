@@ -755,6 +755,8 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
 
     Solo hay que irse a la ruta y coger la clave de esa ruta.
     
+    La url de jenkins es: http://localhost:8080
+    
   - A continuación, se selecciona los plugins a descargar. Selecionamos los sugeridos.
   - Después empezamos la configuración de Jenkins y su integración con github:
     1) Cambios el fichero jenkins.xml para cambiar la ruta donde se guardan las compilaciones. Se puede ver en Administrar Jenkins / Configurar Sistema
@@ -788,7 +790,7 @@ Se puede personalizar el log:
 https://regexr.com/
 - Una vez guardado, nos saldrá el fichero de log agrupado por las secciones que indicamos.
                                                            
-**SonarQue**:
+**Sonarqube**:
 - Es una plataforma web que se utiliza para analizar y cuantificar la calidad del código fuente
 - Se instala en esta dirección: [https://www.sonarqube.org/downloads/](https://www.sonarqube.org/downloads/)
 - Vamos al archivo sonar.properties y: Descomentamos las líneas de username y password, y se descomenta sonar.jdbc.url, con la url de la base de datos que queramos usar. En nuestro caso tenemos instalado sql server 2019 Express, edición Developer y Express. Se puede ver las características de la instalación en Windows / Centro de instalación de Sql Server". Además podemos seleccionar el puerto y el contexto:
@@ -809,6 +811,33 @@ ALTER DATABASE YourSonarQubeDatabase SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBAC
 - Se ejecuta el: http://localhost:9002/sonarqube, que es dónde hemos instalado el sonar. El usuario es admin y la clave, la que pongo siempre.
 - Se da de alta como servicio:
 sc.exe create SonarQube binPath= "D:\Programas\sonarqube-8.9.6.50800\bin\windows-x86-64\wrapper.exe -s D:\Programas\sonarqube-8.9.6.50800\conf\wrapper.conf"
+     
+- Integración con Jenkins:
+  - Creamos un nuevo usuario en: http://localhost:9002/sonarqube/admin/users
+  - Generamos un token
+  - Instalamos en Jenkins el plugin: SonarQube Scanner 
+  - En "Configuración" vamos a: SonarQube servers
+  - En "Global Tool Configuration": http://localhost:8080/configureTools/ indicamos los datos para SonarQube Scanner
+  - Se administra la parte de de Configuración "SonarQube servers".
+  - Para ejecutarlo, en la parte de configuración del item, en Execute SonarQube Scanner ponemos:
+```
+#*****************************************************
+# Project Identification
+#*****************************************************
+sonar.projectKey=MinimalAPI
+sonar.projectName=MinimalAPI
+sonar.projectVersion=1
+sonar.dotnet.visualstudio.solution=MinimalApi/MinimalAPI.csproj
+sonar.projectDescription=Proyecto de Minimal API
+sonar.scm.disabled=true
+#*****************************************************
+# C# Specific Properties
+#*****************************************************
+sonar.sources=MinimalApi/.
+sonar.language=cs
+sonar.sourceEncoding=UTF-8
+#*****************************************************
+````
 
                                                             
     
