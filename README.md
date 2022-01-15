@@ -772,12 +772,17 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
   - Para SVN, tenemos que instalar SVNServer y un cliente como TortoiseSVN
   - Compilar un proyecto ASP.net en Jenkins con MSBuild.
    - Vamos a la url: [https://www.visualsvn.com/visualsvn/download/](https://www.visualsvn.com/visualsvn/download/) para descargar el MSBuild que corresponda.
-   - En plugins debemos instalar, si no lo tenemos ya, en plugin MsBuild
-   - Se configura en Global Tool Configuration el Ms<Build indicando la ruta de ese archivo. En el caso de visual studio 2022 la ruta es:
+   - En plugins debemos instalar, si no lo tenemos ya, el plugin MsBuild
+   - Se configura en Global Tool Configuration el MsBuild indicando la ruta de ese archivo. En el caso de visual studio 2022 la ruta es:
       D:\Programas\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin
    - Se configura el msbuild. En esa configuración se pueden poner todas las tareas que sean necesarias.                                                        
 Por otro lado, se puede indicar la solución o los proyectos. En el ejemplo, he puesto dos tareas:                                                          
 ![imagen](https://user-images.githubusercontent.com/37666654/149401171-2353a09b-be2b-4ffa-9fd2-63acd215b14e.png)
+```
+/t:Rebuild
+/p:Configuration=Debug
+/p:RestorePackagesConfig=true    
+```
                                                            
 De esta manera, a parte de descargar desde github, se automatiza la compilación.
     - Si faltan los paquetes nuget, se puede incluir la tarea /t:restore
@@ -839,11 +844,13 @@ sonar.sourceEncoding=UTF-8
 #*****************************************************
 ````
      
-Sin embargo, para C# habría que utilizar este código usando el NET global tool dotnet-sonarscanner:
+Sin embargo, para C# para versiones de .Net superiores a la 5, habría que utilizar este código usando el .NET global tool dotnet-sonarscanner y podriamos tener una tarea del tipo "Execute windows batch command":
 ````
-dotnet sonarscanner begin /k:"project-key"  /d:sonar.login="myAuthenticationToken" /d:"sonar.host.url"=http://localhost:9000
-dotnet build 
-dotnet sonarscanner end /d:sonar.login="myAuthenticationToken"
+dotnet build --no-incremental Models/Models.csproj -c Debug
+dotnet restore
+dotnet "D:\Programas\SonarScanner\SonarScanner.MSBuild.dll" begin /k:"MinimalAPI"  /d:sonar.login="61f4c10a37b9bc544c857255d621eecfedf616b8" /d:sonar.host.url="http://localhost:9002/sonarqube"
+dotnet build --no-incremental MinimalApi/MinimalAPI.csproj -c Debug
+dotnet "D:\Programas\SonarScanner\SonarScanner.MSBuild.dll" end /d:sonar.login="61f4c10a37b9bc544c857255d621eecfedf616b8"
 ````
 
                                                             
