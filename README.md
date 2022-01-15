@@ -844,7 +844,7 @@ sonar.sourceEncoding=UTF-8
 #*****************************************************
 ````
      
-Sin embargo, para C# para versiones de .Net superiores a la 5, habría que utilizar este código usando el .NET global tool dotnet-sonarscanner y podriamos tener una tarea del tipo "Execute windows batch command":
+Sin embargo, para C# para versiones de .Net superiores a la 5, habría que utilizar este código utilizando una instalación de [.Net5+](https://github.com/SonarSource/sonar-scanner-msbuild/releases/download/5.4.1.41282/sonar-scanner-msbuild-5.4.1.41282-net5.0.zip) y podriamos tener una tarea del tipo "Execute windows batch command":
 ````
 dotnet build --no-incremental Models/Models.csproj -c Debug
 dotnet restore
@@ -852,6 +852,8 @@ dotnet "D:\Programas\SonarScanner\SonarScanner.MSBuild.dll" begin /k:"MinimalAPI
 dotnet build --no-incremental MinimalApi/MinimalAPI.csproj -c Debug
 dotnet "D:\Programas\SonarScanner\SonarScanner.MSBuild.dll" end /d:sonar.login="61f4c10a37b9bc544c857255d621eecfedf616b8"
 ````
+    
+El resultado se puede ver en esta ruta: http://localhost:9002/sonarqube/dashboard?id=MinimalAPI
 
                                                             
     
