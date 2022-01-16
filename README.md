@@ -755,7 +755,7 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
 
     Solo hay que irse a la ruta y coger la clave de esa ruta.
     
-    La url de jenkins es: http://localhost:8080
+    La url de jenkins es: http://localhost:8080 salvo que se cambie en el fichero jenkins.xml.
     
   - A continuación, se selecciona los plugins a descargar. Selecionamos los sugeridos.
   - Después empezamos la configuración de Jenkins y su integración con github:
@@ -855,6 +855,19 @@ dotnet "D:\Programas\SonarScanner\SonarScanner.MSBuild.dll" end /d:sonar.login="
     
 El resultado se puede ver en esta ruta: http://localhost:9002/sonarqube/dashboard?id=MinimalAPI
 
-                                                            
+**Pruebas Unitarias**
+- Creamos un proyecto de pruebas en Visual Studio para la minimalAPI. Para ello creamos un poryecto de xUnit que use:
+```
+using Xunit;
+using System.Net.Http.Json;
+```
+- Para las pruebas, en la MinimalAPI hay que poner:
+public partial class Program { }
+
+- Dos páginas que explican estos pruebas:
+  - https://stackoverflow.com/questions/69586239/integration-test-for-asp-net-core-6-web-api-throws-system-invalidoperationexcept
+  - https://www.hanselman.com/blog/minimal-apis-in-net-6-but-where-are-the-unit-tests
+
+    
     
     
