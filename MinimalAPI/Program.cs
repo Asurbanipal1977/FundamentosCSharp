@@ -52,3 +52,7 @@ app.MapGet("/prueba", (Prueba prueba) => prueba.Hola());
 app.MapPost("/post", (Data data) => $"{data.Id} {data.Name}");
 
 app.Run();
+
+
+// Make the implicit Program class public so test projects can access it
+public partial class Program { }

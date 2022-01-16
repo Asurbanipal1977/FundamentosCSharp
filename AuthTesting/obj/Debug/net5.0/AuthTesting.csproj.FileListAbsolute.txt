@@ -13,3 +13,4 @@ C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\ref\AuthTesting.dll
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.pdb
 C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.genruntimeconfig.cache
+C:\Users\mame1\source\repos\FundamentosCSharp\FundamentosCSharp\AuthTesting\obj\Debug\net5.0\AuthTesting.csproj.AssemblyReference.cache

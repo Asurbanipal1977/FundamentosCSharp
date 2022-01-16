@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalR.Shared", "Bla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostedServiceSignalR", "HostedServiceSignalR\HostedServiceSignalR.csproj", "{6EE3715E-C6BF-4743-A5B0-92E5DB6B00E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoom", "ChatRoom\ChatRoom.csproj", "{2583A282-46FC-4F88-BA95-9E1A367D2595}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRoom", "ChatRoom\ChatRoom.csproj", "{2583A282-46FC-4F88-BA95-9E1A367D2595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalAPI.Test", "MinimalAPI.Test\MinimalAPI.Test.csproj", "{64F332B2-5BF1-4600-AC19-01D1ADAA7E6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{2583A282-46FC-4F88-BA95-9E1A367D2595}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2583A282-46FC-4F88-BA95-9E1A367D2595}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2583A282-46FC-4F88-BA95-9E1A367D2595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F332B2-5BF1-4600-AC19-01D1ADAA7E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F332B2-5BF1-4600-AC19-01D1ADAA7E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F332B2-5BF1-4600-AC19-01D1ADAA7E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F332B2-5BF1-4600-AC19-01D1ADAA7E6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

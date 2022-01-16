@@ -4,20 +4,20 @@
 <p>@ViewBag.Message</p>
 
 <form asp-action="Create">
-    Id: <input asp-for=Id />
-    <span class="text-danger" asp-validation-for=Id>
+    Id: <input asp-for="@Model.Id" />
+    <span class="text-danger" asp-validation-for="@Model.Id">
     </span>
 
-    UserId: <input asp-for=UserId />
-     <span class="text-danger" asp-validation-for=UserId>
+    UserId: <input asp-for="@Model.UserId" />
+     <span class="text-danger" asp-validation-for="@Model.UserId">
     </span>
 
-    Title: <input asp-for=Title />
-     <span class="text-danger" asp-validation-for=Title>
+    Title: <input asp-for="@Model.Title" />
+     <span class="text-danger" asp-validation-for="@Model.Title">
     </span>
 
-    Body: <input asp-for=Body />
-     <span class="text-danger" asp-validation-for=Body>
+    Body: <input asp-for="@Model.Body" />
+     <span class="text-danger" asp-validation-for="@Model.Body">
     </span>
 
     <input type="submit" value="Guardar" />
