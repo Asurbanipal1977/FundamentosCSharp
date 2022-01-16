@@ -863,8 +863,13 @@ using System.Net.Http.Json;
 ```
 - Para las pruebas, en la MinimalAPI hay que poner:
 public partial class Program { }
+    
+- En Jenkins hay que crear una tarea que ejecute:
+```
+ dotnet test MinimalApi.Test
+```
 
-- Dos páginas que explican estos pruebas:
+- Dos páginas que explican estas pruebas:
   - https://stackoverflow.com/questions/69586239/integration-test-for-asp-net-core-6-web-api-throws-system-invalidoperationexcept
   - https://www.hanselman.com/blog/minimal-apis-in-net-6-but-where-are-the-unit-tests
 
