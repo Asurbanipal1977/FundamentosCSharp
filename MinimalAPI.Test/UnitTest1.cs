@@ -23,7 +23,7 @@ namespace MinimalAPI.Test
             var app = new WebApplicationFactory<Program>();
             using var client = app.CreateClient();
             var prueba = await client.GetStringAsync("/prueba");
-            Assert.Equal("Es una Prueba falsa",prueba);
+            Assert.Equal("Es una Prueba",prueba);
         }
     }
 }
