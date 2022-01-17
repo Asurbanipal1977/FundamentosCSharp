@@ -20,7 +20,7 @@ app.UseSwaggerUI();
 
 app.MapGet("/", () => "Hello World!");
 app.MapGet("/hola", (string name) => $"Hola {name}");
-app.MapGet("/holaNew/{name}/{surname}", (string name, string surname) => $"Hola {name} {surname}");
+app.MapGet("/holaNew/{name}/{surname}", (string name, string surname) => $"Hola, tu nombre es {name} {surname}");
 
 app.MapGet("/peticion", async () =>
 {
