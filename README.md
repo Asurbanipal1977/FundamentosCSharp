@@ -713,11 +713,15 @@ Para almacenar el web token es normal usar el localstorage. Un ejercicio de ejem
 [https://github.com/Asurbanipal1977/WebApiSeguro](https://github.com/Asurbanipal1977/WebApiSeguro)
 
 #### 10. TAG HELPERS
-Nos permiten añadir ciertas funcionalidades.
-    - asp-append-version: permite añadir un string a la url de un css o js para evitar problemas de caché. Ej:
-    ```
-    <link rel="stylesheet" href="~/PortaFolio.styles.css" asp-append-version="true" />
-    ```
+Nos permiten añadir ciertas funcionalidades:
+  - asp-append-version: permite añadir un string a la url de un css o js para evitar problemas de caché. Ej:
+  ```
+  <link rel="stylesheet" href="~/PortaFolio.styles.css" asp-append-version="true" />
+  ```
+  - asp-controller
+  - asp-action
+  - asp-validation-summary
+  - asp-for: Para enlacar con un campo del modelo.
     
 #### 11. CAMPOS NULLABLES EN .NET 6
     
