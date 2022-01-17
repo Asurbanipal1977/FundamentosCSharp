@@ -873,6 +873,12 @@ public partial class Program { }
   - https://stackoverflow.com/questions/69586239/integration-test-for-asp-net-core-6-web-api-throws-system-invalidoperationexcept
   - https://www.hanselman.com/blog/minimal-apis-in-net-6-but-where-are-the-unit-tests
 
-    
+  **Publicar**
+ 
+- Se crea una tarea de este tipo: dotnet publish MinimalApi/MinimalAPI.csproj --configuration Debug --output "C:\inetpub\wwwroot\MinimalAPI"
+- Tenemos que instalar un paquete para que se puedan ejecutar aplicaciones de .net core en IIS:
+[https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-2.2.5-windows-hosting-bundle-installer](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-2.2.5-windows-hosting-bundle-installer)
+- Crear el sitio web en el puerto que queramos.
+- Dar permisos totales al usuario IIS_IUSRS.
     
     
