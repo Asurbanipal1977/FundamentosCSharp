@@ -881,4 +881,17 @@ public partial class Program { }
 - Crear el sitio web en el puerto que queramos.
 - Dar permisos totales al usuario IIS_IUSRS.
     
+### 4. BASES DE DATOS
+1. Si se quiere cambiar de modo de acceso, se tiene que lanzar:
+```
+ALTER LOGIN sa ENABLE ;  
+GO  
+ALTER LOGIN sa WITH PASSWORD = 'sa' ;  
+GO  
+```
+    
+Y, a continuación, reiniciar el servicio de Sql Server.
+    
+2. Para ver un diagrama de DD, hay que loguearse con el usaurio sa.
+    
     
