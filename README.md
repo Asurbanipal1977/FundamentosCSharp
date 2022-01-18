@@ -760,6 +760,10 @@ Nos permiten añadir ciertas funcionalidades:
   - asp-action
   - asp-validation-summary
   - asp-for: Para enlacar con un campo del modelo.
+    
+- Validaciones personalizas: Pueden ser:
+  - Por atributo: 
+    - Se debe crear una clase que hereda de ValidationAttribute
 
 #### 12. JENKINS
 - Servidor OpenSource con integración continua y automatización para Java, Node.js y .net, entre otros.
