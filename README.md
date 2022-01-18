@@ -711,19 +711,8 @@ Para realizar el Api nos basamos en: [Construir web api con JWT](https://enmiloc
 
 Para almacenar el web token es normal usar el localstorage. Un ejercicio de ejemplo le tenemos en:
 [https://github.com/Asurbanipal1977/WebApiSeguro](https://github.com/Asurbanipal1977/WebApiSeguro)
-
-#### 10. TAG HELPERS
-Nos permiten añadir ciertas funcionalidades:
-  - asp-append-version: permite añadir un string a la url de un css o js para evitar problemas de caché. Ej:
-  ```
-  <link rel="stylesheet" href="~/PortaFolio.styles.css" asp-append-version="true" />
-  ```
-  - asp-controller
-  - asp-action
-  - asp-validation-summary
-  - asp-for: Para enlacar con un campo del modelo.
     
-#### 11. CAMPOS NULLABLES EN .NET 6
+#### 10. CAMPOS NULLABLES EN .NET 6
     
 Si no queremos que tenga en cuenta y oblige a indicar si acepta o no nulos, se puede poner el campo <nullable> a disable en la definición del proyecto.
 ```
@@ -738,7 +727,7 @@ Si no queremos que tenga en cuenta y oblige a indicar si acepta o no nulos, se p
 </Project>
 ```
     
-#### 12. RAZOR
+#### 11. RAZOR
 Se puede mezclar código cliente y servidor mediante @ y @{}. Las páginas razor aportan un gran dinamismo a una página. 
 1. Se puden hacer if, for, foreach, ...
 2. Se pueden crear vistas parciales y añadirlas mediante: 
@@ -760,8 +749,19 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
 ```
 - En el layout esta este código, que hará que se ejecute la parte de los cripts parciales al final de la carga del layout. 
 @await RenderSectionAsync("Scripts", required: false)
+    
+- Tag Helpers:
+Nos permiten añadir ciertas funcionalidades:
+  - asp-append-version: permite añadir un string a la url de un css o js para evitar problemas de caché. Ej:
+  ```
+  <link rel="stylesheet" href="~/PortaFolio.styles.css" asp-append-version="true" />
+  ```
+  - asp-controller
+  - asp-action
+  - asp-validation-summary
+  - asp-for: Para enlacar con un campo del modelo.
 
-#### 13. JENKINS
+#### 12. JENKINS
 - Servidor OpenSource con integración continua y automatización para Java, Node.js y .net, entre otros.
 - Pasos para configurarlo:
   - [Descarga](https://jenkins.io/download/)
@@ -896,7 +896,7 @@ public partial class Program { }
 - Crear el sitio web en el puerto que queramos.
 - Dar permisos totales al usuario IIS_IUSRS.
     
-### 4. BASES DE DATOS
+### 13. BASES DE DATOS
 1. Si se quiere cambiar de modo de acceso, se tiene que lanzar:
 ```
 ALTER LOGIN sa ENABLE ;  
