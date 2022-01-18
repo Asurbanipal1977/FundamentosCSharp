@@ -763,7 +763,10 @@ Nos permiten añadir ciertas funcionalidades:
     
 - Validaciones personalizas: Pueden ser:
   - Por atributo: 
-    - Se debe crear una clase que hereda de ValidationAttribute
+    - Se debe crear una clase que hereda de ValidationAttribute.
+    - Se sobreeescribe el método IsValid.
+    - En la clase a validar se añade el atributo:
+    [PrimeraLetraMayuscula]
 
 #### 12. JENKINS
 - Servidor OpenSource con integración continua y automatización para Java, Node.js y .net, entre otros.
