@@ -919,4 +919,6 @@ Y, a continuación, reiniciar el servicio de Sql Server.
     
 2. Para ver un diagrama de DD, hay que loguearse con el usaurio sa.
     
-    
+#### 14. DAPPER
+- Nos permite mapear en clases las tablas.
+- Se tiene que instalar: Dapper y Microsoft.Data.SqlClient
