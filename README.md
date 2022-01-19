@@ -928,3 +928,5 @@ Y, a continuación, reiniciar el servicio de Sql Server.
                                                     VALUES (@Nombre, @UsuarioId, 0);
                                                     SELECT SCOPE_IDENTITY();",tipoCuenta);
 ```
+
+    
