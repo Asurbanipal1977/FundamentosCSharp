@@ -922,3 +922,9 @@ Y, a continuación, reiniciar el servicio de Sql Server.
 #### 14. DAPPER
 - Nos permite mapear en clases las tablas.
 - Se tiene que instalar: Dapper y Microsoft.Data.SqlClient
+- Para hacer la inserción en Dapper:
+```    
+    var id = connection.QuerySingle<int>($@"INSERT INTO TiposCuentas (Nombre, UsuarioId, Orden) 
+                                                    VALUES (@Nombre, @UsuarioId, 0);
+                                                    SELECT SCOPE_IDENTITY();",tipoCuenta);
+```
