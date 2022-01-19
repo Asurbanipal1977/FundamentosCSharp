@@ -929,4 +929,16 @@ Y, a continuación, reiniciar el servicio de Sql Server.
                                                     SELECT SCOPE_IDENTITY();",tipoCuenta);
 ```
 
-    
+### 15. VALIDACIÓN POR JAVASCRIPT USANDO REMOTE.
+- En el servicio creamos la validación que deseemos. Ej:
+```
+    [HttpGet]
+        public async Task<IActionResult> ExisteTipoCuenta(string nombre)
+        {
+            var yaExiste = await _repositoriosTiposCuentas.Existe(new TipoCuenta { UsuarioId = 1, Nombre = nombre });
+
+            return (yaExiste ? Json($"El nombre ya existe") : Json(true));
+        }
+ ```
+- En la clase, añadimos la etiqueta Remote, indicando el controlador y la acción a ejecutar:
+[Remote(action: "ExisteTipoCuenta",controller:"TiposCuentas")]
