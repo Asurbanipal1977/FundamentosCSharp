@@ -822,6 +822,11 @@ https://regexr.com/
                                                            
 **Sonarqube**:
 - Es una plataforma web que se utiliza para analizar y cuantificar la calidad del código fuente
+- Consta de:
+  - un servidor web, un servidor de búsqueda y un motor de cómputo.
+  - base de datos. Dispone de una base de datos interna para entornos de desarrollo (base de datos H2)
+  - complementos
+  - analizadores, que son aplicaciones cliente que analizan el código.
 - Se baja la instalafión en esta dirección: [https://www.sonarqube.org/downloads/](https://www.sonarqube.org/downloads/)
 - Vamos al archivo sonar.properties y: Descomentamos las líneas de username y password, y se descomenta sonar.jdbc.url, con la url de la base de datos que queramos usar. En nuestro caso tenemos instalado sql server 2019 Express, edición Developer y Express. Se puede ver las características de la instalación en Windows / Centro de instalación de Sql Server". Además podemos seleccionar el puerto y el contexto:
 sonar.web.port=9001
