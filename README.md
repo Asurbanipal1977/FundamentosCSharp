@@ -942,3 +942,10 @@ Y, a continuación, reiniciar el servicio de Sql Server.
  ```
 - En la clase, añadimos la etiqueta Remote, indicando el controlador y la acción a ejecutar:
 [Remote(action: "ExisteTipoCuenta",controller:"TiposCuentas")]
+    
+### 16. USO DE LA LIBRERIA JQUERYUI
+Esta librería, permite, entre otras cosas la ordenación manual de una tabla. Para ello:
+1. Se instala la librería. Que se puede desacargar de: https://jqueryui.com/
+2. Se copia esta librería en la carpeta libs del proyecto .Net Core.
+3. En el tbody de la tabla se añade un id, que desde el ready se referencia para llamar a .sortable().
+4. Se añade el estilo cursor:move a la fila de la tabla (tr).
