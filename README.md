@@ -928,6 +928,18 @@ Y, a continuación, reiniciar el servicio de Sql Server.
                                                     VALUES (@Nombre, @UsuarioId, 0);
                                                     SELECT SCOPE_IDENTITY();",tipoCuenta);
 ```
+- Para procediemitnos almacenados se debe indicar que vamos a ejecutar un procedimiento de esta manera:
+```
+public async Task Crear (TipoCuenta tipoCuenta)
+{
+   using var connection = new SqlConnection(_cadenaConexion);
+   var id = await connection.QuerySingleAsync<int>("TiposCuentaInsertar",
+                new { Nombre = tipoCuenta.Nombre,
+                    UsuarioId = tipoCuenta.UsuarioId
+                },commandType: System.Data.CommandType.StoredProcedure);
+            tipoCuenta.Id = id;
+}
+```
 
 ### 15. VALIDACIÓN POR JAVASCRIPT USANDO REMOTE.
 - En el servicio creamos la validación que deseemos. Ej:
