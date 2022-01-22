@@ -978,5 +978,7 @@ Esta librería, permite, entre otras cosas la ordenación manual de una tabla. P
    - Seleccionamos "Raise or Lower Terrain" 
     ![imagen](https://user-images.githubusercontent.com/37666654/150616331-6b63a12c-7982-4c92-ab6b-943c54802957.png)
     - Se selecciona "Paint Texture" para meter la textura al terreno añadiendo nuevas capas (Layer)
+    - Para mover la camara principal, basta con hacer doble click en la cámara y arrastrarla. Si muestra una ventana dónde se muestra la visión de esta cámara.
+![imagen](https://user-images.githubusercontent.com/37666654/150632834-e966c7eb-5fd7-436d-bddf-44c2dbbf1bc8.png)
 
     
