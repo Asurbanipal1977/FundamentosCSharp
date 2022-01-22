@@ -966,3 +966,17 @@ Esta librería, permite, entre otras cosas la ordenación manual de una tabla. P
 2. Se copia esta librería en la carpeta libs del proyecto .Net Core.
 3. En el tbody de la tabla se añade un id, que desde el ready se referencia para llamar a .sortable().
 4. Se añade el estilo cursor:move a la fila de la tabla (tr).
+    
+## 17. UNITY
+1. Creación de un terreno
+    - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
+    - Se marca Unity Registry.
+    ![imagen](https://user-images.githubusercontent.com/37666654/150615647-aa9a975a-8fe2-4523-b626-9350007d2904.png)
+   - Se instala el terrain Tools.
+   - Se crea el terreno en Window/Terrain/Terrain Tools.
+   - Seleccionamos el terreno en la parte izquierda, y se nos cargan las características de moldeando en la parte derecha.
+   - Seleccionamos "Raise or Lower Terrain" 
+    ![imagen](https://user-images.githubusercontent.com/37666654/150616331-6b63a12c-7982-4c92-ab6b-943c54802957.png)
+    - Se selecciona "Paint Texture" para meter la textura al terreno añadiendo nuevas capas (Layer)
+
+    
