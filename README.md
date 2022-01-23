@@ -770,6 +770,9 @@ Nos permiten añadir ciertas funcionalidades:
   - Por módelo:
     - Se tiene que implementar la interface IValidatableObject.
     - Se implementa el método Validate con la validación deseada.
+    
+- Para crear en Razor un select a partir de un enumerado es:
+    @Html.GetEnumSelectList<el tipo del enumerado>()
 
 #### 12. JENKINS
 - Servidor OpenSource con integración continua y automatización para Java, Node.js y .net, entre otros.
