@@ -967,7 +967,7 @@ Esta librería, permite, entre otras cosas la ordenación manual de una tabla. P
 3. En el tbody de la tabla se añade un id, que desde el ready se referencia para llamar a .sortable().
 4. Se añade el estilo cursor:move a la fila de la tabla (tr).
     
-## 17. UNITY
+### 17. UNITY
 1. Creación de un terreno
     - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
     - Se marca Unity Registry.
@@ -980,5 +980,35 @@ Esta librería, permite, entre otras cosas la ordenación manual de una tabla. P
     - Se selecciona "Paint Texture" para meter la textura al terreno añadiendo nuevas capas (Layer)
     - Para mover la camara principal, basta con hacer doble click en la cámara y arrastrarla. Si muestra una ventana dónde se muestra la visión de esta cámara.
 ![imagen](https://user-images.githubusercontent.com/37666654/150632834-e966c7eb-5fd7-436d-bddf-44c2dbbf1bc8.png)
+    
+### 18. DEFINIR EL SEPARADOR DE MILES EN LA APLICACIÓN
 
+- En el archivo Program.cs se define los idiomas válidos.
+```
+var supportedCultures = new[] { new CultureInfo("es-ES") };
+app.UseRequestLocalization(new RequestLocalizationOptions()
+{
+    DefaultRequestCulture = new RequestCulture(new CultureInfo("es-ES")),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
+```
+- Hay que sobreescribir jquery.validate.min.js con este código
+```
+<script>
+    $.validator.methods.range = function (value, element, param) {
+        var globalizedValue = value.replace(",", ".");
+        return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+    }
+
+    $.validator.methods.number = function (value, element) {
+        return this.optional(element) || /-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+    }
+    //Date dd/MM/yyyy
+    $.validator.methods.date = function (value, element) {
+        var date = value.split("/");
+        return this.optional(element) || !/Invalid|NaN/.test(new Date(date[2], date[1], date[0]).toString());
+    }
+</script>
+```
     
