@@ -936,7 +936,7 @@ Y, a continuación, reiniciar el servicio de Sql Server.
                                                     VALUES (@Nombre, @UsuarioId, 0);
                                                     SELECT SCOPE_IDENTITY();",tipoCuenta);
 ```
-- Para procediemitnos almacenados se debe indicar que vamos a ejecutar un procedimiento de esta manera:
+- Para procedimientos almacenados se debe indicar que vamos a ejecutar un procedimiento de esta manera. No se puede pasar el objecto TipoCuenta porque intentaría pasar todos los parámetros.
 ```
 public async Task Crear (TipoCuenta tipoCuenta)
 {
