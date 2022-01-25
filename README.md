@@ -539,6 +539,9 @@ Con respecto a los antiguos servicios asmx, estas son las diferencias:
 - WCF:
   - Asegura entrega de mensajes, transacciones seguras, segmentación binaria y reemplaza los xml
   - Requiere mayores conocimientos y tiempo de configuración.
+    
+#### 2.44. _ViewImports.cshtml
+Este fichero almacena los imports que se aplican a todas las vistas.
 
 ### 3. C#.Net Core
 #### 1. Inyección de dependencias
