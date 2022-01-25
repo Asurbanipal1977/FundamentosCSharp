@@ -984,8 +984,9 @@ var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(sup
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 app.UseRequestLocalization(localizationOptions);
+```
 
-- Para el idioma se pasaría el parámetro ?culture=en-US a la URL
+- Para el idioma, se pasaría el parámetro ?culture=en-US a la URL
 - Añadir una carpeta resources dónde están los idiomas en ficheros .resx.
 ![imagen](https://user-images.githubusercontent.com/37666654/151057070-131c58ea-6f33-4265-be8b-9979ece3a4d8.png)
 - En el fichero de la clase, la anotación se marcaría como:
