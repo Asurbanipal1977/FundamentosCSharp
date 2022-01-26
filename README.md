@@ -742,7 +742,7 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
 <partial name="_SeccionProyectos" model="Model.Proyectos" />
 ```
 3. Para añadir validación javascript:
-- En la página se añade un span en el campo que queramos vañlidar:
+- En la página se añade un span en el campo que queramos validar:
     <span asp-validation-for="Nombre" class="text-danger"></span>
 - Se añade en esa página una sección de esta forma:
 ```
@@ -754,7 +754,7 @@ También se puede definir el modelo que se va a pasar a esa sección o vista par
 @await RenderSectionAsync("Scripts", required: false)
     
 - Tag Helpers:
-Nos permiten añadir ciertas funcionalidades:
+Nos permiten añadir ciertas funcionalidades y existen a partir de MVC 6:
   - asp-append-version: permite añadir un string a la url de un css o js para evitar problemas de caché. Ej:
   ```
   <link rel="stylesheet" href="~/PortaFolio.styles.css" asp-append-version="true" />
@@ -763,6 +763,8 @@ Nos permiten añadir ciertas funcionalidades:
   - asp-action
   - asp-validation-summary
   - asp-for: Para enlacar con un campo del modelo.
+
+Anteriormente teníamos que usar solo los html helpers, cómo el @Html.ActionLink.
     
 - Validaciones personalizas: Pueden ser:
   - Por atributo: 
