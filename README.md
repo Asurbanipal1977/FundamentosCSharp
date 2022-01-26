@@ -996,6 +996,8 @@ app.UseRequestLocalization(localizationOptions);
 ```
 [Required(ErrorMessageResourceType = typeof(SharedResource), ErrorMessageResourceName = "Required"]
 ```
+
+- Para el idioma en las páginas de la vista y el controlador, se puede seguir **[esta página](https://techclub.tajamar.es/localizacion-en-net-core/)**
     
 ### 18. DEFINIR EL SEPARADOR DE MILES EN LA APLICACIÓN
 
