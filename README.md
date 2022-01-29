@@ -1031,6 +1031,9 @@ app.UseRequestLocalization(new RequestLocalizationOptions()
     }
 </script>
 ```
+
+### 18. CALENDARIO
+Para mostrar un calendario podemos usar [FullCalendar](https://fullcalendar.io/)
   
 ### 25. UNITY
 1. Creación de un terreno
