@@ -1068,7 +1068,8 @@ Para mostrar un calendario podemos usar [FullCalendar](https://fullcalendar.io/)
       }
 ```
   
-Básicamente, los events son la información que mostramos cada día y el dateClick nos permitirá mostrar una ventana emergente con los datos del día.
+Básicamente, los events son la información que mostramos cada día y el dateClick nos permitirá mostrar una ventana emergente con los datos del día, mediante una ventana emergente de bootstrap. Ej:
+[Ejemplo de calendario con bootstrap](https://github.com/Asurbanipal1977/ManejoPresupuestoApp/blob/main/ManejoPresupuestoApp/Views/Transacciones/Calendario.cshtml)
   
 ### 19. DOCKERS, KUBERNETES Y JENKINS
 - **Dockers**: se emplea para aislar las aplicaciones en contenedores. Un contenedor tiene todo lo necesario para poder arrancar una aplicación (no es un máquina virtual).
