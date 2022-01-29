@@ -1033,7 +1033,49 @@ app.UseRequestLocalization(new RequestLocalizationOptions()
 ```
 
 ### 18. CALENDARIO
-Para mostrar un calendario podemos usar [FullCalendar](https://fullcalendar.io/)
+Para mostrar un calendario podemos usar [FullCalendar](https://fullcalendar.io/). Un ejemplo de su uso sería:
+ ```
+ document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          locale: 'es',
+          dayMaxEventRows: 3,
+          headerToolbar: {
+            left: 'dayGridMonth,timeGridWeek,timeGridDay',
+            center: 'title',
+            right: 'prevYear,prev,next,nextYear'
+          },
+          events:'/Transacciones/ObtenerTransaccionesCalendario',
+          dateClick: async function (info){
+              await buscarTransaccionesPorFecha(info.dateStr)
+          }
+        });
+
+        calendar.render();
+      });
+
+      async function buscarTransaccionesPorFecha(fecha)
+      {
+          const response = await fetch(`/Transacciones/ObtenerTransaccionesPorFecha?fecha=${fecha}`,
+          {
+              method:'GET',
+              headers: {
+                        'content-type': 'application/json'
+                    }
+          });
+          const json = await response.json();
+      }
+```
+  
+Básicamente, los events son la información que mostramos cada día y el dateClick nos permitirá mostrar una ventana emergente con los datos del día.
+  
+### 19. DOCKERS, KUBERNETES Y JENKINS
+- **Dockers**: se emplea para aislar las aplicaciones en contenedores. Un contenedor tiene todo lo necesario para poder arrancar una aplicación (no es un máquina virtual).
+- **Kubernetes**: Es un orquestador de contenedores y se usa para implementar y escalar su aplicación mediante la administración de múltiples contenedores implementados en múltiples máquinas host.
+- **Jenkins**: Es una herramienta de integración contínua y de automatización de tareas. >Permite, por ejemplo, desplegar si hay cambios en un repositorio de Github.
+  
+El [proyecto Tye](https://blog.joedayz.pe/2020/06/el-proyecto-tye.html) es una herramienta experimental que nos permitirá desarrollar, probar, y desplegar micro servicios y aplicaciones distribuidas de una forma simple. Con pocos conocimientos, nos genera el archivo .yaml para poder desplegar un servicio en Kubernetes.
   
 ### 25. UNITY
 1. Creación de un terreno
