@@ -1087,6 +1087,7 @@ Estos son los pasos a seguir:
   builder.Services.AddTransient<IUserStore<Usuario>,UsuarioStore>();
   builder.Services.AddIdentityCore<Usuario>();
   ```
+- Inyectar en el controlador UserManager<Usuario> _userManager
   
 ### 25. UNITY
 1. Creación de un terreno
