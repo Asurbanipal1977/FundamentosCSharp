@@ -1078,6 +1078,16 @@ Básicamente, los events son la información que mostramos cada día y el dateCl
   
 El [proyecto Tye](https://blog.joedayz.pe/2020/06/el-proyecto-tye.html) es una herramienta experimental que nos permitirá desarrollar, probar, y desplegar micro servicios y aplicaciones distribuidas de una forma simple. Con pocos conocimientos, nos genera el archivo .yaml para poder desplegar un servicio en Kubernetes.
   
+### 20. SECURIZAR APLICACIÓN CON IDENTITY
+Estos son los pasos a seguir:
+- Crear una clase para identificar al usaurio.
+- Implementar las interfaces IUserStore<clase de usuario>, IUserEmailStore<clase de usuario>, IUserPasswordStore<clase de usuario>
+- Configurar Identity en la clase Program:
+  ```
+  builder.Services.AddTransient<IUserStore<Usuario>,UsuarioStore>();
+  builder.Services.AddIdentityCore<Usuario>();
+  ```
+  
 ### 25. UNITY
 1. Creación de un terreno
     - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
