@@ -1094,6 +1094,38 @@ Estos son los pasos a seguir:
   ```
 - Inyectar en el controlador UserManager<Usuario> _userManager
   
+**Autenticar mediante una cookie**:
+- En el controlador se inyecta: signInManager.
+- Si se ha creado correctamente el usuario, se realiza la creación de la cookie:
+  await _signInManager.SignInAsync(usuario, isPersistent: true);
+- En program.cs se configura la aplciación para que entienda la cookie como autenticación:
+```
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
+        options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+        options.DefaultSignInScheme = IdentityConstants.ApplicationScheme;
+    }
+).AddCookie(IdentityConstants.ApplicationScheme);
+```
+
+  Y se tiene que usar la autenticación: 
+  app.UseAuthentication();
+  
+- Se añade el SignInManager:
+  builder.Services.AddTransient<SignInManager<Usuario>>();
+
+- Se crea una vista parcial para que el usuario pueda logarse y deslogarse.
+- Se crea la acción de deslogearse en el controller:
+```
+[HttpPost]
+public async Task<IActionResult> Logout()
+{
+    await HttpContext.SignOutAsync(IdentityConstants.ApplicationScheme);
+    return RedirectToAction("Index","Transacciones");
+}
+```
+  
 ### 25. UNITY
 1. Creación de un terreno
     - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
