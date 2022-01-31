@@ -977,7 +977,7 @@ Esta librería, permite, entre otras cosas la ordenación manual de una tabla. P
 
 ### 17. IDIOMA EN UNA APLICACIÓN NET CORE 6
 
-- En el program.cs se añade y se usa el servicio de localizazión:
+- En el program.cs se añade y se usa el servicio de localización:
 ```
 builder.Services.AddLocalization(opt => { opt.ResourcesPath = "Resources"; } );
 builder.Services.AddMvc()
@@ -1000,6 +1000,11 @@ app.UseRequestLocalization(localizationOptions);
 ```
 
 - Para el idioma en las páginas de la vista y el controlador, se puede seguir **[esta página](https://techclub.tajamar.es/localizacion-en-net-core/)**
+  Por ejemplo, en un controlador, hay que:
+  - Inyectar la librería IStringLocalizer<clase>.
+  - Crearse un fichero en la carpeta Resources. Por ejemplo: Models.Usuario.es-ES.resx
+  
+  Ej: [Ejemplo idioma para controller](https://github.com/Asurbanipal1977/ManejoPresupuestoApp/tree/main/ManejoPresupuestoApp/Controllers/UsuariosController.cs)
     
 ### 18. DEFINIR EL SEPARADOR DE MILES EN LA APLICACIÓN
 
