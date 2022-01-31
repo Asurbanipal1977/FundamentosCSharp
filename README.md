@@ -1148,7 +1148,31 @@ public async Task<IActionResult> Logout()
   }
 ```
 
-- Para saber si un usuario está o no logado basta con usar HTTPContext.Identity.IsAuthenticated
+- Para saber si un usuario está o no logado basta con usar HTTPContext.Identity.IsAuthenticated.
+- Los Claims nos permiten acceder a las propiedades de el objeto User. De esta manera, podemos acceder al id del usuario.
+- Para aplicar la autorización a todas las páginas se tiene que utilizar:
+```
+//Se crea una autenticación a nivel de aplicación
+var politicaUsuariosAutenticados = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+// Add services to the container.
+builder.Services.AddControllersWithViews(opciones =>
+{
+    opciones.Filters.Add(new AuthorizeFilter(politicaUsuariosAutenticados));    
+});
+```
+- Para añadir autenticación y la cookie de identificación en el program.cs:
+  ```
+  builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
+        options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+        options.DefaultSignInScheme = IdentityConstants.ApplicationScheme;
+    }
+).AddCookie(IdentityConstants.ApplicationScheme, opciones =>
+{
+    opciones.LoginPath = "/usuarios/Login";
+});
+  ```
   
   
 ### 25. UNITY
