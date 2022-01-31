@@ -1126,6 +1126,31 @@ public async Task<IActionResult> Logout()
 }
 ```
   
+- Para logarse usaríamos un método como el siguiente, que llame al método PasswordSignInAsync en la clase SignInManager:
+```
+[HttpPost]
+  public async Task<IActionResult> Login(LoginModel model)
+  {
+      if (!ModelState.IsValid)
+      {
+          return View(model);
+      }
+      var resultado = await _signInManager.PasswordSignInAsync
+          (model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+
+      if (resultado.Succeeded)
+          return RedirectToAction("Index", "Transacciones");
+      else
+      {
+          ModelState.AddModelError(String.Empty, "El usuario o password son incorrectos");
+          return View(model);
+      }
+  }
+```
+
+- Para saber si un usuario está o no logado basta con usar HTTPContext.Identity.IsAuthenticated
+  
+  
 ### 25. UNITY
 1. Creación de un terreno
     - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
