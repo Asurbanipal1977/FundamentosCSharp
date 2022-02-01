@@ -52,8 +52,9 @@ app.MapGet("/cervezas",
         catch(Exception e)
         {
             app.Logger.LogError(e.Message);
-            return Results.BadRequest(new { 
-                Message = e.Message
+            return Results.BadRequest(new
+            {
+                Message = $"{e.Message} - {e.InnerException?.Message}"
             });
         }
     }
