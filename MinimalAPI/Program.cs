@@ -7,7 +7,11 @@ string MyCors = "MyCors";
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDbContext<EFContext>();
+builder.Services.AddDbContext<EFContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 builder.Services.AddTransient<Prueba>();
 builder.Services.AddCors(opts => opts.AddPolicy(MyCors, builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()));
 builder.Services.AddSwaggerGen();
