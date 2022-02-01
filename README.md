@@ -930,7 +930,7 @@ GO
     
 Y, a continuación, reiniciar el servicio de Sql Server.
     
-2. Para ver un diagrama de DD, hay que loguearse con el usaurio sa.
+2. Para ver un diagrama de DD, hay que loguearse con el usuario sa.
     
 #### 14. DAPPER
 - Nos permite mapear en clases las tablas.
@@ -1152,7 +1152,7 @@ public async Task<IActionResult> Logout()
 - Los Claims nos permiten acceder a las propiedades de el objeto User. De esta manera, podemos acceder al id del usuario.
 - Para aplicar la autorización a todas las páginas se tiene que utilizar:
 ```
-//Se crea una autenticación a nivel de aplicación
+- Se crea una autenticación a nivel de aplicación
 var politicaUsuariosAutenticados = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
 // Add services to the container.
 builder.Services.AddControllersWithViews(opciones =>
@@ -1173,6 +1173,7 @@ builder.Services.AddControllersWithViews(opciones =>
     opciones.LoginPath = "/usuarios/Login";
 });
   ```
+- Se pone excepciones a esa autenticación a nivel de aplicación. Se pone una etiqueta [AllowAnonymous] a cada método que no queremos que sea autenticado.
   
   
 ### 25. UNITY
