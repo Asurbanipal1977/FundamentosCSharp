@@ -1182,7 +1182,7 @@ builder.Services.AddControllersWithViews(opciones =>
 - Se pone excepciones a esa autenticación a nivel de aplicación. Se pone una etiqueta [AllowAnonymous] a cada método que no queremos que sea autenticado.
   
 ### 21. DESPLIEGUES
-#### DESPLIEGUE EN AZURE
+#### DESPLIEGUE EN AZURE COMO SERVICIO
 [Ver este enlace](https://github.com/Asurbanipal1977/APIDockerizada/blob/main/README.md)
 
  - Se puede hacer que se despliegue desde Visual Studio al publicar. Se selecciona Azure App Service.
@@ -1194,13 +1194,12 @@ builder.Services.AddControllersWithViews(opciones =>
 - Se copia en IIS (c:/inetpub).
 - Se crea el sitio en el administrador de IIS.
   
-#### DEPLIEGUE EN AZURE DEVOPS
-- Se publica en github añadiendo el fichero de gitignore: dotnet new gitignore.
-- 
-  
-#### INTEGRACIÓN CONTINUA Y ENTREGA CONTINUA
+#### INTEGRACIÓN CONTINUA Y ENTREGA CONTINUA - DESPLIEGUE EN AZURE DEVOPS
 . La integración continua se refiere a la práctica de subir los cambios de código en un repositorio común. Se pasarán los test de manera automática y, de esta manera, se detectarán los posibles errores.
 - La entrega continua es la capacidad de enviar a producción los cambios del sistema, ya sean corrección de errores, cambios de configuración, ...
+
+Para publicar en Azure Devops:
+- Se publica en github añadiendo el fichero de gitignore: dotnet new gitignore.
 - Vamos a Azure Devops: https://dev.azure.com/Asurbanipal1977/ y creamos un nuevo proyecto.
 - Se añade un nuevo pipeline.
 - Elegimos asp net core.
