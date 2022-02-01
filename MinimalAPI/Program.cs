@@ -41,7 +41,19 @@ app.MapGet("/peticion", async () =>
 });
 
 app.MapGet("/cervezas", 
-    async (EFContext context) => await context.Cervezas.ToListAsync()
+    async (EFContext context) => {
+        try
+        {
+            return Results.Ok(await context.Cervezas.ToListAsync());
+        }
+        catch(Exception e)
+        {
+            app.Logger.LogError(e.Message);
+            return Results.BadRequest(new { 
+                Message = e.Message
+            });
+        }
+    }
 );
 app.MapGet("/cerveza/{id}",
     async (int id, EFContext context) =>
