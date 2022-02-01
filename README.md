@@ -1188,6 +1188,15 @@ builder.Services.AddControllersWithViews(opciones =>
  - Se puede hacer que se despliegue desde Visual Studio al publicar. Se selecciona Azure App Service.
  - Después de seleccionar el plan y el grupo de recursos, podemos publicar. Lo haremos dependiente del framework, para que ocupe menos.
  - Ej: [Portafolio](https://portafoliomiguelangelmartinez.azurewebsites.net/)
+
+#### DESPLIEGUE EN IIS
+- Se publica como carpeta
+- Se copia en IIS (c:/inetpub).
+- Se crea el sitio en el administrador de IIS.
+  
+#### INTEGRACIÓN CONTINUA Y ENTREGA CONTINUA
+. La integración continua se refiere a la práctica de subir los cambios de código en un repositorio común. Se pasarán los test de manera automática y, de esta manera, se detectarán los posibles errores.
+- La entraga continua es la capacidad de enviar a producción los cambios del sistema, ya sean corrección de errores, cambios de configuración, ...
   
   
 ### 25. UNITY
