@@ -1188,6 +1188,13 @@ builder.Services.AddControllersWithViews(opciones =>
  - Se puede hacer que se despliegue desde Visual Studio al publicar. Se selecciona Azure App Service.
  - Después de seleccionar el plan y el grupo de recursos, podemos publicar. Lo haremos dependiente del framework, para que ocupe menos.
  - Ej: [Portafolio](https://portafoliomiguelangelmartinez.azurewebsites.net/)
+  
+ - Si se tiene base de datos, a la hora de publicar, se debe seleccionar crear la base de datos desde "Dependencia de Servicio" en la publicación de Visual Studio 2022.
+ - Una vez creada la base de datos, desde Portal Azure, se tendrá que importar. Para importar la base de datos, se realiza desde SQL Server Management Studio y seleccionamos las opciones:
+   - Check for object existence: false
+   - Script use database: false
+   - Importamos datos y tablas, y quitamos los datos que no queramos.
+ 
 
 #### DESPLIEGUE EN IIS
 - Se publica como carpeta
@@ -1261,7 +1268,7 @@ pool:
 - Nos vamos a pipeline / release y añadimos el artefacto (nuestro proyecto) y el stage (producción, por ejemplo). Para stage seleccionamos "Azure App Service deployment".
   Si damos al rayo que aparece, nos aparece una ventana desplegable en la que podemos activar el despliegue continuo.
 - En Tasks / Run on Agent, seleccionamos el agente Default.
-- En Package or Folkder seleccionamos lo siguiente:
+- En Package or Folder seleccionamos lo siguiente:
   ![imagen](https://user-images.githubusercontent.com/37666654/152031789-e7420a5f-3da2-4f66-9038-5dfdca0a7e53.png)
 
 - Si da este error: "HTTP Error 500.32 - ANCM Failed to Load dll ". Se debe a la versión de compilación, que debe ser 32 bits y no 64
