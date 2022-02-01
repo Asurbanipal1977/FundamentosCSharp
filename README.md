@@ -1194,9 +1194,78 @@ builder.Services.AddControllersWithViews(opciones =>
 - Se copia en IIS (c:/inetpub).
 - Se crea el sitio en el administrador de IIS.
   
+#### DEPLIEGUE EN AZURE DEVOPS
+- Se publica en github añadiendo el fichero de gitignore: dotnet new gitignore.
+- 
+  
 #### INTEGRACIÓN CONTINUA Y ENTREGA CONTINUA
 . La integración continua se refiere a la práctica de subir los cambios de código en un repositorio común. Se pasarán los test de manera automática y, de esta manera, se detectarán los posibles errores.
-- La entraga continua es la capacidad de enviar a producción los cambios del sistema, ya sean corrección de errores, cambios de configuración, ...
+- La entrega continua es la capacidad de enviar a producción los cambios del sistema, ya sean corrección de errores, cambios de configuración, ...
+- Vamos a Azure Devops: https://dev.azure.com/Asurbanipal1977/ y creamos un nuevo proyecto.
+- Se añade un nuevo pipeline.
+- Elegimos asp net core.
+- Se crea el yaml del pipeline:
+```
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- main
+
+pool:
+  name: Default
+
+variables:
+  solution: '**/*.sln'
+  proyecto: '**/*.csproj'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+
+- task: UseDotNet@2
+  displayName: 'Instalar .NET 6'
+  inputs:
+    packageType: 'sdk'
+    version: '6.0.x'
+
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Construyendo los artefactos...'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: $(proyecto)
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) --runtime win-x86 --self-contained'
+    zipAfterPublish: false
+    modifyOutputPath: false
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publicando los artefactos'
+```
+  
+- Hay que usar un agente local ya que da error en caso contrario. El agente local está en la ruta:
+D:\Programas\vsts-agent-win-x64-2.192.0
+En el archivo yaml hay que poner:
+```
+pool:
+  name: Default
+```  
+
+- Nos vamos a pipeline / release y añadimos el artefacto (nuestro proyecto) y el stage (producción, por ejemplo). Para stage seleccionamos "Azure App Service deployment".
+  Si damos al rayo que aparece, nos aparece una ventana desplegable en la que podemos activar el despliegue continuo.
+- En Tasks / Run on Agent, seleccionamos el agente Default.
+- En Package or Folkder seleccionamos lo siguiente:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152031789-e7420a5f-3da2-4f66-9038-5dfdca0a7e53.png)
+
+- Si da este error: "HTTP Error 500.32 - ANCM Failed to Load dll ". Se debe a la versión de compilación, que debe ser 32 bits y no 64
   
   
 ### 25. UNITY
