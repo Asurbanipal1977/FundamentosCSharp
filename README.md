@@ -917,7 +917,13 @@ public partial class Program { }
 - Tenemos que instalar un paquete para que se puedan ejecutar aplicaciones de .net core en IIS:
 [https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-2.2.5-windows-hosting-bundle-installer](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-2.2.5-windows-hosting-bundle-installer)
 - Crear el sitio web en el puerto que queramos.
-- Dar permisos totales al usuario IIS_IUSRS.
+- Dar permisos totales al usuario IIS_IUSRS (botón derecho y editar permisos en el Administrador de IIS)
+- Si tenemos una base de datos SQL Server, hay que dar permisos:
+exec sp_grantlogin 'IIS APPPOOL\MinimalAPI'
+use pruebas
+exec sp_grantdbaccess 'IIS APPPOOL\MinimalAPI'
+
+Y reiniciar el servicio de SQL Server.
     
 ### 13. BASES DE DATOS
 1. Si se quiere cambiar de modo de acceso, se tiene que lanzar:
