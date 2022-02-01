@@ -1181,6 +1181,14 @@ builder.Services.AddControllersWithViews(opciones =>
   ```
 - Se pone excepciones a esa autenticación a nivel de aplicación. Se pone una etiqueta [AllowAnonymous] a cada método que no queremos que sea autenticado.
   
+### 21. DESPLIEGUES
+#### DESPLIEGUE EN AZURE
+[Ver este enlace](https://github.com/Asurbanipal1977/APIDockerizada/blob/main/README.md)
+
+ - Se puede hacer que se despliegue desde Visual Studio al publicar. Se selecciona Azure App Service.
+ - Después de seleccionar el plan y el grupo de recursos, podemos publicar. Lo haremos dependiente del framework, para que ocupe menos.
+ - Ej: [Portafolio](https://portafoliomiguelangelmartinez.azurewebsites.net/)
+  
   
 ### 25. UNITY
 1. Creación de un terreno
