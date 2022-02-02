@@ -1158,7 +1158,7 @@ public async Task<IActionResult> Logout()
 - Los Claims nos permiten acceder a las propiedades de el objeto User. De esta manera, podemos acceder al id del usuario.
 - Para aplicar la autorización a todas las páginas se tiene que utilizar:
 ```
-- Se crea una autenticación a nivel de aplicación
+//Se crea una autenticación a nivel de aplicación
 var politicaUsuariosAutenticados = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
 // Add services to the container.
 builder.Services.AddControllersWithViews(opciones =>
