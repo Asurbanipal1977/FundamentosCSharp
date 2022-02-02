@@ -1200,7 +1200,13 @@ builder.Services.AddControllersWithViews(opciones =>
 - Se publica como carpeta
 - Se copia en IIS (c:/inetpub).
 - Se crea el sitio en el administrador de IIS.
-  
+- Cuando tenemos una base de datos, es importante que la cadena de conexión la tengamos de esta manera:
+```
+"ConnectionStrings": {
+    "DefaultConnection": "Data Source=GIGABYTE-SABRE\\SQLEXPRESS;Initial Catalog=ManejoPresupuesto;Integrated Security=False;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;User Id=ManejoPresupuesto;Password=ManejoPresupuesto"
+  },
+```  
+
 #### INTEGRACIÓN CONTINUA Y ENTREGA CONTINUA - DESPLIEGUE EN AZURE DEVOPS
 . La integración continua se refiere a la práctica de subir los cambios de código en un repositorio común. Se pasarán los test de manera automática y, de esta manera, se detectarán los posibles errores.
 - La entrega continua es la capacidad de enviar a producción los cambios del sistema, ya sean corrección de errores, cambios de configuración, ...
