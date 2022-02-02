@@ -1167,8 +1167,8 @@ builder.Services.AddControllersWithViews(opciones =>
 });
 ```
 - Para añadir autenticación y la cookie de identificación en el program.cs:
-  ```
-  builder.Services.AddAuthentication(options =>
+```
+builder.Services.AddAuthentication(options =>
     {
         options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
         options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
@@ -1178,7 +1178,8 @@ builder.Services.AddControllersWithViews(opciones =>
 {
     opciones.LoginPath = "/usuarios/Login";
 });
-  ```
+```
+  
 - Se pone excepciones a esa autenticación a nivel de aplicación. Se pone una etiqueta [AllowAnonymous] a cada método que no queremos que sea autenticado.
   
 ### 21. DESPLIEGUES
