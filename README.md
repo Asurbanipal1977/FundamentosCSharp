@@ -1280,6 +1280,24 @@ pool:
 
 - Si da este error: "HTTP Error 500.32 - ANCM Failed to Load dll ". Se debe a la versión de compilación, que debe ser 32 bits y no 64
   
+- Si tiene base de datos, hay que abrir el "Visual Studio Installer" e instalar:
+  - "Desarrollo de Azure" y "Almacenamiento y procesamiento de datos".
+  - Abrimos la solución y añadimos un proyecto de sql Server (proyecto de Base de Datos de SQL Server).
+  - Una vez creado, botón derecho e importar, y seleccionamos la conexión y la base de datos:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152142783-baf7d633-05e0-4c71-9fc0-ea8daac9f859.png)
+  - Desmarcamos este check en las opciones del proyecto de base de datos:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152143165-78ba2028-6bfb-4ce1-bd05-cefc18409da1.png)
+  - Se crea el proyecto en Azure Devops y se crea el pipeline para el despliegue continuo.
+  - Al final, si damos click en el artefacto generado veremos los proyectos creados.
+  ![imagen](https://user-images.githubusercontent.com/37666654/152149468-404a074a-e6ce-4baf-a416-10380f8cb207.png)
+  
+  - Una vez hecho todo lo anterior, se crea el proceso para la publicación de la release. En El agent job, hay que recordar que se tiene que elegir el Default en Agent Pool:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152150460-33022318-6dc5-4e66-86b2-4e3b86b22166.png)
+  - En el "Azure App Service Deploy" debemos seleccionar en "Package or Folder" nuestro artefacto a desplegar.
+  - En la tarea de base de datos, usar la autenticación por usuario y password. Por cadena de conexión no me ha funcionado.
+  - Para comprobar que funciona la integración continua en la base de datos, se puede hacer un cambio en la base de datos local. Después, en el proyecto de base de datos, pulsar "Comparar con esquema", y se compara la base de datos con el proyecto:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152169053-a636701d-9896-4ff7-919b-b9532715c3a2.png)
+  - Una vez que se publiquen los cambios en github, se lanzará los procesos de integración continua.
   
 ### 25. UNITY
 1. Creación de un terreno
