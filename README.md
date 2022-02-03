@@ -1308,6 +1308,17 @@ pool:
 
 - En esta pantalla, podemos añadir usuarios a los distintos proyectos:
   ![imagen](https://user-images.githubusercontent.com/37666654/152330777-59ae10d7-f040-4661-ba0c-1eec12aceaaf.png)
+  
+- Hay que añadir usuarios en la pestaña de Teams del proyecto:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152377953-c6ca71b6-928a-4313-a290-5bcc9275b0d9.png)
+
+- En el proyecto, agregamos los BackLogs, que son los trabajos.  
+![imagen](https://user-images.githubusercontent.com/37666654/152381126-cc3ce283-33b3-43b3-9305-5f881066849e.png)
+
+  - Se crea un item y se le asigna a la persona que queramos.
+  
+  - En Visual Studio, accedemos a la carpeta Team Explorer y buscamos la carpeta del proyecto dentro de nuestro usuario.
+  ![imagen](https://user-images.githubusercontent.com/37666654/152389443-a32b3ddc-99fb-498b-9ad5-ec7032677793.png)
 
   
 ### 25. UNITY
