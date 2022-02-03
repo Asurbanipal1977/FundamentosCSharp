@@ -1332,9 +1332,21 @@ pool:
   ![imagen](https://user-images.githubusercontent.com/37666654/152398714-b02ea5bb-b1ba-4387-9537-e6008733eef2.png)
   
 #### RAMAS
-Se puede convertir un prpoyecto descargado en Rama desde el "Explorador de control de código fuente"
+- Se puede convertir un proyecto descargado en Rama desde el "Explorador de control de código fuente"
   ![imagen](https://user-images.githubusercontent.com/37666654/152411178-62e2b534-8376-4c95-b5f3-47ea459aa9f6.png)
 
+- De este rama, podemos crear la rama de desarrollo y de release y obtenemos la última versión.
+
+- Desde el historial de versiones, podemos volver a la versión anterior dando al botón derecho sobre la versión y revirtiendo los cambios.
+ ![imagen](https://user-images.githubusercontent.com/37666654/152441318-a3a4f819-553f-47e9-a1f9-1f986799ac0a.png)
+
+- Desde el explorador de código fuente, podemos hacer el merge de una rama origen en una rama destino.
+  
+- Creamos el pipeline para integración continua y fijamos en el trigger la activación de esa integración continua.
+  ![imagen](https://user-images.githubusercontent.com/37666654/152446006-c57e6d80-a82b-42e0-80fe-acb8df11ac06.png)
+  
+En cuanto se lanza un cambio en el repositorio, se vuelve a compilar todo.
+  
   
 ### 25. UNITY
 1. Creación de un terreno
