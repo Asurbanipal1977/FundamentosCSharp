@@ -1299,6 +1299,17 @@ pool:
   ![imagen](https://user-images.githubusercontent.com/37666654/152169053-a636701d-9896-4ff7-919b-b9532715c3a2.png)
   - Una vez que se publiquen los cambios en github, se lanzará los procesos de integración continua.
   
+### 22. TFS
+- Accedemos a [Visual Studio](https://app.vsaex.visualstudio.com/me?mkt=es-ES&campaign=o~msft~vscom~vssignin).
+![imagen](https://user-images.githubusercontent.com/37666654/152328743-f7d8548c-8588-44a0-a0e7-379b34f473fb.png)
+
+- Creamos un proyecto
+  ![imagen](https://user-images.githubusercontent.com/37666654/152329440-68d6d20a-1c64-4887-b88d-1e2b7e8da5c2.png)
+
+- En esta pantalla, podemos añadir usuarios a los distintos proyectos:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152330777-59ae10d7-f040-4661-ba0c-1eec12aceaaf.png)
+
+  
 ### 25. UNITY
 1. Creación de un terreno
     - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
