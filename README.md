@@ -1319,6 +1319,14 @@ pool:
   
   - En Visual Studio, accedemos a la carpeta Team Explorer y buscamos la carpeta del proyecto dentro de nuestro usuario.
   ![imagen](https://user-images.githubusercontent.com/37666654/152389443-a32b3ddc-99fb-498b-9ad5-ec7032677793.png)
+  
+  - Una vez creado el proyecto, le añadimos al control de código fuente.
+  
+  - Ponemos las tareas que tenemoas asignadas, En Curso.
+  ![imagen](https://user-images.githubusercontent.com/37666654/152391976-ee2ef119-49d6-4b24-9adc-ebdedda561c0.png)
+
+ - Hacemos los cambios que queramos y ponemos en asociar con las tareas que dependan los cambios
+  ![imagen](https://user-images.githubusercontent.com/37666654/152394729-a3d6ff75-a6a9-4ae6-8097-5f477bf03473.png)
 
   
 ### 25. UNITY
