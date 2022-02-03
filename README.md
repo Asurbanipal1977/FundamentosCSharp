@@ -1331,6 +1331,11 @@ pool:
  - Los cambios del código los podemos ver en /Repos/Changesets/:
   ![imagen](https://user-images.githubusercontent.com/37666654/152398714-b02ea5bb-b1ba-4387-9537-e6008733eef2.png)
   
+#### RAMAS
+Se puede convertir un prpoyecto descargado en Rama desde el "Explorador de control de código fuente"
+  ![imagen](https://user-images.githubusercontent.com/37666654/152411178-62e2b534-8376-4c95-b5f3-47ea459aa9f6.png)
+
+  
 ### 25. UNITY
 1. Creación de un terreno
     - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
