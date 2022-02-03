@@ -1327,7 +1327,9 @@ pool:
 
  - Hacemos los cambios que queramos y ponemos en asociar con las tareas que dependan los cambios
   ![imagen](https://user-images.githubusercontent.com/37666654/152394729-a3d6ff75-a6a9-4ae6-8097-5f477bf03473.png)
-
+  
+ - Los cambios del código los podemos ver en /Repos/Changesets/:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152398714-b02ea5bb-b1ba-4387-9537-e6008733eef2.png)
   
 ### 25. UNITY
 1. Creación de un terreno
