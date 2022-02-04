@@ -1343,9 +1343,13 @@ pool:
 - Desde el explorador de código fuente, podemos hacer el merge de una rama origen en una rama destino.
   
 - Creamos el pipeline para integración continua y fijamos en el trigger la activación de esa integración continua.
-  ![imagen](https://user-images.githubusercontent.com/37666654/152446006-c57e6d80-a82b-42e0-80fe-acb8df11ac06.png)
+![imagen](https://user-images.githubusercontent.com/37666654/152501179-deaca95b-0f3f-43dc-be8f-5f5b189172db.png)
   
 En cuanto se lanza un cambio en el repositorio, se vuelve a compilar todo.
+
+- También hay que marcar el gated check-in, para evitar que se puedan subir cambios si los cambios no son correctos y no se han podido compilar.
+  ![imagen](https://user-images.githubusercontent.com/37666654/152519828-6bb1dd86-441b-41a0-b18c-678afe7fc0bc.png)
+
   
 - La opción "Mi Trabajo" dentro de Team Explorer es igual en su funcionalidad al git stash
 ![imagen](https://user-images.githubusercontent.com/37666654/152449646-ad68ce7a-c778-48db-8bf9-df1485892465.png)
