@@ -1322,7 +1322,7 @@ pool:
   
   - Una vez creado el proyecto, le añadimos al control de código fuente.
   
-  - Ponemos las tareas que tenemos asignadas, En Curso.
+  - Ponemos las tareas que tenemos asignadas, En Curso. Esto se hace desde la pantalla de "Mi trabajo".
   ![imagen](https://user-images.githubusercontent.com/37666654/152391976-ee2ef119-49d6-4b24-9adc-ebdedda561c0.png)
 
  - Hacemos los cambios que queramos y ponemos en asociar con las tareas que dependan los cambios
