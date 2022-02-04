@@ -1347,6 +1347,10 @@ pool:
   
 En cuanto se lanza un cambio en el repositorio, se vuelve a compilar todo.
   
+- La opción "Mi Trabajo" dentro de Team Explorer es igual en su funcionalidad al git stash
+![imagen](https://user-images.githubusercontent.com/37666654/152449646-ad68ce7a-c778-48db-8bf9-df1485892465.png)
+
+  
   
 ### 25. UNITY
 1. Creación de un terreno
