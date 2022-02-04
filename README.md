@@ -1322,7 +1322,7 @@ pool:
   
   - Una vez creado el proyecto, le añadimos al control de código fuente.
   
-  - Ponemos las tareas que tenemoas asignadas, En Curso.
+  - Ponemos las tareas que tenemos asignadas, En Curso.
   ![imagen](https://user-images.githubusercontent.com/37666654/152391976-ee2ef119-49d6-4b24-9adc-ebdedda561c0.png)
 
  - Hacemos los cambios que queramos y ponemos en asociar con las tareas que dependan los cambios
@@ -1350,11 +1350,22 @@ En cuanto se lanza un cambio en el repositorio, se vuelve a compilar todo.
 - También hay que marcar el gated check-in, para evitar que se puedan subir cambios si los cambios no son correctos y no se han podido compilar.
   ![imagen](https://user-images.githubusercontent.com/37666654/152519828-6bb1dd86-441b-41a0-b18c-678afe7fc0bc.png)
 
+- Cuando los cambios se suben, se quedan en cola:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152520595-88f58c94-993f-4886-b6ab-7070483d41ac.png)
+
+- Se crea la tarea de despliegue para la rama de release.
   
+- Cuando se protejan cambios, una vez subidos hay que pulsar en "Integrar con área de trabajo"
+
 - La opción "Mi Trabajo" dentro de Team Explorer es igual en su funcionalidad al git stash
 ![imagen](https://user-images.githubusercontent.com/37666654/152449646-ad68ce7a-c778-48db-8bf9-df1485892465.png)
 
-  
+- Fusionamos mediante combinación la rama de dev con la rama de main.
+  ![imagen](https://user-images.githubusercontent.com/37666654/152525219-abbf1b51-4618-41c1-a2d8-c95dcc6d9e96.png)
+
+- La fecha de los sprint se define en esta pantalla:
+  ![imagen](https://user-images.githubusercontent.com/37666654/152526510-f4c38d76-bfb6-4437-a479-ca76d96504e1.png)
+
   
 ### 25. UNITY
 1. Creación de un terreno
