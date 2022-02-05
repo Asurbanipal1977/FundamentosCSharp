@@ -24,6 +24,9 @@ string str2 = d2.ToUpper();
 - Se puede encadenar métodos. También puedes crear métodos que encadenen. Para ello siempre debes responder el objeto actual. 
 Ej de concatenación: cadena.toUpper().Trim()
 
+- Para el Modelo MVC podemos poner esta anotación para no usar el automapper y hacer que una tome las anotaciones de otra clase:
+[MetadataType(typeof(AlumnosCLS))] --> Otra forma para no tener que hacer el mapeado con AutoMapper
+
 #### 2.1. TIPOS ANÓNIMOS Y REFLECTION
 - Los tipos anónimos tiene estas características:
   - Son de solo lectura.
