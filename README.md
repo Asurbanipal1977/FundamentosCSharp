@@ -26,6 +26,9 @@ Ej de concatenación: cadena.toUpper().Trim()
 
 - Para el Modelo MVC podemos poner esta anotación para no usar el automapper y hacer que una tome las anotaciones de otra clase:
 [MetadataType(typeof(AlumnosCLS))] --> Otra forma para no tener que hacer el mapeado con AutoMapper
+- Difererencia entre const y readonly:
+  - Las constantes son a nivel de clase mientras que los readonly son a nivel de objeto.
+  - Las constantes no pueden asignarse pero, las propiuedades readonly si pueden a sociarse en el constructor.
 
 #### 2.1. TIPOS ANÓNIMOS Y REFLECTION
 - Los tipos anónimos tiene estas características:
