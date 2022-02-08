@@ -34,6 +34,8 @@ Si está en Core, hay que usar using Microsoft.AspNetCore.Mvc y:
   - Las constantes son a nivel de clase mientras que los readonly son a nivel de objeto.
   - Las constantes no pueden asignarse pero, las propiuedades readonly si pueden a sociarse en el constructor.
 
+- [ValidateAntiForgeryToken] permite que solo se puede enviar un formulario desde el dominio dónde lo subiste, y no desde otro dominio.
+
 #### 2.1. TIPOS ANÓNIMOS Y REFLECTION
 - Los tipos anónimos tiene estas características:
   - Son de solo lectura.
