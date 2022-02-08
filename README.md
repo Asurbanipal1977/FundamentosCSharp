@@ -25,7 +25,11 @@ string str2 = d2.ToUpper();
 Ej de concatenación: cadena.toUpper().Trim()
 
 - Para el Modelo MVC podemos poner esta anotación para no usar el automapper y hacer que una tome las anotaciones de otra clase:
-[MetadataType(typeof(AlumnosCLS))] --> Otra forma para no tener que hacer el mapeado con AutoMapper
+[MetadataType(typeof(AlumnosCLS))] --> Otra forma para no tener que hacer el mapeado con AutoMapper.
+Si está en Core, hay que usar using Microsoft.AspNetCore.Mvc y:
+[ModelMetadataType(typeof(AlumnoCLS))]
+
+
 - Difererencia entre const y readonly:
   - Las constantes son a nivel de clase mientras que los readonly son a nivel de objeto.
   - Las constantes no pueden asignarse pero, las propiuedades readonly si pueden a sociarse en el constructor.
