@@ -1379,6 +1379,51 @@ En cuanto se lanza un cambio en el repositorio, se vuelve a compilar todo.
   ![imagen](https://user-images.githubusercontent.com/37666654/152526510-f4c38d76-bfb6-4437-a479-ca76d96504e1.png)
 
   
+### 22. GRPC
+Nueva forma de crear servicios basados en una alta disponibilidad y que se envía en binario.
+  
+Consta de:
+- Especificación de proyecto. La síntaxis más moderna es proto3:
+```
+syntax = "proto3";
+option csharp_namespace = "GrpcServicePrueba";
+package greet;
+```
+
+- Esta es la definición de proyecto y de la pregunta y respuesta:
+```
+  // The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// The request message containing the user's name. -> El número indica el orden en el mensaje
+message HelloRequest {
+  string name = 1;
+  int a = 2;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+```
+
+ - Para poder usarlo y llamarlo, nos creamos un proyecto de consola e importamos:
+  - Google.Protobuf
+  - Grpc.Net.Client
+  - Grpc.Tools
+  
+- Creamos el archivo .proto que había en servidor.
+- Añadimos una línea a la definición del proyecto:
+  ```
+  <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+  ```
+  
+  
+  
+  
 ### 25. UNITY
 1. Creación de un terreno
     - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
