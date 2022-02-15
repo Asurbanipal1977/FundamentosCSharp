@@ -1420,7 +1420,7 @@ message HelloReply {
   ```
   <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
   ```
-  
+ - Hacemos la invocación al servicio desde Program.cs
   
   
   
