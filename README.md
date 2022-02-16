@@ -1422,6 +1422,15 @@ message HelloReply {
   ```
  - Hacemos la invocación al servicio desde Program.cs
   
+### 24. TELERIK
+  
+- Para poder usar los controles Telerik, tenemos que instalarlo desde: https://www.telerik.com/
+  Por ejemplo, podemos instalar el ASP.NET Ajax. Si da un error, hay que añadir la referencia de Telerik en el proyecto, buscando la carpeta dónde se instaló.
+- Hay que colocar un control scriptManager:
+  ```
+  <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+  ```
+
   
   
 ### 25. UNITY
