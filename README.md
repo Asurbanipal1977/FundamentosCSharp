@@ -1431,7 +1431,10 @@ message HelloReply {
   <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
   ```
 
+  - Para poder instalar más extensiones de Telerik, instalamos el control-panel:
+  https://www.telerik.com/try/control-panel
   
+  Una vez instalado este panel de control, podemos seleccionar que queremos instalar.
   
 ### 25. UNITY
 1. Creación de un terreno
