@@ -1379,7 +1379,7 @@ En cuanto se lanza un cambio en el repositorio, se vuelve a compilar todo.
   ![imagen](https://user-images.githubusercontent.com/37666654/152526510-f4c38d76-bfb6-4437-a479-ca76d96504e1.png)
 
   
-### 22. GRPC
+### 23. GRPC
 Nueva forma de crear servicios basados en una alta disponibilidad y que se envía en binario.
   
 Consta de:
@@ -1436,7 +1436,45 @@ message HelloReply {
   
   Una vez instalado este panel de control, podemos seleccionar que queremos instalar.
   
-### 25. UNITY
+  
+### 25. EJECUTAR JAVASCRIPT DESDE .NET
+Para ello se puede usar la librería **PuppeteerSharp**. Esta librería se instala desde nuget. Permite usar un navegador y 
+generar un pdf a partir de un documento html o de una web. Esto es muy útil si se quieren sacar un informe.
+  
+```
+using PuppeteerSharp;
+
+string outputFile = $@"{Directory.GetCurrentDirectory()}\myFile.pdf";
+string plantilla = $@"D:\000_Cursos\Workspaces\Puppeteer\PuppeteerExample\PuppeteerExample\prueba.html";
+
+Console.WriteLine(outputFile);  
+
+using var browserFetcher = new BrowserFetcher();
+await browserFetcher.DownloadAsync();
+
+//Con esto se abre el navegador y se tiene que indicar la ruta del chrome
+await using var browser = await Puppeteer.LaunchAsync(
+    new LaunchOptions()
+    {
+        Headless = true,
+        ExecutablePath = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+    }
+ );
+
+//Creamos página del navegador
+await using var page = await browser.NewPageAsync();
+////Se puede poner contenido html
+//await page.GoToAsync(plantilla);
+
+////Ejecutar javascript
+//await page.EvaluateFunctionAsync("cargarDiv",new object[] { new string[] { "Sandia", "Melón", "Pera" } });
+
+await page.GoToAsync(@"https:\\theenglishexpress.es");
+
+await page.PdfAsync(outputFile);
+```
+  
+### 26. UNITY
 1. Creación de un terreno
     - Window/Package Manager, se pulsa la rueda de opciones y se escoge "Opciones avanzadas", activándose el check de "Activar la previsualización de paquetes"
     - Se marca Unity Registry.
